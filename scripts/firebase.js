@@ -175,7 +175,7 @@ export async function saveStudent(data) {
 export async function studentDataIsSaved() {
   const user = await getUser();
   const ref = doc(db, "users", user.uid);
-  const snapshot = getDoc(ref);
+  const snapshot = await getDoc(ref);
   return snapshot.exists();
 }
 
