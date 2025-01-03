@@ -5,6 +5,8 @@
  */
 {
     "compilerOptions": {
+        "target": "es2017",
+        "module": "ESNext",
         "moduleResolution": "node",
         "forceConsistentCasingInFileNames": true,
         "checkJs": false,

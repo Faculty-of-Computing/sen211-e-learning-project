@@ -14,7 +14,6 @@ import {
   updateProfile,
   // @ts-ignore
 } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
-// @ts-ignore
 import {
   addDoc,
   collection,
@@ -128,21 +127,30 @@ export async function googleAuth() {
  */
 
 /**
- * Save the user's quiz or test results to the database.
+ * Save the user's quiz or test results to the database and redirect them
+ * to the performance page to see their result.
  *
  * @param {Record} result - An object containing the user's test results.
- * @returns {Promise<void>} Resolves when the result is successfully uploaded to Firestore.
+ * @returns {Promise<void>} Resolves when the result is successfully uploaded
+ * to Firestore.
  * @throws {Error} If the upload process fails.
  */
-export async function uploadResult(result) {
+export async function saveResult(result) {
   const ref = collection(db, "results");
   const user = await getUser();
   try {
-    await addDoc(ref, {
+    const { id } = await addDoc(ref, {
       ...result,
       time: serverTimestamp(),
       uid: user.uid,
     });
+    const url = new URL("/modules/performance", location.href);
+    url.searchParams.set("id", id);
+    url.searchParams.set("score", result.score.toString());
+    url.searchParams.set("total", result.total.toString());
+    url.searchParams.set("duration", result.duration);
+    url.searchParams.set("course", result.course);
+    location.href = url.href;
   } catch (error) {
     handleError(error);
   }

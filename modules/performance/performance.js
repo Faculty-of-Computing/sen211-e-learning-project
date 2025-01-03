@@ -16,21 +16,23 @@ await new Promise((res) => {
 
 const performanceTableContainer = document.getElementById("performance-table");
 const url = new URL(location.href);
-const needs = ["score", "total", "duration", "course"];
-const params = Array.from(url.searchParams.keys());
-const missing = needs.filter((key) => {
-  return !params.includes(key);
-});
-if (missing.length) {
-  alert(`Search params are missing the following keys: ${missing.join(", ")}`);
-  throw history.back();
-}
 
-/** @type {Record<keyof Omit<Result, "name">, string>} */
-// @ts-ignore
-const result = Object.fromEntries(Array.from(url.searchParams.entries()));
+if (
+  !url.searchParams.has("score") ||
+  !url.searchParams.has("total") ||
+  !url.searchParams.has("id") ||
+  !url.searchParams.has("duration") ||
+  !url.searchParams.has("course")
+)
+  throw (location.href = "/");
 
-const average = ((+result.score / +result.total) * 100).toFixed();
+const scoreFromResult = url.searchParams.get("score");
+const totalFromResult = url.searchParams.get("total");
+const idFromResult = url.searchParams.get("id");
+const durationFromResult = url.searchParams.get("duration");
+const courseFromResult = url.searchParams.get("course");
+
+const average = ((+scoreFromResult / +totalFromResult) * 100).toFixed();
 
 const user = await getUser();
 
@@ -44,7 +46,7 @@ performanceTableContainer.innerHTML = `
     <tr>
       <td>Your score</td>
       <td>
-        ${result.score}/${result.total}
+        ${scoreFromResult}/${totalFromResult}
       </td>
     </tr>
     <tr>
@@ -53,15 +55,15 @@ performanceTableContainer.innerHTML = `
     </tr>
     <tr>
       <td>Duration</td>
-      <td>${result.duration}</td>
+      <td>${durationFromResult}</td>
     </tr>
     <tr>
       <td>Course</td>
-      <td>${result.course}</td>
+      <td>${courseFromResult}</td>
     </tr>
     <tr>
       <td>Questions</td>
-      <td>${result.total}</td>
+      <td>${totalFromResult}</td>
     </tr>
   </tbody>
 </table>
@@ -70,13 +72,13 @@ performanceTableContainer.innerHTML = `
     Quiz Evaluation:
   </span>
   <span className="font-afacad font-medium text-[24px] leading-[32px] tracking-[-0.02em] text-white">
-    Attempted: ${result.total}
+    Attempted: ${totalFromResult}
   </span>
   <span className="font-afacad font-medium text-[24px] leading-[32px] tracking-[-0.02em] text-white">
-    Passed: ${result.score}
+    Passed: ${scoreFromResult}
   </span>
   <span className="font-afacad font-medium text-[24px] leading-[32px] tracking-[-0.02em] text-white">
-    Failed: ${+result.total - +result.score}
+    Failed: ${+totalFromResult - +scoreFromResult}
   </span>
 </div>
 `;
@@ -133,13 +135,13 @@ startCardContainer.innerHTML += [
     value: +average,
   }),
   startCard({
-    content: `${result.score}/${result.total}`,
+    content: `${scoreFromResult}/${totalFromResult}`,
     title: "Score",
-    max: +result.total,
-    value: +result.score,
+    max: +totalFromResult,
+    value: +scoreFromResult,
   }),
   startCard({
-    content: result.duration,
+    content: durationFromResult,
     title: "Duration",
   }),
 ].join(" ");
