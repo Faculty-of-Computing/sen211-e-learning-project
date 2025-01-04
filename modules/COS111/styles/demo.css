@@ -2,7 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Monteserrat !important;
+    font-family: Monteserrat;
+    
 }
 
 body {
@@ -13,17 +14,17 @@ body {
 
 @font-face {
     font-family: Monteserrat;
-    src: url(./../Fonts/Montserrat-Regular.ttf);
+    src: url(../Fonts/Montserrat-Regular.ttf);
 }
 
 @font-face {
     font-family: Monteserrat-Black;
-    src: url(./../Fonts/Montserrat-Black.ttf);
+    src: url(../Fonts/Montserrat-Black.ttf);
 }
 
 @font-face {
     font-family: Monteserrat-Light;
-    src: url(./../Fonts/Montserrat-Light.ttf);
+    src: url(../Fonts/Montserrat-Light.ttf);
 }
 
 #Learn {
@@ -32,6 +33,10 @@ body {
     font-family: Monteserrat-Black;
 }
 
+header.desktop-nav a {
+    text-decoration: none;
+    color: #fff;
+}
 header.desktop-nav h1 {
     font-family: Monteserrat-Black;
 }
@@ -345,6 +350,16 @@ section.content .fetched-content h3:first-child {
     margin-bottom: 1em;
 }
 
+section.content .fetched-content a {
+    text-decoration: none;
+    color: #000;
+    background-color: orange;
+    padding: .5em;
+    /* margin-top: 2em; */
+    font-family: Monteserrat-Black;
+    border-radius: 20px;
+}
+
 section p {
     font-family: Monteserrat-Light;
     font-size: 1.1rem;
@@ -352,8 +367,13 @@ section p {
 
 section.content ul li {
     margin-top: 1em;
+    margin-bottom: 1em;
     list-style-type: decimal;
     font-size: 1.1rem;
+}
+
+section.content ul, p {
+    margin-bottom: 2em;
 }
 
 .pagination {
