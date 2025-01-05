@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2</title>
+    <link rel="stylesheet" href="../style/Cos121.css">
+</head>
+<body>
+    <!-- The header is meant to cover the nav bar too, including the logo -->
+        <div class="profile">RA</div>
+        <header class="desktop-nav">
+            <h1><span class="Learn">Learn</span>ify</h1>
+            <nav>
+                <ul class="nav-links">
+                <li><p><a href="../Frontend/index.html">Home</a></p></li>
+                <li><p>
+                    <div class="hidden">
+                        <button class="DropDown-Button">More</button>
+                        <div class="Drop-Menu">
+                            <a href="#">Performance</a>
+                            <a href="#">Counseling</a>
+                            <a href="#">Forum</a>
+                        </div>
+                    </div></p></li>
+                <li><p><a href="">Module Quiz</a></p></li>
+                <li><p><a href="../Frontend/About.html">About</a></p></li>
+                </ul>
+            </nav>
+        
+
+            <div class="hamburger showOnMobile" onclick="showNav()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+    
+            <div class="reverse-hamburger" onclick="hideNav()">
+                <div></div>
+                <div></div>
+            </div>
+        </header>
+
+    <div class="module-btn">
+        <h1><span class="Learn">Module</span>2</h1>
+    </div>
+    <div class="Sub-header">
+        <div class="go-back"><a href="../Frontend/cos121.html">&lt; Module 2</a></div>
+        <button class="quizButton"><a href="">Module Quiz</a></button>
+    </div>
+
+    <!-- <div class="HomeContent1">
+        <h1>COS 121</h1>
+        <h1>Keywords, Variables and Assignment statements</h1>
+    </div> -->
+
+    <!-- This is for the Lecture Overview part -->
+   <!--  <div class="Lectures-Overview">
+        <div class="lectures-overview-header">
+            <h2>Lectures and Notes on Cos211</h2>
+
+        </div> -->
+
+<!--Please this is the format we are to use in editing, if the lecture you are editing does'nt have a list or contain more complex text and statement then can you adjust it-->
+    <section>
+        <main class="lecture-content">
+
+            <div class="lecture-heading">
+                <h1><span class="cos121">(COS121)</span></h1>
+                <h1>Introduction To Array</h1>
+            </div><br>
+
+                <div class="lecture-note">
+                    <div class="lecture-module-intro">
+                        <P>An array is a collection of elements of the same data type stored in contiguous memory locations. Arrays are used to store and manipulate large amounts of data.</P>
+                    </div><br>
+
+                    <div>
+                            <div class="inner-heading">
+                                <h3>Characteristics of Arrays</h3>
+                            </div>
+
+                                <div class="type-list">
+                                    <ol> 
+                                        <li>All elements in an array are of the same data type.</li> 
+
+                                        <li>Each element in an array is identified by an index or subscript.</li>
+
+                                        <li>Arrays are stored in contiguous memory locations.</li> 
+
+                                        <li>Arrays have a fixed size that is specified when the array is created.</li>
+                                    </ol>
+                                </div><br>
+
+                            <div class="inner-heading">
+                                 <h3>Types of Arrays</h3>
+                            </div>
+                                <div class="type-list">
+                                    <ol>
+                                        <li>One-dimensional array: A list of elements of the same data type.</li>
+
+                                        <li>Multi-dimensional array: A table or matrix of elements of the same data type.</li>
+                                    </ol>
+                                </div><br>
+
+                                <div class="inner-heading">
+                                    <h3>Declaring Arrays</h3>
+                                </div>
+    
+                                    <div class="type-list">
+                                        <ol> 
+                                            <li>The syntax for declaring a one-dimensional array is: data_type array_name[array_size];</li> 
+    
+                                            <li>The syntax for declaring a multi-dimensional array is: data_type
+                                                array_name[array_size1][array_size2];.</li>
+                                        </ol>
+                                    </div><br>
+
+                                <div class="inner-heading">
+                                    <h3>Initializing Arrays</h3>
+                                </div>
+    
+                                    <div class="type-list">
+                                        <ol> 
+                                            <li>Arrays can be initialized when they are declared using the syntax: data_type array_name[array_size] = {element1, element2, ...};</li> 
+    
+                                            <li>Arrays can also be initialized using a loop.</li>
+                                        </ol>
+                                    </div><br>
+
+                                <div class="inner-heading">
+                                    <h3>Initializing Arrays</h3>
+                                </div>
+        
+                                   <div class="type-list">
+                                        <ol> 
+                                            <li>Array elements can be accessed using their index or subscript.</li> 
+    
+                                            <li>The syntax for accessing an array element is: array_name[index].</li>
+                                        </ol>
+                                    </div><br>
+
+                                <div>
+                        
+                                        <h3 class="inner-heading">Exaples:</h3>
+
+                                        <p>Example of a One-Dimensional Array:</p>
+                                        <p>int scores[5] = {90, 80, 70, 60, 50};</p>
+                                        <p>printf(&quot;%d&quot;, scores[0]); // prints 90</p><br>
+
+                                        <p>Example of a Multi-Dimensional Array:</p>
+                                        <p>int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};</p>
+                                        <p>printf(&quot;%d&quot;, matrix[0][1]); // prints 2</p>
+                                        <p>printf(&quot;%d&quot;, matrix[1][2]); // prints 6</p><br>
+
+                                        <p>Example of Accessing Array Elements:</p>
+                                        <p>int numbers[3] = {10, 20, 30};</p>
+                                        <p>printf(&quot;%d&quot;, numbers[1]); // prints 20</p>
+                                        <p>printf(&quot;%d&quot;, numbers[2]); // prints 30</p>
+                                        <p>printf(&quot;%d&quot;, numbers[0]); // prints 10</p><br>
+                                        
+                                        <p>Example of Initializing Arrays Using a Loop:</p>
+                                        <p>int numbers[5];</p>
+                                        <p>for (int i = 0; i &lt; 5; i++) {</p>
+                                            <p>numbers[i] = i * 10;</p>
+                                        <p>}</p>    
+                                        
+                                    </div><br>
+                                    </fieldset>
+                                    
+                                
+                    </div>
+
+                </div>
+            
+        </main>
+        <div class="pagination">
+            <button class="prev"><a href="../lectures/lecture3.html"><span><</span> Prev Lecture</a></button>
+            <button class="next"><a href="../lectures/lecture5.html">Lecture <span>></span></a></button>
+        </div>
+    </section>
+</body>
+</html>
