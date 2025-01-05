@@ -73,7 +73,7 @@ header.desktop-nav {
     justify-content: space-between;
     position: fixed;
     /* top: 50px; */
-    z-index: 900;
+    z-index: 1;
 }
 
 header.desktop-nav .hamburger>div {
@@ -110,6 +110,7 @@ header.desktop-nav .reverse-hamburger {
     display: none;
     cursor: pointer;
 }
+
 
 .mobile-nav {
     display: none;
@@ -601,4 +602,44 @@ footer {
         /* justify-content: space-between; */
     }
 
+}
+
+
+
+
+
+
+
+
+
+/* loading */
+
+
+.loading{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: rgba(80, 0, 0, 0.199);
+    z-index: 900;
+}
+.loading-content{
+    width: 15rem;
+    height: 13rem;
+    border-radius: 10px;
+    background-color: black;
+    color: orange;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-icon{
+    width: 5rem;
 }

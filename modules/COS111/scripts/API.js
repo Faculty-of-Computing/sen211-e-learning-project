@@ -5,6 +5,10 @@
 // console.log(document.getElementById("contentOne"))
 
 async function fetchCourseContent(contentToFetch) {
+
+// loading indicator
+  document.getElementById('loadingIndicator').style.display = 'flex';
+
     try {
       const response = await fetch('https://cos1.vercel.app/api/content');
   
@@ -16,12 +20,20 @@ async function fetchCourseContent(contentToFetch) {
         // console.log(response);
         console.log('Course Content:', data[contentToFetch].content);
         localStorage.setItem("Content", JSON.stringify(data[contentToFetch].content));
-        window.location.href = "../../lessons/details.html";
+
+         // Hid the loading indicator once the content is fetched
+         document.getElementById('loadingIndicator').style.display = 'none';
+
+         window.location.href = "../COS111/lessons/details.html";
+        //window.location.href= "./lessons/details.html";
       } else {
         console.error('Failed to fetch course content:', await response.json());
+
       }
     } catch (error) {
       console.error('Error:', error);
+      document.getElementById('loadingIndicator').style.display = 'none';
+
     }
   }
 
