@@ -1,0 +1,27 @@
+/*
+ * NOTE DON'T DELETE THIS FILE, THIS HELPS WITH AUTOMATIC IMPORTS IN JS 
+ * AND OTHER AUTOMATIC SETTINGS NEEDED FOR IMPROVED DX IN JS
+ * TYPE CHECKING HAS BEEN DISABLED SO YOU HAVE NOTHING TO WORRY ABOUT
+ */
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "checkJs": false,
+        "allowJs": true,
+        "lib": [
+            "ESNext",
+            "DOM",
+            "DOM.Iterable",
+            "DOM.AsyncIterable"
+        ]
+    },
+    "include": [
+        "./**/*.js"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

@@ -1,4 +1,4 @@
-import { studentDataIsSaved } from "./firebase";
+import { studentDataIsSaved } from "./firebase.js";
 
 export function disableFields() {
   document.querySelectorAll("fieldset, button").forEach((element) => {

@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
 
   const googleBtn = document.querySelector("#google-auth");
   // @ts-ignore
-  googleBtn.onclick = async () => {
+  googleBtn.onclick = () => {
     disableFields();
     googleAuth()
       .then(() => {
