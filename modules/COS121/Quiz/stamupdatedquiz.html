@@ -1,0 +1,111 @@
+<body>
+  <main class="the-main-of-all">
+      
+      <header class="logo-quiz">
+        <h1><span>Learn</span>ify</h1>
+        <h2>Quiz Home</h2>
+    </header>
+    
+    
+    
+    <section class="landing-page-covered-details">
+        <div class="landing-content">
+        
+        
+           <div class="bg-btn">
+               <button type="button" class="landingup-btn" id="landingback-btn">Back</button>
+               <button type="button" class="landingup-btn quizguide-btn" id="quizguide-btn">Guide</button>
+           </div>
+            <div class="landing-page-content-text"><h1>Quiz Content</h1><div class="p-text-div"><p>Welcome! This page leads to the quiz section as you're about taking a quiz on a Course COS 121. Kindly visit the quiz guide before proceeding to quiz page,,</p></div></div>
+            <button type="button" class="landingpage-continue-btn" id="landingpage-continue-btn">Start Quiz</button>
+        </div>
+            
+    </section>
+        
+        
+    
+      
+  </main>
+  
+  
+  
+  
+  <div  class="guide-pop " >
+      
+      <h2>Guides for quiz</h2>
+      <span class="guideinfo">1. Read questions before choosing ur answer</span>
+      <span class="guideinfo">2. Select the correct option</span>
+      <span class="guideinfo">3. Click on prev button to return</span>
+      <span class="guideinfo">4. Click on next button to move on</span>
+      <span class="guideinfo">5. Submit and check score</span>
+      
+      <div class="egroup-btn">
+          <button class=" guideinfo-btn  exitinfo-btn" id="exitinfo-btn">Exit Info</button>
+          
+      </div>
+      
+  </div>
+  
+  
+  
+  
+  
+  <div class="quiz-main" align="center" id="quiz"> 
+      
+      
+      
+      <div class="gohome-h2">
+          <button type="button" class="go-home-btn"id="go-home-btn">Home</button>
+          <h2 align="">Course (Quiz): COS 121</h2>
+      </div>
+    <br>
+      
+    <div class="quiz-container" id="quiz">
+        <span id="question-number" hidden>3</span>
+        <h2 class="quiz-question" id="question"> What is the primary goal of algorithm design in programming?</h2><br><hr>
+        
+        <section class="option-section">
+            <div class="options">
+                <input type="radio" name="option" value="a" id="first" required >
+                <label for="first" class="answer-label">To write efficient codes</label>
+            </div>
+            <div class="options">
+                <input type="radio" name="option" id="second" value="b" required >
+                <label for="second" class="answer-label">To solve complex problem</label>
+            </div>
+            <div class="options">
+                <input type="radio" id="third" name="option" value="c" required >
+                <label for="third" class="answer-label">To design a user interface</label>
+            </div>
+            <div class="options">
+               <input type="radio" id="fourth" name="option" value="d" required >
+               <label for="fourth" class="answer-label">To optimize memory usage</label>
+            </div>
+            <br><br><br><br>
+            <hr><br>
+
+            <div class="pn-btn" id="prev-btn">
+                <button class="left-btn" > <- Prev</button>
+                <div class="quiz-count">( <span id="page-count">1</span>/<strong id="strong-total">20</strong>)</div>
+                <button type="button" class="right-btn but-btn" id="next-btn">Next -></button> 
+            </div>
+            <div class="submit-div"> <button type="button" class="but-btn submit" id="submit">Submit</button></div>
+            
+        </section>
+    </div>
+  </div><br><br><br>
+  
+  
+  
+  
+  
+  <div>
+      
+      <div class="result-div" id="result">
+          <h2 class="h2" id="score">Questions Answered</h2>
+          <div class="reload-quiz">
+              <button type="button" onclick="reloadQuiz();" id="reload-btn">Reload Quiz</button>
+          </div>
+     </div>
+  </div>
+</body>
