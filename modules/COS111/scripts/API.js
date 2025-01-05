@@ -16,7 +16,7 @@ async function fetchCourseContent(contentToFetch) {
         // console.log(response);
         console.log('Course Content:', data[contentToFetch].content);
         localStorage.setItem("Content", JSON.stringify(data[contentToFetch].content));
-        window.location.href = "../COS111/lessons/details.html";
+        window.location.href = "../Frontend/lessons/details.html";
       } else {
         console.error('Failed to fetch course content:', await response.json());
       }
