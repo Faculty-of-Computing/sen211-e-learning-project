@@ -240,7 +240,7 @@ header.desktop-nav .reverse-hamburger {
 
 .readmore {
     position: relative;
-    width: 7rem;
+    width: 5.5rem;
     height: 2rem;
     background: black;
     color: white;
@@ -332,7 +332,7 @@ header.desktop-nav .reverse-hamburger {
 section.content {
     position: relative;
     top: 150px;
-    padding: 0 2em;
+    padding: 2rem 2em;
 }
 
 section.content .cos {
@@ -591,11 +591,11 @@ footer {
 
     footer {
         width: 100%;
-        height: 30rem;
+        height: 25rem;
     }
 
     .footer-container {
-        height: 25rem;
+        height: 22rem;
 
         display: flex;
         flex-direction: column;
@@ -642,4 +642,14 @@ footer {
 }
 .loading-icon{
     width: 5rem;
+}
+
+#error{
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem 0;
+    align-items: center;
+    /* border: 1px solid; */
+    width: 100%;
+    height: 100%;
 }

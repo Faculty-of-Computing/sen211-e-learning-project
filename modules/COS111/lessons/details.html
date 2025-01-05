@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COS111</title>
     <link rel="stylesheet" href="../styles/demo.css">
 </head>
+
 <body>
     <header class="desktop-nav">
         <h1><span id="Learn">Module</span> 1</h1>
@@ -37,48 +39,60 @@
         </nav>
 
     </div>
-<div class="GoBack">
-<a href="../index.html"><button class="goBackButton">< Go back</button></a>
-<a href="../quizzes/Quiz.html"><button class="quizButton"> Module quiz</button></a>
-</div>
+    <div class="GoBack">
+        <a href="../index.html"><button class="goBackButton">
+                < Go back</button></a>
+        <a href="../quizzes/Quiz.html"><button class="quizButton"> Module quiz</button></a>
+    </div>
 
-<section class="content">
-<h4 class="cos">COS111</h4>
-<div class="fetched-content">
-<h2>Innovation in Artificial Intelligence and Human-Computer Interaction</h2>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A maiores eos corporis quas. Beatae iusto esse placeat fugiat laudantium ullam distinctio labore adipisci, cumque, necessitatibus ab voluptates. Suscipit tempora culpa cumque, ut laudantium consectetur incidunt? Reiciendis accusamus nihil explicabo eius.</p>
+    <section class="content">
+        <h4 class="cos">COS111</h4>
+        <div class="fetched-content">
+            <h2>Innovation in Artificial Intelligence and Human-Computer Interaction</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A maiores eos corporis quas. Beatae iusto esse
+                placeat fugiat laudantium ullam distinctio labore adipisci, cumque, necessitatibus ab voluptates.
+                Suscipit tempora culpa cumque, ut laudantium consectetur incidunt? Reiciendis accusamus nihil explicabo
+                eius.</p>
 
-<ol>
-<li class="olHeader"><h3>The Evolution of Artificial and Human Computer Interaction </h3> </li>
-<ul>
-<li>
-<h4>The Rise of Artificial Intelligence</h4>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nesciunt quos aliquam tempore neque suscipit corrupti, eveniet velit eligendi, voluptatem tenetur maxime? Ea porro alias nihil non officiis aspernatur molestiae.</p>
-</li>
-<li>
-<h4>The Transformation of Human-Computer Interaction</h4>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nesciunt quos aliquam tempore neque suscipit corrupti, eveniet velit eligendi, voluptatem tenetur maxime? Ea porro alias nihil non officiis aspernatur molestiae.</p>
-</li>
-</ul>
-</ol>
-</div>
+            <ol>
+                <li class="olHeader">
+                    <h3>The Evolution of Artificial and Human Computer Interaction </h3>
+                </li>
+                <ul>
+                    <li>
+                        <h4>The Rise of Artificial Intelligence</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nesciunt quos aliquam tempore
+                            neque suscipit corrupti, eveniet velit eligendi, voluptatem tenetur maxime? Ea porro alias
+                            nihil non officiis aspernatur molestiae.</p>
+                    </li>
+                    <li>
+                        <h4>The Transformation of Human-Computer Interaction</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nesciunt quos aliquam tempore
+                            neque suscipit corrupti, eveniet velit eligendi, voluptatem tenetur maxime? Ea porro alias
+                            nihil non officiis aspernatur molestiae.</p>
+                    </li>
+                </ul>
+            </ol>
+        </div>
 
-<div class="pagination">
-<button class="prev"><span><</span> Prev Lecture</button>
-<button class="next">Next Lecture <span>></span></button>
-</div>
-</section>
+        <div class="pagination">
+            <button class="prev"><span>
+                    < </span> Prev Lecture</button>
+            <button class="next">Next Lecture <span>></span></button>
+        </div>
+    </section>
 
-<script src="../scripts/App.js"></script>
-<!-- <script src="API.js"></script> -->
-<script>
-let fetchedContent = JSON.parse(localStorage.getItem("Content"));
-if (fetchedContent) {
-    document.querySelector(".fetched-content").innerHTML = fetchedContent;
-}
-else {
-    document.querySelector(".fetched-content").textContent = "No data found";
-}
-</script>
+    <script src="../scripts/App.js"></script>
+    <!-- <script src="API.js"></script> -->
+    <script>
+        let fetchedContent = JSON.parse(localStorage.getItem("Content"));
+        if (fetchedContent) {
+            document.querySelector(".fetched-content").innerHTML = fetchedContent;
+        }
+        else {
+            document.querySelector(".fetched-content").textContent = "No data found";
+        }
+    </script>
 </body>
+
 </html>
