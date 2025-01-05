@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./../styles/Footer.css">
     <script src="./../../../scripts/firebase.js" type="module"></script>
     <script type="module">
-        import { uploadResult } from './../../../scripts/firebase.js';
+        import { saveResult } from './../../../scripts/firebase.js';
 
         var quizState = 'wait'
         document.addEventListener("DOMContentLoaded", function () {
@@ -124,10 +124,11 @@
                             });
 
                             console.log("Final Score:", score);
-                            uploadResult({
+                            saveResult({
                                 score: score,
                                 total: quizData.questions.length,
-                                course: quizData.name
+                                course: quizData.name,
+                                duration: timeLeft,
                             })
                                 .then(response => {
                                     console.log(response); // Expected: "Data uploaded successfully"
