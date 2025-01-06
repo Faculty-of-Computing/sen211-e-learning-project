@@ -14,7 +14,8 @@ if (
   url.searchParams.has("duration") ||
   url.searchParams.has("course")
 ) {
-  const performanceTableContainer = document.getElementById("performance-table");
+  const performanceTableContainer =
+    document.getElementById("performance-table");
   performanceTableContainer.style.display = "";
   const scoreFromResult = url.searchParams.get("score");
   const totalFromResult = url.searchParams.get("total");
@@ -158,9 +159,9 @@ const rows = results.map((result) => {
   }
   return `
   <span>
-    ${time.getFullYear().toString().slice(2)}/
-    ${(time.getMonth() + 1).toString().padStart(2, "0")}/
-    ${time.getDate().toString().padStart(2, "0")}
+  ${time.getDate().toString().padStart(2, "0")} / 
+  ${(time.getMonth() + 1).toString().padStart(2, "0")} /
+    ${time.getFullYear().toString().slice(2)}
   </span>
   <span>${result.course}</span>
   <span>${result.score}/${result.total}</span>

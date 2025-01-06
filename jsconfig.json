@@ -10,12 +10,20 @@
         "moduleResolution": "bundler",
         "checkJs": false,
         "allowJs": true,
+        "strict": true,
+        "rootDir": ".",
+        "baseUrl": ".",
         "lib": [
             "ESNext",
             "DOM",
             "DOM.Iterable",
             "DOM.AsyncIterable"
-        ]
+        ],
+        "paths": {
+            "/*": [
+                "./*"
+            ]
+        }
     },
     "include": [
         "./**/*.js",
