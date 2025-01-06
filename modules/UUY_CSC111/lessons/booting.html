@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Computer Ethics | UUY-CSC 111</title>
+        <link rel="stylesheet" href="../styles/demo.css">
+    </head>
+
+    <body>
+        <header class="desktop-nav">
+            <h1>
+                <span id="Learn">Module</span> 1
+            </h1>
+
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Topics</li>
+                    <li>Module Quiz</li>
+                    <li>About/Feedback</li>
+                </ul>
+            </nav>
+
+            <div class="hamburger showOnMobile" onclick="showNav()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="reverse-hamburger" onclick="hideNav()">
+                <div></div>
+                <div></div>
+            </div>
+        </header>
+
+        <div class="mobile-nav">
+            <nav>
+                <ul>
+                    <li>Home <span>></span></li>
+                    <li>Topics <span>></span></li>
+                    <li>Module Quiz <span>></span></li>
+                    <li>About/Feedback <span>></span></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="GoBack">
+            <a href="../index.html"><button class="goBackButton">< Go back</button></a>
+            <a href="../quizzes/Quiz.html"><button class="quizButton"> Module quiz</button></a>
+        </div>
+
+        <section class="content">
+            <h4 class="cos">COS112</h4>
+            <div class="fetched-content">
+                <h2>Innovation in Artificial Intelligence and Human-Computer Interaction</h2>
+                <p>Booting is the process of starting a computer and loading the operating system. It involves a
+                    series of steps that take place automatically when the computer is turned on.</p>
+                <h3>Steps Involved in Booting:</h3>
+                <ul>
+                    <li><strong>Power-On Self-Test (POST)</strong>: the computer performs a series of diagnostic tests to ensure
+                        that the hardware is functioning properly</li>
+                    <li><strong>BIOS (Basic Input/Output System) Initialization</strong>: the BIOS is loaded into memory and
+                        initializes the computer's hardware components</li>
+                    <li><strong>Device Detection</strong>: the BIOS detects and configures the computer's hardware devices, such
+                        as the keyboard, mouse, and hard drive</li>
+                    <li><strong>Operating System Loading</strong>: the BIOS loads the operating system into memory and transfers
+                        control to it</li>
+                    <li><strong>Operating System Initialization</strong>: the operating system initializes its components and starts
+                        the login process</li>
+                </ul>
+                <h3>Types of Booting:</h3>
+                <ul>
+                    <li><strong>Cold Boot</strong>: the computer is started from a completely powered-off state</li>
+                    <li><strong>Warm Boot</strong>: the computer is restarted without being completely powered off</li>
+                    <li><strong>Network Boot</strong>: the computer is started from a network location, rather than from a local hard
+                        drive</li>
+                </ul>
+                <h3>Boot Devices:</h3>
+                <ul>
+                    <li><strong>Hard Drive</strong>: the most common boot device, which stores the operating system and program
+                        files</li>
+                    <li><strong>Solid-State Drive (SSD)</strong>: a faster and more reliable alternative to traditional hard drives</li>
+                    <li><strong>USB Drive</strong>: a portable storage device that can be used to boot a computer</li>
+                    <li><strong>CD/DVD Drive</strong>: a device that can be used to boot a computer from a CD or DVD</li>
+                </ul>
+                <h3>Troubleshooting Boot Issues:</h3>
+                <ul>
+                    <li><strong>Check the power cord and ensure the computer is receiving power</strong></li>
+                    <li><strong>Verify that the BIOS is configured correctly</strong></li>
+                    <li><strong>Check for loose connections or faulty hardware</strong></li>
+                    <li><strong>Try booting in safe mode or using a bootable USB drive</strong></li>
+                </ul>
+                <h3>Examples:</h3>
+                <ul>
+                    <li>A computer fails to boot and displays a "No boot device found" error. What could be the
+                        cause?</li>
+                    <li>A computer takes a long time to boot. What steps can be taken to improve the boot time?</li>
+                </ul>
+            </div>
+
+            <div class="pagination">
+                <button class="prev"><span><</span> Prev Lecture</button>
+                <button class="next">Next Lecture <span>></span></button>
+            </div>
+        </section>
+
+        <script src="../sripts/App.js"></script>
+        <!-- <script src="API.js"></script> -->
+        <script>
+        </script>
+    </body>
+</html>

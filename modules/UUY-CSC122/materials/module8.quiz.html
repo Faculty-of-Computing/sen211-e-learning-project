@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/style.css">
-    <link rel="stylesheet" href="../styles/module4.quiz.style.css">
+    <link rel="stylesheet" href="../styles/module8.quiz.style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,7 +13,7 @@
         rel="stylesheet">
     <script src="./../../../scripts/firebase.js" type="module"></script>
     <script type="module">
-        import { uploadResult } from './../../../scripts/firebase.js';
+        import { saveResult } from './../../../scripts/firebase.js';
 
         var quizState = 'wait'
         document.addEventListener("DOMContentLoaded", function () {
@@ -116,10 +116,11 @@
                             });
 
                             console.log("Final Score:", score);
-                            uploadResult({
+                            saveResult({
                                 score: score,
                                 total: quizData.questions.length,
-                                course: quizData.name
+                                course: quizData.name,
+                                duration: timeLeft,
                             })
                                 .then(response => {
                                     console.log(response); // Expected: "Data uploaded successfully"
@@ -176,12 +177,12 @@
     <div class="timer-head hide">Time left: ...</div>
     <div class="main">
         <div class="header-section">
-            <img src="" class="g4-logo" />
+            <h1><span id="Learn">Module</span> 8</h1>
             <div class="user-slug">
-                EM
+                AE
             </div>
         </div>
-        <p class="welcome-message">Welcome, Gideon Jones </p>
+        <p class="welcome-message">Welcome, Annabel Eteng </p>
         <p><a href="../../../index.html" class="goto">Home</a> /<a href="../index.html" class="goto">Module 8</a>/Quiz
         </p>
         <span class="status-message">Loading quiz...</span>
@@ -223,4 +224,3 @@
 </body>
 
 </html>
-

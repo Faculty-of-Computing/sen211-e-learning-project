@@ -1,0 +1,584 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Monteserrat !important;
+}
+
+body {
+    color: white;
+    background: black;
+    position: relative;
+}
+
+@font-face {
+    font-family: Monteserrat;
+    src: url(./../Fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Monteserrat-Black;
+    src: url(./../Fonts/Montserrat-Black.ttf);
+}
+
+@font-face {
+    font-family: Monteserrat-Light;
+    src: url(./../Fonts/Montserrat-Light.ttf);
+}
+
+#Learn {
+    background-color: orange;
+    color: black;
+    font-family: Monteserrat-Black;
+}
+
+header.desktop-nav h1 {
+    font-family: Monteserrat-Black;
+}
+
+header.desktop-nav nav ul {
+    display: flex;
+    /* border: 2px solid white; */
+    justify-content: space-around;
+    width: 50vw;
+}
+
+header.desktop-nav nav ul li {
+    list-style-type: none;
+}
+
+header.desktop-nav nav ul li {
+    font-size: 1em;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+header.desktop-nav nav ul li:hover {
+    color: orange;
+}
+
+header.desktop-nav {
+    padding: 0 1em;
+    height: 7rem;
+    width: 100%;
+    background: #000;
+    /* border: 2px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    /* top: 50px; */
+    z-index: 900;
+}
+
+header.desktop-nav .hamburger>div {
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+}
+
+header.desktop-nav .hamburger>div:nth-child(2) {
+    margin-top: .3em;
+    margin-bottom: .3em;
+}
+
+header.desktop-nav .reverse-hamburger>div {
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+}
+
+header.desktop-nav .reverse-hamburger>div:nth-child(1) {
+    transform: rotate(-35deg);
+}
+
+header.desktop-nav .reverse-hamburger>div:nth-child(2) {
+    transform: rotate(35deg);
+}
+
+header.desktop-nav .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+header.desktop-nav .reverse-hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.mobile-nav nav {
+    position: fixed;
+    height: 85vh;
+    background-color: #000;
+    width: 100%;
+    z-index: 1000;
+    animation: animateNav .5s;
+    bottom: 0;
+}
+
+@keyframes animateNav {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+.mobile-nav nav ul li {
+    color: #fff;
+    list-style-type: none;
+    margin: 2em 2em;
+    display: flex;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+.mobile-nav nav ul li:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+@media only screen and (min-height:768px) {
+    .mobile-nav nav {
+        height: 91vh;
+    }
+}
+
+.HomeContent1 {
+    height: 5rem;
+    padding: 2em;
+    position: relative;
+    top: 80px;
+    margin-bottom: 5.5em;
+}
+
+.Lectures-Overview {
+    padding: 2rem;
+    margin-top: 1em;
+}
+
+.lectures-overview-header {
+    display: flex;
+    height: 4rem;
+    margin: 0 0 1rem 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.module-quiz {
+    width: 10rem;
+    height: 3rem;
+    background-color: transparent;
+    color: orange;
+    font-size: 20px;
+    cursor: pointer;
+    border: 4px solid orange;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.quizButton:hover {
+    padding: .5em .8em;
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.templates {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    /* border: 1px solid; */
+}
+
+.template1 {
+    width: 90%;
+    background: rgb(38, 31, 31);
+    margin: .5rem 0 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 1rem;
+    justify-content: space-between;
+    font-size: 1em;
+    align-items: left;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.template1 p {
+    font-family: Monteserrat;
+    font-size: 1.2rem;
+    margin: .8em 0;
+}
+
+.template1:hover {
+    transform: scale(1.05);
+}
+
+.templates .template1 img {
+    width: 100%;
+}
+
+.templates .template1 img.svg {
+    width: 20px;
+}
+
+.readmore {
+    position: relative;
+    width: 7rem;
+    height: 2rem;
+    background: black;
+    color: white;
+    font-size: 12px;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    left: 50%;
+    cursor: pointer;
+}
+
+.readmore:hover {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+}
+
+.template1 a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* mediaquery part @sisco😌 */
+/* I decided to work on the media query like you asked */
+
+@media only screen and (max-width:1300px) {
+
+    .templates {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header.desktop-nav {
+        width: 97%;
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .templates {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    header.desktop-nav nav ul {
+        display: none;
+    }
+
+    .showOnMobile {
+        display: block !important;
+    }
+
+    .readmore {
+        left: 50%;
+    }
+
+    section.question-area {
+        flex-direction: column;
+    }
+}
+
+.GoBack {
+    position: relative;
+    top: 120px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+}
+
+.GoBack .goBackButton {
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.quizButton {
+    padding: .3em .5em;
+    border: 1px solid orange;
+    background: none;
+    color: orange;
+    transition: .3s;
+}
+
+section.content {
+    position: relative;
+    top: 150px;
+    padding: 0 2em;
+}
+
+section.content .cos {
+    font-family: Monteserrat-Light;
+}
+
+section.content .fetched-content h3 {
+    font-family: Monteserrat-Black;
+    font-size: 1.8em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+section.content .fetched-content h3:first-child {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+section p {
+    font-family: Monteserrat-Light;
+    font-size: 1.1rem;
+}
+
+section.content ul li {
+    margin-top: 1em;
+    list-style-type: decimal;
+    font-size: 1.1rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+.pagination2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+    position: relative;
+    bottom: -200px;
+    padding: 0 2em;
+}
+
+.pagination .prev,
+.pagination2 .prev {
+    width: 30%;
+    text-align: right;
+    padding: .2em .5em;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination .next,
+.pagination2 .next {
+    width: 30%;
+    text-align: left;
+    padding: .2em .5em;
+    border: 1px solid orange;
+    background: none;
+    color: orange;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (min-width: 992px) {
+
+    section.content {
+        max-width: 70%;
+    }
+}
+
+.GoBack .time span {
+    color: orange;
+}
+
+section.question-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2em;
+    position: relative;
+    top: 170px;
+}
+
+section.question-area .options div {
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: .5em;
+    margin-top: 1em;
+}
+
+section.question-area .indicator {
+    margin-top: 2em;
+}
+
+section.question-area .indicator p {
+    font-size: .9em;
+    font-family: Monteserrat-Light;
+}
+
+section.question-area .indicator .bottom {
+    margin-top: 1em;
+}
+
+section.question-area .indicator .bottom div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+section.question-area .indicator .bottom div div.answered {
+    width: 10px;
+    height: 10px;
+    background-color: lime;
+    border-radius: 50%;
+}
+
+section.question-area .indicator .bottom div div.skipped {
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+section.question-area .indicator .bottom div span {
+    font-size: .8rem;
+    font-family: Monteserrat-Light;
+}
+
+section.question-area .answered-questions {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 10px;
+}
+
+section.question-area .answered-questions div {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #777;
+    margin-top: .5em;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 1.1em;
+    padding-top: 0.3em;
+    font-family: Monteserrat;
+}
+
+
+
+
+.footerH1 {
+    font-family: Monteserrat-Black;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+footer {
+    width: 100%;
+    height: 12rem;
+    background: rgb(66, 54, 54);
+    color: #ecf0f1;
+    padding: 20px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+
+    padding: 0 20px;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+    color: orange;
+    font-size: 20px;
+}
+
+.footer-column p {
+    margin: 5px 0;
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.social-media a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.social-media a:hover {
+    color: #3498db;
+}
+
+
+.nav-links {
+    max-width: fit-content;
+    display: grid;
+    gap: 18px
+}
+
+.link-part.end.go.start.hide {
+    visibility: hidden;
+    display: none;
+}
+
+.loading-gif.hide {
+    visibility: hidden;
+    display: none;
+}
+
+.question {
+    margin-block: 30px;
+}
+
+@media screen and (max-width:790px) {
+
+    footer {
+        width: 100%;
+        height: 30rem;
+    }
+
+    .footer-container {
+        height: 25rem;
+
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+
+}
