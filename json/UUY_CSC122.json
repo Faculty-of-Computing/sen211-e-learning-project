@@ -1,0 +1,206 @@
+{
+  "name": "UUY_CSC122 Quiz 1",
+  "time": 1800,
+  "questions": [
+    {
+      "question": "What is the primary function of Microsoft Word?",
+      "options": [
+         "To create spreadsheets",
+         "To create documents",
+         "To create presentations",
+         "To create databases"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the purpose of the formula bar in Microsoft Excel?",
+      "options": [
+         "To format cells",
+         "To create charts", 
+         "To enter formulas",
+         "To print worksheets"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the main advantage of using templates in Microsoft PowerPoint?",
+      "options": [
+         "To create complex animations",
+         "To add audio clips",
+         "To quickly create presentations",
+         "To customize fonts"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the shortcut key to save a document in Microsoft Word?",
+      "options": [
+         "Ctrl + P", 
+         "Ctrl + S", 
+         "Ctrl + C", 
+         "Ctrl + V"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the purpose of the AutoSum feature in Microsoft Excel?",
+      "options": [
+         "To format cells", 
+         "To create charts", 
+         "To quickly sum a range of cells", 
+         "To print worksheets"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "How do you insert a new slide in Microsoft PowerPoint?",
+      "options": [
+         "Click on the 'Insert' tab and select 'New Slide'", 
+         "Click on the 'Home' tab and select 'New Slide'", 
+         "Right-click on the slide pane and select 'New Slide'", 
+         "Press the 'Ctrl + M' keys"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the purpose of the 'Track Changes' feature in Microsoft Word?",
+      "options": [
+         "To format documents", 
+         "To insert tables", 
+         "To collaborate with others", 
+         "To print documents"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the shortcut key to copy a cell in Microsoft Excel?",
+      "options": [
+         "Ctrl + C",
+         "Ctrl + V",
+         "Ctrl + X",
+         "Ctrl + A"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How do you insert a table in Microsoft PowerPoint?",
+      "options": [
+         "Click on the 'Insert' tab and select 'Table'", 
+         "Click on the 'Home' tab and select 'Table'", 
+         "Right-click on the slide and select 'Table'", 
+         "Press the 'Ctrl + T' keys"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the purpose of the 'Spell Check' feature in Microsoft Word?",
+      "options": [
+         "To format documents", 
+         "To insert tables", 
+         "To check grammar and spelling", 
+         "To print documents"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the primary function of Microsoft Word?",
+      "options": [
+         "To create spreadsheets", 
+         "To create documents", 
+         "To create presentations", 
+         "To manage databases"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a feature of Microsoft Excel?",
+      "options": [
+         "Mail merge", 
+         "Formula editing", 
+         "Slide transitions", 
+         "Database management"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the purpose of the 'Normal View' in Microsoft PowerPoint?",
+      "options": [
+         "To view slide notes",
+         "To view slide thumbnails",
+         "To view slides in a linear format",
+         "To view slides in a slide show format"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "How do you insert a table in Microsoft Word?",
+      "options": [
+         "Using the 'Insert' tab and selecting 'Picture'", 
+         "Using the 'Insert' tab and selecting 'Table'", 
+         "Using the 'Format' tab and selecting 'Table'", 
+         "Using the 'Home' tab and selecting 'Table'"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the function of the 'AutoSum' feature in Microsoft Excel?",
+      "options": [
+         "To automatically format cells", 
+         "To automatically insert formulas", 
+         "To automatically sum a range of cells", 
+         "To automatically create charts"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "How do you add a new slide to a presentation in Microsoft PowerPoint?",
+      "options": [
+         "Using the 'Home' tab and selecting 'New Slide'", 
+         "Using the 'Insert' tab and selecting 'New Slide'", 
+         "Using the 'Slide Show' tab and selecting 'New Slide'", 
+         "Using the 'Review' tab and selecting 'New Slide'"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the purpose of the 'Header and Footer' feature in Microsoft Word?",
+      "options": [
+         "To add watermarks to a document", 
+         "To add page numbers to a document", 
+         "To add a table of contents to a document", 
+         "To add a footer to a document"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "How do you format cells in Microsoft Excel to display currency symbols?",
+      "options": [
+         "Using the 'Home' tab and selecting 'Number' and then 'Currency'", 
+         "Using the 'Format' tab and selecting 'Cells' and then 'Currency'", 
+         "Using the 'Insert' tab and selecting 'Symbol' and then 'Currency'", 
+         "Using the 'Review' tab and selecting 'Format' and then 'Currency'"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the purpose of the 'Transitions' feature in Microsoft PowerPoint?",
+      "options": [
+         "To add animations to a presentation", 
+         "To add slide transitions to a presentation", 
+         "To add sound effects to a presentation", 
+         "To add videos to a presentation"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "How do you save a document in Microsoft Word as a PDF file?",
+      "options": [
+         "Using the 'File' tab and selecting 'Save As' and then 'PDF'", 
+         "Using the 'Home' tab and selecting 'Save As' and then 'PDF'", 
+         "Using the 'Insert' tab and selecting 'Save As' and then 'PDF'", 
+         "Using the 'Review' tab and selecting 'Save As' and then 'PDF'"
+      ],
+      "correct": 0
+    }
+  ]
+}

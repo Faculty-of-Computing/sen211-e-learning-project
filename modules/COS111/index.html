@@ -11,7 +11,9 @@
 <body>
     <!-- The header is meant to cover the nav bar too, including the logo So note-->
     <header class="desktop-nav">
-       <a href="index.html"><h1><span id="Learn">Module</span> 1</h1> </a> 
+        <a href="index.html">
+            <h1><span id="Learn">Module</span> 1</h1>
+        </a>
         <nav>
             <ul class="nav-links">
                 <li onclick="location.href='./../../index.html'">Home</li>
@@ -48,6 +50,27 @@
         <p>(Intoduction to computing)</p>
     </div>
 
+    <div id="loadingIndicator" class="loading" style="display:none;">
+        <div class="loading-content">
+
+            <!-- <img class="loading-icon" src="./img/spinning-dots.svg" alt="img"> -->
+            <div id="loading-icon" style="display: none;">
+
+                <img class="loading-icon" src="./img/infinite-spinner.svg" alt="img">
+            </div>
+
+            <div id="error" style="display: none;">
+                    <h1>Oops...</h1>
+                    <h6>Please refresh  page</h6>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
     <!-- This is for the Lecture Overview part -->
     <div class="Lectures-Overview">
         <div class="lectures-overview-header">
@@ -63,58 +86,52 @@
                 <img src="./img/Img1.jpg" alt="">
                 <p>Introduction to Computer Organization and Systems (COS) </p>
 
-                <a onclick="fetchCourseContent('Introduction to Computer Organization and System')" id="contentOne"><button class="readmore">Read
-                        More <img src="../res/arrow-right-svgrepo-com.svg" class="svg" alt=""></button></a>
+                <a onclick="fetchCourseContent('Introduction to Computer Organization and System')"
+                    id="contentOne"><button class="readmore">Read
+                        More </button></a>
             </div>
 
             <div class="template1">
                 <img src="img/Img2.jpg" alt="">
                 <p>Concept of Computer System</p>
 
-                <a onclick="fetchCourseContent('Concepts of Computer System')"> <button class="readmore">Read More <img
-                            src="../res/arrow-right-svgrepo-com.svg" class="svg" alt=""></button></a>
+                <a onclick="fetchCourseContent('Concepts of Computer System')"> <button class="readmore">Read More</button></a>
             </div>
 
             <div class="template1">
                 <img src="img/Img3.jpg" alt="">
                 <p>Computer History</p>
-                <a onclick="fetchCourseContent('Computer History')"> <button class="readmore">Read More <img
-                            src="../res/arrow-right-svgrepo-com.svg" class="svg" alt=""></button></a>
+                <a onclick="fetchCourseContent('Computer History')"> <button class="readmore">Read More</button></a>
             </div>
 
             <div class="template1">
                 <img src="img/Img4.jpg" alt="">
                 <p>Generations of Computers</p>
-                <a onclick="fetchCourseContent('Generations of Computer')"> <button class="readmore">Read More <img
-                        src="../res/arrow-right-svgrepo-com.svg" class="svg" alt=""></button></a>
+                <a onclick="fetchCourseContent('Generations of Computer')"> <button class="readmore">Read More </button></a>
             </div>
 
             <div class="template1">
                 <img src="img/Img5.jpg" alt="">
                 <p>Number Systems</p>
-                <a onclick="fetchCourseContent('Number Systems')"> <button class="readmore">Read More <img
-                            src="../res/arrow-right-svgrepo-com.svg" class="svg" alt=""></button></a>
+                <a onclick="fetchCourseContent('Number Systems')"> <button class="readmore">Read More</button></a>
             </div>
 
             <div class="template1">
                 <img src="img/Img6.jpg" alt="">
                 <p>Programming Languages</p>
-                <a onclick="fetchCourseContent('Programming Languages')"> <button class="readmore">Read More <img
-                            src="../res/arrow-right-svgrepo-com.svg" class="svg" alt=""></button></a>
+                <a onclick="fetchCourseContent('Programming Languages')"> <button class="readmore">Read More </button></a>
             </div>
 
             <div class="template1">
                 <img src="img/Img1.jpg" alt="">
                 <p>Internet and Networking</p>
-                <a onclick="fetchCourseContent('Internet and Networking')"> <button class="readmore">Read More <img
-                            src="../res/arrow-right-svgrepo-com.svg" class="svg" alt=""></button></a>
+                <a onclick="fetchCourseContent('Internet and Networking')"> <button class="readmore">Read More </button></a>
             </div>
 
             <div class="template1">
                 <img src="img/Img2.jpg" alt="">
                 <p>Computer Viruses</p>
-                <a onclick="fetchCourseContent('Computer Viruses')"> <button class="readmore">Read More <img
-                            src="../res/arrow-right-svgrepo-com.svg" class="svg" alt=""></button></a>
+                <a onclick="fetchCourseContent('Computer Viruses')"> <button class="readmore">Read More </button></a>
             </div>
 
 
@@ -131,7 +148,7 @@
 
             <div class="footer-container">
                 <div class="footer-column">
-                    <h1 class="footerH1"><span id="Learn">Learn</span>ify</h1>
+                    <h1 class="footerH1"><span id="Learn">Module</span> 1</h1>
                     <p>&copy; 2025 Learnify. All rights reserved.</p>
                 </div>
                 <div class="footer-column">

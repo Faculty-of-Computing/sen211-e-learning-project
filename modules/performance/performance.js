@@ -1,18 +1,6 @@
 // @ts-check
 import { getUser, getUserResults } from "../../scripts/firebase.js";
-
-/**
- * @typedef {object} Result
- * @property {string} name
- * @property {number} score
- * @property {number} total
- * @property {string} duration
- * @property {string} course
- */
-
-await new Promise((res) => {
-  window.onload = () => res(true);
-});
+import "../../lib/chart.js"
 
 const performanceTableContainer = document.getElementById("performance-table");
 const url = new URL(location.href);
@@ -38,7 +26,7 @@ const user = await getUser();
 
 // @ts-ignore
 performanceTableContainer.innerHTML = `
-<h4 className="font-afacad text-[48px] font-bold leading-[35px] tracking-[-0.03em] text-left  text-primary">
+<h4 class="font-afacad text-[48px] font-bold leading-[35px] tracking-[-0.03em] text-left  text-primary">
   ${user.displayName}
 </h4>
 <table id="performance">
@@ -67,17 +55,17 @@ performanceTableContainer.innerHTML = `
     </tr>
   </tbody>
 </table>
-<div className="space-x-[15px]">
-  <span className="font-afacad font-semibold text-[24px] leading-[32px] text-primary">
+<div class="space-x-[15px]">
+  <span class="font-afacad font-semibold text-[24px] leading-[32px] text-primary">
     Quiz Evaluation:
   </span>
-  <span className="font-afacad font-medium text-[24px] leading-[32px] tracking-[-0.02em] text-white">
+  <span class="font-afacad font-medium text-[24px] leading-[32px] tracking-[-0.02em] text-white">
     Attempted: ${totalFromResult}
   </span>
-  <span className="font-afacad font-medium text-[24px] leading-[32px] tracking-[-0.02em] text-white">
+  <span class="font-afacad font-medium text-[24px] leading-[32px] tracking-[-0.02em] text-white">
     Passed: ${scoreFromResult}
   </span>
-  <span className="font-afacad font-medium text-[24px] leading-[32px] tracking-[-0.02em] text-white">
+  <span class="font-afacad font-medium text-[24px] leading-[32px] tracking-[-0.02em] text-white">
     Failed: ${+totalFromResult - +scoreFromResult}
   </span>
 </div>
@@ -113,13 +101,13 @@ function startCard(data) {
     });
   });
   return `
-    <div className="size-[251px] box-border flex items-center justify-center p-[21px_15px] gap-[32px] bg-[#1D1F21] xl:bg-transparent rounded-[20px] relative">
-      <span className="absolute font-afacad font-semibold text-[24px] leading-[32px] text-white top-3 left-0 right-0 w-full text-center inline-block">
+    <div class="size-[251px] box-border flex items-center justify-center p-[21px_15px] gap-[32px] bg-[#1D1F21] xl:bg-transparent rounded-[20px] relative">
+      <span class="absolute font-afacad font-semibold text-[24px] leading-[32px] text-white top-3 left-0 right-0 w-full text-center inline-block">
         ${data.title}
       </span>
-      <div className="size-[125px] relative before:content-[''] before:size-full before:bg-black before:opacity-30 before:border-[2px_solid_black] before:rounded-full before:absolute before:-z-10 z-0 font-afacad text-semibold text-white flex justify-center items-center">
-        <canvas id="${id}" className="-mt-2.5" />
-        <span className="absolute capitalize text-lg">${data.content}</span>
+      <div class="size-[125px] relative before:content-[''] before:size-full before:bg-black before:opacity-30 before:border-[2px_solid_black] before:rounded-full before:absolute before:-z-10 z-0 font-afacad text-semibold text-white flex justify-center items-center">
+        <canvas id="${id}" class="-mt-2.5"></canvas>
+        <span class="absolute capitalize text-lg">${data.content}</span>
       </div>
     </div>
     `;
@@ -148,6 +136,8 @@ startCardContainer.innerHTML += [
 
 const results = await getUserResults();
 const rows = results.map((result) => {
+  if (result.id === idFromResult) return "";
+
   /** @type {string} */
   let className,
     /** @type {string} */
@@ -171,13 +161,12 @@ const rows = results.map((result) => {
   </span>
   <span>${result.course}</span>
   <span>${result.score}/${result.total}</span>
-  {/* FIXME */}
   <span class="${className}">
     ${text}
   </span>
 `;
 });
 
-const historyFieldContainer = document.getElementById("history-fields");
-// @ts-ignore
-historyFieldContainer.innerHTML = rows.join(" ");
+// const historyFieldContainer = document.getElementById("history-fields");
+// // @ts-ignore
+// historyFieldContainer.innerHTML = rows.join(" ");

@@ -19,7 +19,8 @@
         ]
     },
     "include": [
-        "./**/*.js"
+        "./**/*.js",
+        "./*.d.ts"
     ],
     "exclude": [
         "node_modules"

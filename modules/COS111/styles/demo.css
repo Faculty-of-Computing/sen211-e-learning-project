@@ -73,7 +73,7 @@ header.desktop-nav {
     justify-content: space-between;
     position: fixed;
     /* top: 50px; */
-    z-index: 900;
+    z-index: 1;
 }
 
 header.desktop-nav .hamburger>div {
@@ -110,6 +110,7 @@ header.desktop-nav .reverse-hamburger {
     display: none;
     cursor: pointer;
 }
+
 
 .mobile-nav {
     display: none;
@@ -239,7 +240,7 @@ header.desktop-nav .reverse-hamburger {
 
 .readmore {
     position: relative;
-    width: 7rem;
+    width: 5.5rem;
     height: 2rem;
     background: black;
     color: white;
@@ -331,7 +332,7 @@ header.desktop-nav .reverse-hamburger {
 section.content {
     position: relative;
     top: 150px;
-    padding: 0 2em;
+    padding: 2rem 2em;
 }
 
 section.content .cos {
@@ -590,15 +591,65 @@ footer {
 
     footer {
         width: 100%;
-        height: 30rem;
+        height: 25rem;
     }
 
     .footer-container {
-        height: 25rem;
+        height: 22rem;
 
         display: flex;
         flex-direction: column;
         /* justify-content: space-between; */
     }
 
+}
+
+
+
+
+
+
+
+
+
+/* loading */
+
+
+.loading{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: rgba(80, 0, 0, 0.199);
+    z-index: 900;
+}
+.loading-content{
+    width: 15rem;
+    height: 13rem;
+    border-radius: 10px;
+    background-color: black;
+    color: orange;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-icon{
+    width: 5rem;
+}
+
+#error{
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem 0;
+    align-items: center;
+    /* border: 1px solid; */
+    width: 100%;
+    height: 100%;
 }
