@@ -1,0 +1,107 @@
+/* Base Styles */
+* {
+    color: white;
+    user-select: none;
+    font-family: "Afacad", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: "Inter", sans-serif;
+}
+
+/* Main Container */
+.main {
+    margin: auto;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #181818;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+/* Header Section */
+.header-section {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 2px solid #2c2c2c;
+}
+
+.g4-logo {
+    max-width: 180px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.g4-logo:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.user-slug {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #303030;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-slug:hover {
+    background-color: #404040;
+}
+
+/* Welcome Message */
+.welcome-message {
+    font-size: 22px;
+    margin: 20px 0;
+    color: #cccccc;
+}
+
+/* Breadcrumb Navigation */
+a.goto {
+    color: #f0a500;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 5px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a.goto:hover {
+    color: #ff6f00;
+    text-shadow: 0 0 5px #ff6f00;
+}
+
+a.goto:last-of-type {
+    font-weight: bold;
+}
+
+/* Content Section */
+.inside {
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.insi

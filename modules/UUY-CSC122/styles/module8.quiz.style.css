@@ -70,6 +70,12 @@ label {
     width: 100%;
 }
 
+#Learn {
+    background-color: orange;
+    color: black;
+    font-family: Monteserrat-Black;
+}
+
 .timer-head {
     position: fixed;
     top: 0;

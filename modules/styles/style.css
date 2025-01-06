@@ -244,6 +244,12 @@ a.goto:hover {
     color: #e65400;
 }
 
+#Learn {
+    background-color: orange;
+    color: black;
+    font-family: Monteserrat-Black;
+}
+
 @media (min-width: 992px) {
     .grid-item:hover {
         transform: scale(1.03);
