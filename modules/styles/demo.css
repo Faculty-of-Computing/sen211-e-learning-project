@@ -50,13 +50,13 @@ header {
   justify-content: space-between;
 }
 
-header .hamburger > div {
+header .hamburger>div {
   width: 50px;
   height: 3px;
   background-color: #fff;
 }
 
-header .hamburger > div:nth-child(2) {
+header .hamburger>div:nth-child(2) {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
 }
@@ -173,6 +173,7 @@ img {
   align-items: center;
   justify-content: space-between;
 }
+
 /* mediaquery part @sisco😌 */
 /* I decided to work on the media query like you asked */
 
@@ -186,15 +187,19 @@ img {
   .templates {
     grid-template-columns: repeat(1, 1fr);
   }
+
   header nav ul {
     display: none;
   }
+
   header .hamburger {
     display: block;
   }
+
   .readmore {
     left: 50%;
   }
+
   section.question-area {
     flex-direction: column;
   }
@@ -421,6 +426,7 @@ section.question-area .answered-questions div {
   font-weight: bold;
   cursor: pointer;
 }
+
 /* .go-back-container {
 display: flex;
 } */
@@ -523,4 +529,8 @@ header.search-container {
 .quiztime-section {
   display: flex;
   justify-content: space-between;
+}
+
+.question {
+  margin-block: 15px;
 }

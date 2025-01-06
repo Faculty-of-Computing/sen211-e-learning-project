@@ -1,0 +1,150 @@
+{
+  "name": "CSC 112 (Computer Troubleshooting)",
+  "time": 1800,
+  "questions": [
+    {
+      "question": "All memory chips store data in the form of ____?",
+      "options": ["Results", "Bytes", "Storage", "Information"],
+      "correct": "Bytes",
+      "feedback": "Memory chips store data in the form of bytes."
+    },
+    {
+      "question": "Which of the following is a hardware maintenance schedule?",
+      "options": [
+        "Scan for updates",
+        "Defragment the hard disk",
+        "Review security updates",
+        "Scan and drive for errors"
+      ],
+      "correct": "Defragment the hard disk",
+      "feedback": "Defragmenting the hard disk is a common hardware maintenance task."
+    },
+    {
+      "question": "Which software components ensure the security and integrity of a computer system?",
+      "options": [
+        "Application software",
+        "Utility software",
+        "Operating system",
+        "Programming software"
+      ],
+      "correct": "Utility software",
+      "feedback": "Utility software helps ensure the security and integrity of a computer system."
+    },
+    {
+      "question": "What is the purpose of grounding yourself before handling internal computer components?",
+      "options": [
+        "To prevent static electricity from damaging the components",
+        "To improve the computer's performance",
+        "To reduce the risk of electric shock",
+        "To prevent overheating"
+      ],
+      "correct": "To prevent static electricity from damaging the components",
+      "feedback": "Grounding yourself prevents static electricity from damaging computer components."
+    },
+    {
+      "question": "What is the first step in troubleshooting?",
+      "options": [
+        "Restart the computer",
+        "Check the power cord",
+        "Gather information about the problem",
+        "Call technical support"
+      ],
+      "correct": "Gather information about the problem",
+      "feedback": "The first step in troubleshooting is to gather information about the problem."
+    },
+    {
+      "question": "Which tool is commonly used to troubleshoot network connectivity issues?",
+      "options": ["Ping", "Tracert", "IP config", "All of the above"],
+      "correct": "All of the above",
+      "feedback": "Ping, Tracert, and IP config are all tools used to troubleshoot network connectivity issues."
+    },
+    {
+      "question": "What is the purpose of the IP config command?",
+      "options": [
+        "To release and renew IP addresses",
+        "To test network connectivity",
+        "To configure network settings",
+        "To troubleshoot DNS issues"
+      ],
+      "correct": "To release and renew IP addresses",
+      "feedback": "The IP config command is used to release and renew IP addresses."
+    },
+    {
+      "question": "What is the purpose of a network switch?",
+      "options": [
+        "To connect multiple devices to a network",
+        "To provide network security",
+        "To configure network settings",
+        "To troubleshoot network issues"
+      ],
+      "correct": "To connect multiple devices to a network",
+      "feedback": "A network switch connects multiple devices to a network."
+    },
+    {
+      "question": "Which of the following network troubleshooting applications is used to analyze traffic on the network?",
+      "options": [
+        "Port Scanner",
+        "Protocol analyzer",
+        "Packet sniffer",
+        "Wi-Fi analyzer"
+      ],
+      "correct": "Packet sniffer",
+      "feedback": "A packet sniffer is used to analyze traffic on the network."
+    },
+    {
+      "question": "Which tool is commonly used to diagnose and troubleshoot computer hardware problems?",
+      "options": [
+        "Task manager",
+        "System configuration",
+        "Device manager",
+        "Event viewer"
+      ],
+      "correct": "Device manager",
+      "feedback": "Device manager is commonly used to diagnose and troubleshoot computer hardware problems."
+    },
+    {
+      "question": "Which of the following is a common symptom of a failing hard drive?",
+      "options": [
+        "The computer boots up slowly",
+        "The computer's screen is blank",
+        "The computer makes a clicking and grinding noise",
+        "The computer keyboard is not responding"
+      ],
+      "correct": "The computer makes a clicking and grinding noise",
+      "feedback": "A clicking and grinding noise is a common symptom of a failing hard drive."
+    },
+    {
+      "question": "What is the first step in troubleshooting a network connectivity issue?",
+      "options": [
+        "Check the network cable",
+        "Restart the router",
+        "Check IP address configuration",
+        "Run a network diagnostic tool"
+      ],
+      "correct": "Check the network cable",
+      "feedback": "The first step in troubleshooting a network connectivity issue is to check the network cable."
+    },
+    {
+      "question": "Which type of memory is volatile?",
+      "options": [
+        "ROM (Read-only Memory)",
+        "RAM (Random Access Memory)",
+        "HDD (Hard disk drive)",
+        "SSD (Solid State Drive)"
+      ],
+      "correct": "RAM (Random Access Memory)",
+      "feedback": "RAM is volatile memory, meaning it loses its data when the power is turned off."
+    },
+    {
+      "question": "What is the purpose of cache memory?",
+      "options": [
+        "To store data permanently",
+        "To provide faster access to frequently used data",
+        "To connect peripherals to the computer",
+        "To store data temporarily while the computer processes it"
+      ],
+      "correct": "To store data temporarily while the computer processes it",
+      "feedback": "Cache memory stores data temporarily while the computer processes it, providing faster access to frequently used data."
+    }
+  ]
+}
