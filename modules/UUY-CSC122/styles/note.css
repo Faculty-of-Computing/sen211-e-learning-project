@@ -1,107 +1,106 @@
-/* Base Styles */
-* {
-    color: white;
-    user-select: none;
-    font-family: "Afacad", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General body styling */
 body {
-    background-color: #121212;
+    font-family: Arial, sans-serif;
+    background-color: black; /* Dark background */
+    color: cornsilk; /* White text */
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    font-family: "Inter", sans-serif;
+    font-size: 18px;
 }
-
-/* Main Container */
-.main {
-    margin: auto;
-    max-width: 900px;
-    padding: 20px;
-    background-color: #181818;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-}
-
-/* Header Section */
 .header-section {
+    margin-top: 0px;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 80px;
     align-items: center;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-bottom: 2px solid #2c2c2c;
 }
 
 .g4-logo {
-    max-width: 180px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.g4-logo:hover {
-    transform: scale(1.1);
-    opacity: 0.9;
+    max-width: 200px;
 }
 
 .user-slug {
     font-weight: bold;
-    font-size: 18px;
-    text-transform: uppercase;
-    background-color: #303030;
+    font-size: 24px;
+    background-color: rgb(61, 61, 61);
+    color: rgb(255, 255, 255);
+    width: fit-content;
+    height: 36px;
+    justify-self: end;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+}
+#Learn {
+    background-color: orange;
+    color: black;
+    font-family: Monteserrat-Black;
+}
+
+
+/* Styling for module header */
+header {
+    background-color: orange; /* Orange color for header */
+    padding: 10px 20px;
     color: #ffffff;
-    padding: 10px 15px;
-    border-radius: 50px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.user-slug:hover {
-    background-color: #404040;
-}
-
-/* Welcome Message */
-.welcome-message {
-    font-size: 22px;
-    margin: 20px 0;
-    color: #cccccc;
-}
-
-/* Breadcrumb Navigation */
-a.goto {
-    color: #f0a500;
-    text-decoration: none;
-    font-size: 16px;
-    margin-right: 5px;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-a.goto:hover {
-    color: #ff6f00;
-    text-shadow: 0 0 5px #ff6f00;
-}
-
-a.goto:last-of-type {
+    font-size: 24px;
     font-weight: bold;
 }
 
-/* Content Section */
-.inside {
-    background-color: #202020;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    color: #e0e0e0;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    line-height: 1.8;
-    font-size: 18px;
+/* Breadcrumb navigation */
+nav {
+    margin: 10px 20px;
+    font-size: 14px;
+    color: #ffffff;
 }
 
-.insi
+nav a {
+    color: orange; /* Orange links */
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section title */
+h1 {
+    color: #ff6a00; /* Orange for headers */
+    margin: 20px 20px 10px;
+}
+
+/* Subheaders */
+h2 {
+    color: #ffffff; /* White for subheaders */
+    margin: 15px 20px 5px;
+}
+
+/* Main content styling */
+section {
+    margin: 20px;
+    background-color: #222222; /* Dark grey background for content */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Text content */
+p {
+    line-height: 1.6;
+    color: #dcdcdc; /* Light grey for body text */
+}
+
+/* Highlighted terms */
+strong {
+    color: #ff6a00; /* Orange for emphasis */
+}
+
+/* Links within content */
+a {
+    color: #ff6a00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
