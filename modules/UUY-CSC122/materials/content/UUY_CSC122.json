@@ -1,0 +1,127 @@
+{
+  "name": "Microsoft Office Quiz",
+  "time": 1800,
+  "questions": [
+    {
+      "question": "What is the primary function of Microsoft Word?",
+      "options": [
+        "To create spreadsheets",
+        "To create documents",
+        "To create presentations",
+        "To create databases"
+      ],
+      "correct": "To create documents",
+      "feedback": "Microsoft Word is primarily used for creating documents such as letters, reports, and essays."
+    },
+    {
+      "question": "What is the purpose of the formula bar in Microsoft Excel?",
+      "options": [
+        "To format cells",
+        "To create charts",
+        "To enter formulas",
+        "To print worksheets"
+      ],
+      "correct": "To enter formulas",
+      "feedback": "The formula bar in Excel is used to enter or edit data, including formulas, in the active cell."
+    },
+    {
+      "question": "What is the main advantage of using templates in Microsoft PowerPoint?",
+      "options": [
+        "To create complex animations",
+        "To quickly create presentations",
+        "To add audio clips",
+        "To customize fonts"
+      ],
+      "correct": "To quickly create presentations",
+      "feedback": "Templates in PowerPoint help users to quickly create presentations with predefined styles and layouts."
+    },
+    {
+      "question": "What is the shortcut key to save a document in Microsoft Word?",
+      "options": [
+        "Ctrl + P",
+        "Ctrl + S",
+        "Ctrl + C",
+        "Ctrl + V"
+      ],
+      "correct": "Ctrl + S",
+      "feedback": "Ctrl + S is the shortcut key to save a document in Microsoft Word."
+    },
+    {
+      "question": "What is the purpose of the AutoSum feature in Microsoft Excel?",
+      "options": [
+        "To format cells",
+        "To create charts",
+        "To quickly sum a range of cells",
+        "To print worksheets"
+      ],
+      "correct": "To quickly sum a range of cells",
+      "feedback": "AutoSum is a feature in Excel that automatically calculates the sum of a range of cells."
+    },
+    {
+      "question": "How do you insert a new slide in Microsoft PowerPoint?",
+      "options": [
+        "Click on the 'Insert' tab and select 'New Slide'",
+        "Click on the 'Home' tab and select 'New Slide'",
+        "Right-click on the slide pane and select 'New Slide'",
+        "Press the 'Ctrl + M' keys"
+      ],
+      "correct": "Click on the 'Insert' tab and select 'New Slide'",
+      "feedback": "In PowerPoint, you can insert a new slide by selecting the 'New Slide' option from the 'Insert' tab."
+    },
+    {
+      "question": "What is the purpose of the 'Track Changes' feature in Microsoft Word?",
+      "options": [
+        "To format documents",
+        "To insert tables",
+        "To collaborate with others",
+        "To print documents"
+      ],
+      "correct": "To collaborate with others",
+      "feedback": "'Track Changes' allows multiple users to make edits to a document, and track all modifications."
+    },
+    {
+      "question": "What is the shortcut key to copy a cell in Microsoft Excel?",
+      "options": [
+        "Ctrl + C",
+        "Ctrl + V",
+        "Ctrl + X",
+        "Ctrl + A"
+      ],
+      "correct": "Ctrl + C",
+      "feedback": "Ctrl + C is the shortcut key to copy a selected cell in Excel."
+    },
+    {
+      "question": "How do you insert a table in Microsoft PowerPoint?",
+      "options": [
+        "Click on the 'Insert' tab and select 'Table'",
+        "Click on the 'Home' tab and select 'Table'",
+        "Right-click on the slide and select 'Table'",
+        "Press the 'Ctrl + T' keys"
+      ],
+      "correct": "Click on the 'Insert' tab and select 'Table'",
+      "feedback": "In PowerPoint, you can insert a table by selecting 'Table' from the 'Insert' tab."
+    },
+    {
+      "question": "What is the purpose of the 'Spell Check' feature in Microsoft Word?",
+      "options": [
+        "To format documents",
+        "To insert tables",
+        "To check grammar and spelling",
+        "To print documents"
+      ],
+      "correct": "To check grammar and spelling",
+      "feedback": "The 'Spell Check' feature in Word automatically identifies and corrects spelling and grammar errors in your document."
+    },
+    {
+      "question": "What is the purpose of the 'Track Changes' feature in Microsoft Word?",
+      "options": [
+        "To format documents",
+        "To insert images",
+        "To collaborate and track edits",
+        "To print documents"
+      ],
+      "correct": "To collaborate and track edits",
+      "feedback": "'Track Changes' is used to track and review edits made to a document, allowing for collaboration."
+    }
+  ]
+}

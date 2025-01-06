@@ -1,0 +1,116 @@
+{
+  "name": "Microsoft Word Quiz",
+  "time": 1800,
+  "questions": [
+    {
+      "question": "What is the primary function of Microsoft Word?",
+      "options": [
+        "To create spreadsheets",
+        "To create documents",
+        "To create presentations",
+        "To create databases"
+      ],
+      "correct": "To create documents",
+      "feedback": "Microsoft Word is primarily used for creating documents such as letters, reports, and essays."
+    },
+    {
+      "question": "Which tab in Microsoft Word contains options for formatting text?",
+      "options": [
+        "Home",
+        "Insert",
+        "Layout",
+        "Review"
+      ],
+      "correct": "Home",
+      "feedback": "The 'Home' tab contains options for text formatting, such as font size, style, and color."
+    },
+    {
+      "question": "What is the shortcut key to create a new document in Microsoft Word?",
+      "options": [
+        "Ctrl + O",
+        "Ctrl + N",
+        "Ctrl + S",
+        "Ctrl + P"
+      ],
+      "correct": "Ctrl + N",
+      "feedback": "Ctrl + N is the shortcut key to create a new blank document in Microsoft Word."
+    },
+    {
+      "question": "What is the purpose of the 'Find and Replace' feature in Microsoft Word?",
+      "options": [
+        "To insert tables",
+        "To locate and replace text",
+        "To apply styles",
+        "To format paragraphs"
+      ],
+      "correct": "To locate and replace text",
+      "feedback": "The 'Find and Replace' feature helps you quickly locate specific text and replace it with new content."
+    },
+    {
+      "question": "Which file format is commonly used to save Microsoft Word documents?",
+      "options": [
+        ".xlsx",
+        ".pptx",
+        ".docx",
+        ".pdf"
+      ],
+      "correct": ".docx",
+      "feedback": "The .docx format is the standard file format for saving Microsoft Word documents."
+    },
+    {
+      "question": "How do you insert a page number in Microsoft Word?",
+      "options": [
+        "Click on the 'Insert' tab and select 'Page Number'",
+        "Click on the 'Home' tab and select 'Page Layout'",
+        "Right-click on the page and select 'Add Page Number'",
+        "Press 'Ctrl + P'"
+      ],
+      "correct": "Click on the 'Insert' tab and select 'Page Number'",
+      "feedback": "To insert page numbers, go to the 'Insert' tab and choose the 'Page Number' option."
+    },
+    {
+      "question": "What is the purpose of the 'Review' tab in Microsoft Word?",
+      "options": [
+        "To insert images",
+        "To format paragraphs",
+        "To add comments and track changes",
+        "To create tables"
+      ],
+      "correct": "To add comments and track changes",
+      "feedback": "The 'Review' tab is used for editing and collaborating on documents, including adding comments and tracking changes."
+    },
+    {
+      "question": "Which feature in Microsoft Word allows you to create a table of contents?",
+      "options": [
+        "Footnotes",
+        "References",
+        "Layout",
+        "Review"
+      ],
+      "correct": "References",
+      "feedback": "The 'References' tab contains the option to create a table of contents for your document."
+    },
+    {
+      "question": "What is the shortcut key to undo an action in Microsoft Word?",
+      "options": [
+        "Ctrl + Z",
+        "Ctrl + Y",
+        "Ctrl + U",
+        "Ctrl + A"
+      ],
+      "correct": "Ctrl + Z",
+      "feedback": "Ctrl + Z is the shortcut key to undo the last action in Microsoft Word."
+    },
+    {
+      "question": "What is the purpose of the 'Spelling & Grammar' feature in Microsoft Word?",
+      "options": [
+        "To check the formatting of the document",
+        "To find synonyms for words",
+        "To identify spelling and grammar errors",
+        "To create footnotes"
+      ],
+      "correct": "To identify spelling and grammar errors",
+      "feedback": "The 'Spelling & Grammar' feature helps ensure your document is free from spelling and grammatical errors."
+    }
+  ]
+}

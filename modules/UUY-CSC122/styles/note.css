@@ -1,0 +1,106 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Dark background */
+    color: cornsilk; /* White text */
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+.header-section {
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    align-items: center;
+}
+
+.g4-logo {
+    max-width: 200px;
+}
+
+.user-slug {
+    font-weight: bold;
+    font-size: 24px;
+    background-color: rgb(61, 61, 61);
+    color: rgb(255, 255, 255);
+    width: fit-content;
+    height: 36px;
+    justify-self: end;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+}
+#Learn {
+    background-color: orange;
+    color: black;
+    font-family: Monteserrat-Black;
+}
+
+
+/* Styling for module header */
+header {
+    background-color: orange; /* Orange color for header */
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Breadcrumb navigation */
+nav {
+    margin: 10px 20px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+nav a {
+    color: orange; /* Orange links */
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section title */
+h1 {
+    color: #ff6a00; /* Orange for headers */
+    margin: 20px 20px 10px;
+}
+
+/* Subheaders */
+h2 {
+    color: #ffffff; /* White for subheaders */
+    margin: 15px 20px 5px;
+}
+
+/* Main content styling */
+section {
+    margin: 20px;
+    background-color: #222222; /* Dark grey background for content */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Text content */
+p {
+    line-height: 1.6;
+    color: #dcdcdc; /* Light grey for body text */
+}
+
+/* Highlighted terms */
+strong {
+    color: #ff6a00; /* Orange for emphasis */
+}
+
+/* Links within content */
+a {
+    color: #ff6a00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
