@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../styles/style.css">
-    <link rel="stylesheet" href="../styles/module4.quiz.style.css">
+    <link rel="stylesheet" href="./../styles/style.css">
+    <link rel="stylesheet" href="./../styles/demo.css">
+    <link rel="stylesheet" href="./../PHY111_117/styles/module4.quiz.style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,8 +18,6 @@
 
         var quizState = 'wait'
         document.addEventListener("DOMContentLoaded", function () {
-            const params = new URLSearchParams(window.location.search);
-            const file = params.get('file');
             const waitSection = document.querySelector('.inside.embed.wait')
             const startSection = document.querySelector('.inside.embed.start')
             const finishSection = document.querySelector('.inside.embed.finish')
@@ -34,8 +33,8 @@
             const timerDisplay = document.querySelector('.timer-head')
             var timeLeft = 0 //s
             var i
-            if (file) {
-                fetch(`./content/${file}`)
+            if (true) {
+                fetch('./CSC112question.json')
                     .then(response => response.text())
                     .then(data => {
                         const quizData = JSON.parse(data)
@@ -170,20 +169,41 @@
             }
         });
     </script>
-    <title>Module 4 Quiz</title>
+    <title>Module 6 Quiz</title>
 </head>
 
 <body>
     <div class="timer-head hide">Time left: ...</div>
     <div class="main">
-        <div class="header-section">
-            <img src="../../res/module4.png" class="g4-logo" />
-            <div class="user-slug">
-                EM
+        <header class="desktop-nav">
+            <h1><span class="Learn">Module 6</span></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li>
+                        <p><a href="../../index.html">Home</a></p>
+                    </li>
+                    <li>
+
+                    </li>
+                    <li>
+
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="hamburger showOnMobile" onclick="showNav()">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-        </div>
-        <p class="welcome-message">Welcome, Gideon Jones </p>
-        <p><a href="../../../index.html" class="goto">Home</a> /<a href="../index.html" class="goto">Module 4</a>/Quiz
+
+            <div class="reverse-hamburger" onclick="hideNav()">
+                <div></div>
+                <div></div>
+            </div>
+        </header>
+        <p class="welcome-message"> </p>
+        <p><a href="../../../index.html" class="goto">Home</a> > <a href="./index.html" class="goto">Module 6</a> > Quiz
         </p>
         <span class="status-message">Loading quiz...</span>
         <div class="inside embed wait">
@@ -196,7 +216,7 @@
         </div>
         <div class="inside embed start hide" style="font-size: 22px;">
             <!-- Content will be loaded here -->
-            <h2 class="quiz-name-2">Loading quiz</h2>
+            <h2 class="quiz-name-2">Hey</h2>
             <div class="questions-container-main">
 
             </div>
@@ -217,7 +237,7 @@
             </div>
             <div class="inside-header-small start">
                 <a class="link-part" onclick="location.reload()">Take again</a>
-                <p><a href="../index.html" class="goto">← Back to Module 4</a></p>
+                <p><a href="./index.html" class="goto">← Back to Module 6</a></p>
             </div>
         </div>
     </div>

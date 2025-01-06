@@ -44,7 +44,7 @@ header h1 {
     font-weight: normal;
 }
 
-.module-btn span {
+.module-btn span{
     background-color: orange;
     color: black;
     border: none;
@@ -53,11 +53,11 @@ header h1 {
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
+    color: white;   
+    text-decoration:none;
 }
 
-.nav-links a:hover {
+.nav-links a:hover{
     color: orange;
     transition: .5s;
 }
@@ -72,12 +72,11 @@ nav ul {
 nav ul li {
     list-style-type: none;
 }
-
-nav ul li p a {
-    font-size: 1em;
-    transition: 0.3s;
-    cursor: pointer;
+nav u li:hover {
+  background: #3A3A3A;
 }
+
+
 
 nav ul p:hover {
     color: orange;
@@ -91,13 +90,13 @@ header {
     font-size: 17px;
 }
 
-header .hamburger>div {
+header .hamburger div {
     width: 50px;
     height: 3px;
     background-color: #fff;
 }
 
-header .hamburger>div:nth-child(2) {
+header .hamburger div:nth-child(2) {
     margin-top: .3em;
     margin-bottom: .3em;
 }
@@ -150,9 +149,9 @@ header .hamburger {
     border: 4px solid orange;
     border-radius: 30px;
     transition: .3s;
-}
+   }
 
-.module-quiz a {
+   .module-quiz a{
     text-decoration: none;
     color: orange;
     display: flex;
@@ -160,7 +159,7 @@ header .hamburger {
     justify-content: space-between;
     padding: 10px;
     float: right;
-}
+   }
 
 .templates {
     display: grid;
@@ -238,7 +237,6 @@ img {
     .templates {
         grid-template-columns: repeat(2, 1fr);
     }
-
     /* .template1{
 width: 90%;
 padding: 14px;
@@ -253,19 +251,60 @@ height: 7rem;
     .templates {
         grid-template-columns: repeat(1, 1fr);
     }
-
-    header nav ul {
-        display: none;
+    header .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0%;
+        background: #020100;
+        width: 80%;
+        padding: 20px 0px 25px;
+        display:none;
+        align-items: center;
+        text-align: center;
+        height: 350px;
+        align-items: center;
+        border-radius: 10px;
+        transition: 0.5s ease-in-out;
+        border: 1px solid #3A3A3A;
+        display: ;
+        padding-top: 0;
+    }
+    
+    nav ul li:hover{
+      background: #353331;
+      border-radius: 10px;
+      border: 1px solid   #3A3A3A ;
+    }
+    
+    header .nav-links.active{
+      left:30%;
+      display: block;
+    }
+    header .nav-links li{
+      font-size: 20px;
+      padding: 35px;
+    }
+    header .DropDown-Button{
+      font-size: 20px;
     }
 
-    /* header .hamburger {
+    header .hamburger{
         display: block;
-    } */
-
+        cursor: pointer ;
+        position: relative;
+        padding: 10px;
+        transition: all 0.3s ease-in-out;
+       
+    }    
+        
+ 
+        
+    
+    
+    
     .readmore {
         left: 50%;
     }
-
     /* .template1{
 width: 15rem;
 padding: 14px;
@@ -304,7 +343,7 @@ height: 7rem;
     cursor: pointer;
 }
 
-.quizButton a {
+ .quizButton a {
     padding: .3em .5em;
     border: 1px solid orange;
     background: none;
@@ -321,9 +360,9 @@ height: 7rem;
     margin-top: 0em;
     float: right;
     text-decoration: none;
-}
+} 
 
-.quizButton {
+.quizButton{
     background-color: none;
     border: none;
 }
@@ -360,7 +399,7 @@ section.content ol ul li {
 }
 */
 
-.pagination {
+.pagination{
     display: flex;
     justify-content: space-between;
 }
@@ -394,7 +433,7 @@ section.content ol ul li {
     align-items: center;
 }
 
-.pagination button {
+.pagination button{
     color: none;
     border: none;
 }
@@ -436,7 +475,7 @@ section.content ol ul li {
     }
 }
 
-.content {
+.content{
     display: block;
     justify-content: center;
     align-items: center;
@@ -503,7 +542,7 @@ section.question-area .answered-questions {
 section.question-area .answered-questions div {
     width: 35px;
     height: 35px; */
-/* background-color: lime; */
+    /* background-color: lime; */
 /*     border: 1px solid #777;
     margin-top: .5em;
     text-align: center;
@@ -640,7 +679,6 @@ header.search-container {
     font-weight: bold;
     cursor: pointer;
 }
-
 /* 
 header {
     display: flex;
@@ -665,58 +703,57 @@ header {
 
 }
 
-.Sub-header {
+.Sub-header{
     /* border: 1px solid white; */
     display: flex;
     height: 4rem;
     margin: 0 0 1rem 0;
     align-items: center;
     justify-content: space-between;
-    /*  padding-left: 30px; */
+   /*  padding-left: 30px; */
 }
 
-.lecture-content {
-    font-size: large;
+.lecture-content{
+    font-size: large; 
     font-family: Arial, Helvetica, sans-serif;
     font-display: block;
     text-align: justify;
     padding: 10px;
 }
-
 /*
  .lecture-module-intro{
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
 }
 */
-.inner-heading {
+.inner-heading{
     font-size: 18px;
     font-weight: bolder;
     padding-top: 10px;
     padding-bottom: 5px;
-}
+} 
 
 
 
-.DropDown-Button {
-    background-color: transparent;
+.DropDown-Button{
+    background-color:transparent;
     color: white;
     font-size: 17px;
     border: none;
     cursor: pointer;
 }
 
-.hidden {
+.hidden{
     position: relative;
     display: inline-block;
 }
 
-.Drop-Menu {
+.Drop-Menu{
     display: none;
     position: absolute;
     background-color: rgb(211, 208, 208);
     min-width: 102px;
-}
+} 
 
 .Drop-Menu a {
     color: rgb(255, 136, 0);
@@ -725,29 +762,25 @@ header {
     display: block;
 }
 
-.Drop-Menu a:hover {
+.Drop-Menu a:hover{
     background-color: rgb(240, 189, 93);
     color: black;
 }
 
-.hidden:hover .Drop-Menu {
+.hidden:hover .Drop-Menu{
     display: Block;
 
 }
 
-.hidden:hover .DropDown-Button {
+.hidden:hover .DropDown-Button{
     background-color: orange;
     color: black;
     width: 4em;
 }
 
-.about-heading {
+.about-heading{
     font-size: 25px;
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 5px;
-}
-
-.question {
-    margin-block: 10px;
 }
