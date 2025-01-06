@@ -258,9 +258,9 @@ height: 7rem;
         display: none;
     }
 
-    header .hamburger {
+    /* header .hamburger {
         display: block;
-    }
+    } */
 
     .readmore {
         left: 50%;

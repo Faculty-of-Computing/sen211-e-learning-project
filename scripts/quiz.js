@@ -2,6 +2,9 @@
 
 import { getUser, saveResult } from "./firebase.js";
 
+const scriptUrl = new URL(import.meta.url);
+const jsonParam = scriptUrl.searchParams.get("json");
+
 await new Promise((res) => {
   document.addEventListener("DOMContentLoaded", res);
 });
@@ -95,124 +98,125 @@ doneReviewScore.onclick = () => {
   location.href = performanceUrl;
 };
 
-/**
- * @param {string} path
- */
-globalThis.initializeQuiz = async function (path) {
-  const res = await fetch(path);
-  /** @type {QuizData} */
-  const quizData = await res.json();
-  quizName.innerText = quizData.name;
-  quizName2.innerText = quizData.name;
-  const minutes = Math.floor(quizData.time / 60);
-  const seconds = quizData.time % 60;
-  timeAlloc.innerText = `Time Allocated: ${minutes}:${
-    seconds < 10 ? "0" : ""
-  }${seconds}`;
-  timeLeft = quizData.time;
-  statusMessage.innerText = "";
-  startButton.classList.toggle("hide", false); // Show the start button
-  loadingGif.classList.toggle("hide", true); // Hide the loading gif
+/** @type {QuizData} */
+let quizData;
 
-  const questionsContainer = /** @type {HTMLElement} */ (
+try {
+  const res = await fetch(jsonParam);
+  /** @type {QuizData} */
+  quizData = await res.json();
+} catch {
+  if (typeof globalThis.quizError === "function") globalThis.quizError();
+  else alert("Unable to fetch quiz data");
+}
+
+quizName.innerText = quizData.name;
+quizName2.innerText = quizData.name;
+const minutes = Math.floor(quizData.time / 60);
+const seconds = quizData.time % 60;
+timeAlloc.innerText = `Time Allocated: ${minutes}:${
+  seconds < 10 ? "0" : ""
+}${seconds}`;
+timeLeft = quizData.time;
+statusMessage.innerText = "";
+startButton.classList.toggle("hide", false); // Show the start button
+loadingGif.classList.toggle("hide", true); // Hide the loading gif
+
+const questionsContainer = /** @type {HTMLElement} */ (
+  document.createElement("div")
+);
+questionContainer.classList.add("questions-container");
+
+quizData.questions.forEach((questionData, index) => {
+  const questionElement = /** @type {HTMLElement} */ (
     document.createElement("div")
   );
-  questionContainer.classList.add("questions-container");
+  questionElement.classList.add("question");
 
-  quizData.questions.forEach((questionData, index) => {
-    const questionElement = /** @type {HTMLElement} */ (
+  const questionText = /** @type {HTMLElement} */ (document.createElement("p"));
+  questionText.innerText = `${index + 1}. ${questionData.question}`;
+  questionElement.appendChild(questionText);
+
+  questionData.options.forEach((option, optionIndex) => {
+    const optionElement = /** @type {HTMLElement} */ (
       document.createElement("div")
     );
-    questionElement.classList.add("question");
+    optionElement.classList.add("option");
 
-    const questionText = /** @type {HTMLElement} */ (
+    const inputElement = document.createElement("input");
+    inputElement.type = "radio";
+    inputElement.name = `question-${index}`;
+    inputElement.value = option;
+    inputElement.id = `question-${index}-option-${optionIndex}`;
+    optionElement.appendChild(inputElement);
+
+    const labelElement = document.createElement("label");
+    labelElement.innerText = option;
+    labelElement.htmlFor = `question-${index}-option-${optionIndex}`;
+    optionElement.appendChild(labelElement);
+
+    questionElement.appendChild(optionElement);
+  });
+  if (questionData.feedback) {
+    const feedbackElement = /** @type {HTMLElement} */ (
       document.createElement("p")
     );
-    questionText.innerText = `${index + 1}. ${questionData.question}`;
-    questionElement.appendChild(questionText);
+    feedbackElement.classList.add("feedback");
+    feedbackElement.innerText = "Feedback: " + questionData.feedback;
+    questionElement.appendChild(feedbackElement);
+  }
+  questionsContainer.appendChild(questionElement);
+});
 
-    questionData.options.forEach((option, optionIndex) => {
-      const optionElement = /** @type {HTMLElement} */ (
-        document.createElement("div")
-      );
-      optionElement.classList.add("option");
+questionContainer.appendChild(questionsContainer);
 
-      const inputElement = document.createElement("input");
-      inputElement.type = "radio";
-      inputElement.name = `question-${index}`;
-      inputElement.value = option;
-      inputElement.id = `question-${index}-option-${optionIndex}`;
-      optionElement.appendChild(inputElement);
+submitButton.onclick = async () => {
+  startSection.classList.toggle("hide", true);
+  finishSection.classList.toggle("hide", false);
+  timerDisplay.classList.toggle("panic", false);
+  timerDisplay.classList.toggle("hide", true);
+  clearInterval(i);
 
-      const labelElement = document.createElement("label");
-      labelElement.innerText = option;
-      labelElement.htmlFor = `question-${index}-option-${optionIndex}`;
-      optionElement.appendChild(labelElement);
-
-      questionElement.appendChild(optionElement);
-    });
-    if (questionData.feedback) {
-      const feedbackElement = /** @type {HTMLElement} */ (
-        document.createElement("p")
-      );
-      feedbackElement.classList.add("feedback");
-      feedbackElement.innerText = "Feedback: " + questionData.feedback;
-      questionElement.appendChild(feedbackElement);
-    }
-    questionsContainer.appendChild(questionElement);
-  });
-
-  questionContainer.appendChild(questionsContainer);
-
-  submitButton.onclick = async () => {
-    startSection.classList.toggle("hide", true);
-    finishSection.classList.toggle("hide", false);
-    timerDisplay.classList.toggle("panic", false);
-    timerDisplay.classList.toggle("hide", true);
-    clearInterval(i);
-
-    let score = 0;
-    const questions = /** @type {NodeListOf<HTMLElement>} */ (
-      document.querySelectorAll(".question")
+  let score = 0;
+  const questions = /** @type {NodeListOf<HTMLElement>} */ (
+    document.querySelectorAll(".question")
+  );
+  questions.forEach((question, index) => {
+    const selectedOption = /** @type {HTMLInputElement} */ (
+      question.querySelector('input[type="radio"]:checked')
     );
-    questions.forEach((question, index) => {
-      const selectedOption = /** @type {HTMLInputElement} */ (
-        question.querySelector('input[type="radio"]:checked')
+    if (
+      selectedOption &&
+      selectedOption.value == quizData.questions[index].correct
+    ) {
+      score++;
+      selectedOption.parentElement.classList.add("correct-answer");
+      /** @type {HTMLElement} */ (
+        selectedOption.parentElement.parentElement.firstChild
+      ).innerText += " (✅Correct)";
+    } else {
+      /** @type {HTMLElement} */ (question.firstChild).innerText +=
+        " (❌Wrong)";
+      const correctOption = /** @type {HTMLInputElement} */ (
+        question.querySelector(
+          `input[value="${quizData.questions[index].correct}"]`
+        )
       );
-      if (
-        selectedOption &&
-        selectedOption.value == quizData.questions[index].correct
-      ) {
-        score++;
-        selectedOption.parentElement.classList.add("correct-answer");
-        /** @type {HTMLElement} */ (
-          selectedOption.parentElement.parentElement.firstChild
-        ).innerText += " (✅Correct)";
-      } else {
-        /** @type {HTMLElement} */ (question.firstChild).innerText +=
-          " (❌Wrong)";
-        const correctOption = /** @type {HTMLInputElement} */ (
-          question.querySelector(
-            `input[value="${quizData.questions[index].correct}"]`
-          )
-        );
-        /** @type {HTMLElement} */ (
-          correctOption.nextElementSibling
-        ).innerText += " (✅Correct Option)";
-        try {
-          selectedOption.parentElement.classList.add("wrong-answer");
-        } catch {
-          /* empty */
-        }
+      /** @type {HTMLElement} */ (correctOption.nextElementSibling).innerText +=
+        " (✅Correct Option)";
+      try {
+        selectedOption.parentElement.classList.add("wrong-answer");
+      } catch {
+        /* empty */
       }
-    });
-    performanceUrl = await saveResult({
-      course: quizData.name,
-      // FIXME DURATION IS THE TIME TAKEN FOR THE QUIZ,
-      //  NOT THE TIME LEFT CHECK THE VALIDITY OF THIS LOGIC
-      duration: timeLeft,
-      score,
-      total: quizData.questions.length,
-    });
-  };
+    }
+  });
+  performanceUrl = await saveResult({
+    course: quizData.name,
+    // FIXME DURATION IS THE TIME TAKEN FOR THE QUIZ,
+    //  NOT THE TIME LEFT CHECK THE VALIDITY OF THIS LOGIC
+    duration: timeLeft,
+    score,
+    total: quizData.questions.length,
+  });
 };
