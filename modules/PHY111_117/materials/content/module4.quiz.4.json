@@ -1,0 +1,156 @@
+{
+  "name": "PHY121 Quiz 2",
+  "time": 1200,
+  "questions": [
+    {
+      "question": "What does the Coulomb's Law describe?",
+      "options": [
+        "The force between two charged objects",
+        "The energy stored in a magnetic field",
+        "The resistance of a material",
+        "The flow of current in a circuit"
+      ],
+      "correct": "The force between two charged objects",
+      "feedback": "Coulomb's Law states that the force between two point charges is directly proportional to the product of their charges and inversely proportional to the square of the distance between them."
+    },
+    {
+      "question": "What is the SI unit of electric charge?",
+      "options": ["Coulomb", "Newton", "Volt", "Ohm"],
+      "correct": "Coulomb",
+      "feedback": "The Coulomb is the standard SI unit for measuring electric charge."
+    },
+    {
+      "question": "Which type of field is represented by field lines that never intersect?",
+      "options": [
+        "Electric field",
+        "Magnetic field",
+        "Gravitational field",
+        "All of the above"
+      ],
+      "correct": "Electric field",
+      "feedback": "Electric field lines do not intersect because at any point in space, the field has a unique direction."
+    },
+    {
+      "question": "What happens to the electric field inside a conductor in electrostatic equilibrium?",
+      "options": [
+        "It becomes zero",
+        "It becomes infinite",
+        "It fluctuates randomly",
+        "It is constant but non-zero"
+      ],
+      "correct": "It becomes zero",
+      "feedback": "Inside a conductor in electrostatic equilibrium, charges rearrange such that the internal electric field is zero."
+    },
+    {
+      "question": "What is the relationship between electric field and electric potential?",
+      "options": [
+        "Electric field is the gradient of electric potential",
+        "Electric field is the integral of electric potential",
+        "Electric potential is proportional to the square of the electric field",
+        "There is no direct relationship"
+      ],
+      "correct": "Electric field is the gradient of electric potential",
+      "feedback": "The electric field is the negative gradient of the electric potential, indicating the direction of the greatest rate of change."
+    },
+    {
+      "question": "Which property defines a conservative force field?",
+      "options": [
+        "Work done is path-independent",
+        "Forces depend on velocity",
+        "Work done depends on time",
+        "Forces are proportional to acceleration"
+      ],
+      "correct": "Work done is path-independent",
+      "feedback": "In a conservative force field, the work done is independent of the path taken, relying only on the initial and final points."
+    },
+    {
+      "question": "What happens to the capacitance of a capacitor if a dielectric material is introduced?",
+      "options": [
+        "It increases",
+        "It decreases",
+        "It remains the same",
+        "It becomes zero"
+      ],
+      "correct": "It increases",
+      "feedback": "Introducing a dielectric material into a capacitor increases its capacitance by reducing the effective electric field."
+    },
+    {
+      "question": "Which formula represents the potential energy between two point charges?",
+      "options": ["U = kq1q2/r", "U = kq1q2r^2", "U = kq1/r^2", "U = kq1q2r"],
+      "correct": "U = kq1q2/r",
+      "feedback": "The potential energy U between two point charges is directly proportional to the product of the charges and inversely proportional to their separation distance."
+    },
+    {
+      "question": "What is Gauss's Theorem used for?",
+      "options": [
+        "To calculate electric flux through a surface",
+        "To determine resistance in a circuit",
+        "To find magnetic field strength",
+        "To compute current density"
+      ],
+      "correct": "To calculate electric flux through a surface",
+      "feedback": "Gauss's Theorem relates the electric flux through a closed surface to the net charge enclosed within it."
+    },
+    {
+      "question": "What is the role of an electric dipole in a uniform electric field?",
+      "options": [
+        "It experiences torque",
+        "It accelerates",
+        "It remains stationary",
+        "It rotates and translates simultaneously"
+      ],
+      "correct": "It experiences torque",
+      "feedback": "An electric dipole in a uniform electric field experiences torque, aligning it with the field."
+    },
+    {
+      "question": "What is the energy stored in a capacitor?",
+      "options": ["U = 1/2 CV^2", "U = CV", "U = 1/2 C^2V", "U = V/C"],
+      "correct": "U = 1/2 CV^2",
+      "feedback": "The energy stored in a capacitor is proportional to the capacitance and the square of the voltage across it."
+    },
+    {
+      "question": "What does the electric potential due to a point charge depend on?",
+      "options": [
+        "The distance from the charge",
+        "The medium between the charges",
+        "The magnitude of the charge",
+        "All of the above"
+      ],
+      "correct": "All of the above",
+      "feedback": "Electric potential depends on the charge magnitude, the distance from it, and the properties of the intervening medium."
+    },
+    {
+      "question": "What is the purpose of a capacitor in a circuit?",
+      "options": [
+        "To store electrical energy",
+        "To increase current flow",
+        "To block voltage",
+        "To generate magnetic fields"
+      ],
+      "correct": "To store electrical energy",
+      "feedback": "A capacitor stores electrical energy in an electric field, which can be discharged later as needed."
+    },
+    {
+      "question": "Which type of charge distribution does Gauss's Law best apply to?",
+      "options": [
+        "Symmetrical distributions",
+        "Random distributions",
+        "Isolated charges",
+        "Complex circuits"
+      ],
+      "correct": "Symmetrical distributions",
+      "feedback": "Gauss's Law is particularly useful for symmetrical charge distributions like spheres, cylinders, and planes."
+    },
+    {
+      "question": "What is the drift velocity in a conductor?",
+      "options": [
+        "The average velocity of charge carriers",
+        "The maximum velocity of electrons",
+        "The instantaneous speed of current",
+        "The speed of the electric field"
+      ],
+      "correct": "The average velocity of charge carriers",
+      "feedback": "Drift velocity refers to the slow average movement of charge carriers due to an applied electric field."
+    }
+  ]
+}
