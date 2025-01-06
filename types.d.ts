@@ -31,3 +31,10 @@ type User = import("firebase/auth").User;
  * @param path URL path to a json document where the quiz will be loaded from
  */
 declare function initializeQuiz(path: string): Promise<void>;
+
+type ResultExtra = {
+  id: string;
+  time: {
+    toDate(): Date
+  }
+}

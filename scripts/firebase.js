@@ -176,7 +176,7 @@ export async function studentDataIsSaved() {
 /**
  * Fetch a list of the current user's results from the database.
  *
- * @returns {Promise<Array<Result & {id : string}>>} A promise that resolves to an array of the user's results.
+ * @returns {Promise<Array<Result & ResultExtra>>} A promise that resolves to an array of the user's results.
  * @throws {Error} If fetching results from Firestore fails.
  */
 export async function getUserResults() {
@@ -186,7 +186,10 @@ export async function getUserResults() {
     const q = firestore.query(ref, firestore.where("uid", "==", user.uid));
     const snapshot = await firestore.getDocs(q);
     return snapshot.docs.map((doc) => {
-      return { id: doc.id, .../** @type {Result} */ (doc.data()) };
+      return {
+        .../** @type {Result & ResultExtra} */ (doc.data()),
+        id: doc.id,
+      };
     });
   } catch (error) {
     handleError(error);

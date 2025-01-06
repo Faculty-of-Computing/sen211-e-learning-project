@@ -5,10 +5,9 @@
  */
 {
     "compilerOptions": {
-        "target": "es2017",
+        "target": "ESNext",
         "module": "ESNext",
-        "moduleResolution": "node",
-        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "bundler",
         "checkJs": false,
         "allowJs": true,
         "lib": [

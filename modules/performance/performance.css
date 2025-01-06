@@ -217,7 +217,7 @@
   leading-trim: both;
 }
 .\[scrollbar-width\:thin\] {
-  scrollbar-width: thin;
+  scrollbar-width: none;
 }
 .\[text-edge\:cap\] {
   text-edge: cap;
