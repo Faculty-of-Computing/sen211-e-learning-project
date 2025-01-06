@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 type QuestionData = {
   question: string;
   options: string[];
@@ -23,3 +24,10 @@ type Result = {
 };
 
 type User = import("firebase/auth").User;
+
+/**
+ * Fetch the quiz and plug it into your code, using Group 1's template
+ * 
+ * @param path URL path to a json document where the quiz will be loaded from
+ */
+declare function initializeQuiz(path: string): Promise<void>;
