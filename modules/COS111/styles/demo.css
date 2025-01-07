@@ -316,7 +316,7 @@ header.desktop-nav .reverse-hamburger {
 
 .GoBack .goBackButton {
     background: none;
-    color: #fff;
+    color: orange;
     border: none;
     cursor: pointer;
 }
@@ -652,4 +652,10 @@ footer {
     /* border: 1px solid; */
     width: 100%;
     height: 100%;
+}
+
+.cos{
+    font-family: Monteserrat-Light;
+    font-size: 2.2rem;
+    margin: 1rem 0;
 }
