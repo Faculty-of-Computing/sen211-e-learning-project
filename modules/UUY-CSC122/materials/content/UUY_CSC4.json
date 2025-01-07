@@ -1,0 +1,116 @@
+{
+  "name": "Microsoft PowerPoint Quiz",
+  "time": 1800,
+  "questions": [
+    {
+      "question": "What is the primary function of Microsoft PowerPoint?",
+      "options": [
+        "To create spreadsheets",
+        "To create presentations",
+        "To edit videos",
+        "To manage databases"
+      ],
+      "correct": "To create presentations",
+      "feedback": "Microsoft PowerPoint is primarily used for creating presentations with slides, text, images, and animations."
+    },
+    {
+      "question": "Which tab in PowerPoint contains the 'New Slide' option?",
+      "options": [
+        "Home",
+        "Insert",
+        "Design",
+        "Transitions"
+      ],
+      "correct": "Home",
+      "feedback": "The 'New Slide' option is located under the 'Home' tab in PowerPoint."
+    },
+    {
+      "question": "What is the shortcut key to start a slideshow in Microsoft PowerPoint?",
+      "options": [
+        "F5",
+        "Ctrl + S",
+        "Alt + F4",
+        "Shift + F5"
+      ],
+      "correct": "F5",
+      "feedback": "Pressing F5 starts the slideshow from the beginning."
+    },
+    {
+      "question": "Which feature allows you to apply consistent formatting to all slides in a presentation?",
+      "options": [
+        "Slide Master",
+        "Transitions",
+        "Animations",
+        "Design Ideas"
+      ],
+      "correct": "Slide Master",
+      "feedback": "The Slide Master feature allows you to set consistent formatting, such as fonts and layouts, for all slides."
+    },
+    {
+      "question": "What is the purpose of the 'Transitions' feature in PowerPoint?",
+      "options": [
+        "To add animations to objects",
+        "To add effects when moving between slides",
+        "To format text",
+        "To insert videos"
+      ],
+      "correct": "To add effects when moving between slides",
+      "feedback": "Transitions control how one slide moves to the next during a presentation."
+    },
+    {
+      "question": "What is the default file extension for PowerPoint presentations?",
+      "options": [
+        ".docx",
+        ".pptx",
+        ".xlsx",
+        ".pdf"
+      ],
+      "correct": ".pptx",
+      "feedback": ".pptx is the default file format for PowerPoint presentations."
+    },
+    {
+      "question": "What does the 'Rehearse Timings' feature do in PowerPoint?",
+      "options": [
+        "It formats text automatically",
+        "It helps practice and record slide timings",
+        "It adds transitions to slides",
+        "It saves the presentation"
+      ],
+      "correct": "It helps practice and record slide timings",
+      "feedback": "The 'Rehearse Timings' feature helps presenters practice and record the timing for each slide."
+    },
+    {
+      "question": "How do you insert an image into a PowerPoint slide?",
+      "options": [
+        "Click on the 'Home' tab and select 'Insert Image'",
+        "Click on the 'Insert' tab and select 'Pictures'",
+        "Right-click on the slide and choose 'Add Image'",
+        "Press Ctrl + P"
+      ],
+      "correct": "Click on the 'Insert' tab and select 'Pictures'",
+      "feedback": "To insert an image, go to the 'Insert' tab and choose 'Pictures'."
+    },
+    {
+      "question": "What is the purpose of the 'Animations' feature in PowerPoint?",
+      "options": [
+        "To create transitions between slides",
+        "To apply movement effects to objects on a slide",
+        "To add background music",
+        "To change the slide layout"
+      ],
+      "correct": "To apply movement effects to objects on a slide",
+      "feedback": "The 'Animations' feature allows you to add movement effects to objects such as text, images, and shapes."
+    },
+    {
+      "question": "What is the shortcut key to duplicate a slide in PowerPoint?",
+      "options": [
+        "Ctrl + D",
+        "Ctrl + C",
+        "Ctrl + V",
+        "Ctrl + X"
+      ],
+      "correct": "Ctrl + D",
+      "feedback": "Ctrl + D is the shortcut key to duplicate a selected slide in PowerPoint."
+    }
+  ]
+}

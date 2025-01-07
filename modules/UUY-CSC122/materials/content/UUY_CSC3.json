@@ -1,0 +1,116 @@
+{
+  "name": "Microsoft Excel Quiz",
+  "time": 1800,
+  "questions": [
+    {
+      "question": "What is the primary function of Microsoft Excel?",
+      "options": [
+        "To create documents",
+        "To create presentations",
+        "To organize and analyze data",
+        "To design graphics"
+      ],
+      "correct": "To organize and analyze data",
+      "feedback": "Microsoft Excel is primarily used for organizing, analyzing, and visualizing data."
+    },
+    {
+      "question": "Which symbol is used to start a formula in Microsoft Excel?",
+      "options": [
+        "=",
+        "+",
+        "-",
+        "/"
+      ],
+      "correct": "=",
+      "feedback": "In Excel, all formulas must begin with the equals (=) sign."
+    },
+    {
+      "question": "What is the shortcut key to save an Excel workbook?",
+      "options": [
+        "Ctrl + P",
+        "Ctrl + S",
+        "Ctrl + C",
+        "Ctrl + V"
+      ],
+      "correct": "Ctrl + S",
+      "feedback": "Ctrl + S is the shortcut key to save a workbook in Excel."
+    },
+    {
+      "question": "Which feature in Excel is used to quickly calculate the sum of a range of cells?",
+      "options": [
+        "AutoFormat",
+        "AutoSum",
+        "Conditional Formatting",
+        "Data Validation"
+      ],
+      "correct": "AutoSum",
+      "feedback": "The AutoSum feature automatically calculates the sum of a range of selected cells."
+    },
+    {
+      "question": "What is the purpose of the 'PivotTable' feature in Excel?",
+      "options": [
+        "To format data",
+        "To create a summary of data",
+        "To validate data",
+        "To create a chart"
+      ],
+      "correct": "To create a summary of data",
+      "feedback": "PivotTables allow you to summarize and analyze large datasets efficiently."
+    },
+    {
+      "question": "What is the file extension for an Excel workbook?",
+      "options": [
+        ".docx",
+        ".xlsx",
+        ".pptx",
+        ".pdf"
+      ],
+      "correct": ".xlsx",
+      "feedback": ".xlsx is the default file format for Excel workbooks."
+    },
+    {
+      "question": "Which Excel function is used to find the largest number in a range?",
+      "options": [
+        "SUM",
+        "MIN",
+        "MAX",
+        "AVERAGE"
+      ],
+      "correct": "MAX",
+      "feedback": "The MAX function is used to find the largest number in a range of cells."
+    },
+    {
+      "question": "What is the purpose of the 'Freeze Panes' feature in Excel?",
+      "options": [
+        "To protect a workbook",
+        "To highlight data",
+        "To keep certain rows or columns visible",
+        "To lock cells for editing"
+      ],
+      "correct": "To keep certain rows or columns visible",
+      "feedback": "The Freeze Panes feature allows you to keep specific rows or columns visible while scrolling."
+    },
+    {
+      "question": "What is the shortcut key to copy selected cells in Excel?",
+      "options": [
+        "Ctrl + C",
+        "Ctrl + V",
+        "Ctrl + X",
+        "Ctrl + Z"
+      ],
+      "correct": "Ctrl + C",
+      "feedback": "Ctrl + C is the shortcut key to copy selected cells in Excel."
+    },
+    {
+      "question": "What is the purpose of the 'Conditional Formatting' feature in Excel?",
+      "options": [
+        "To apply styles to a cell",
+        "To sort data",
+        "To highlight cells based on specific conditions",
+        "To merge cells"
+      ],
+      "correct": "To highlight cells based on specific conditions",
+      "feedback": "Conditional Formatting is used to apply formatting to cells that meet certain criteria."
+    }
+  ]
+}

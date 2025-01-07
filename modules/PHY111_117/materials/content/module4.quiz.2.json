@@ -1,0 +1,251 @@
+{
+  "name": "PHY111 Quiz 2",
+  "time": 1800,
+  "questions": [
+    {
+      "question": "What is the primary difference between heat and temperature?",
+      "options": [
+        "Heat is a measure of energy, temperature is a measure of hotness or coldness",
+        "Heat is measured in Kelvin, temperature in Joules",
+        "Heat is a type of light, temperature is a type of sound",
+        "There is no difference"
+      ],
+      "correct": "Heat is a measure of energy, temperature is a measure of hotness or coldness",
+      "feedback": "Heat refers to energy transfer due to temperature difference, while temperature indicates the degree of hotness or coldness."
+    },
+    {
+      "question": "Which physical property is commonly used in liquid-in-glass thermometers?",
+      "options": [
+        "Change in resistance",
+        "Change in length of liquid column",
+        "Change in volume of gas",
+        "Change in electrical charge"
+      ],
+      "correct": "Change in length of liquid column",
+      "feedback": "The expansion or contraction of a liquid like mercury or alcohol is used to measure temperature in these thermometers."
+    },
+    {
+      "question": "What is the significance of the Zeroth Law of Thermodynamics?",
+      "options": [
+        "It defines the conservation of energy",
+        "It establishes thermal equilibrium",
+        "It describes entropy",
+        "It explains heat transfer modes"
+      ],
+      "correct": "It establishes thermal equilibrium",
+      "feedback": "The Zeroth Law states that if two systems are in thermal equilibrium with a third system, they are in thermal equilibrium with each other."
+    },
+    {
+      "question": "Which gas law relates pressure and volume at constant temperature?",
+      "options": [
+        "Boyle's Law",
+        "Charles's Law",
+        "Avogadro's Law",
+        "Gay-Lussac's Law"
+      ],
+      "correct": "Boyle's Law",
+      "feedback": "Boyle's Law states that the pressure of a gas is inversely proportional to its volume when temperature is constant."
+    },
+    {
+      "question": "What is the fixed point on the Kelvin scale?",
+      "options": ["0 K", "273.15 K", "100 K", "32 K"],
+      "correct": "273.15 K",
+      "feedback": "The fixed point of 273.15 K corresponds to the freezing point of water at standard pressure."
+    },
+    {
+      "question": "Which type of thermometer is suitable for very low temperatures?",
+      "options": [
+        "Mercury thermometer",
+        "Alcohol thermometer",
+        "Platinum resistance thermometer",
+        "Thermoelectric thermometer"
+      ],
+      "correct": "Alcohol thermometer",
+      "feedback": "Alcohol thermometers are used in cold environments as alcohol remains liquid at much lower temperatures compared to mercury."
+    },
+    {
+      "question": "What is the primary function of the clinical thermometer's constriction?",
+      "options": [
+        "To prevent mercury from falling back into the bulb",
+        "To improve readability",
+        "To measure higher temperatures",
+        "To make the thermometer lightweight"
+      ],
+      "correct": "To prevent mercury from falling back into the bulb",
+      "feedback": "The constriction keeps the mercury column stable, allowing the temperature to be read after removal from the body."
+    },
+    {
+      "question": "What is the triple point of water?",
+      "options": [
+        "The temperature where water, ice, and vapor coexist",
+        "The boiling point of water",
+        "The freezing point of water",
+        "The temperature of water in all its forms"
+      ],
+      "correct": "The temperature where water, ice, and vapor coexist",
+      "feedback": "At the triple point, water exists simultaneously as a solid, liquid, and gas under specific conditions of temperature and pressure."
+    },
+    {
+      "question": "Which property makes mercury a good thermometric liquid?",
+      "options": [
+        "It wets glass",
+        "It has a high boiling point",
+        "It is transparent",
+        "It is lightweight"
+      ],
+      "correct": "It has a high boiling point",
+      "feedback": "Mercury's high boiling point allows it to measure high temperatures effectively."
+    },
+    {
+      "question": "What is the formula to convert Celsius to Fahrenheit?",
+      "options": [
+        "F = (C × 9/5) + 32",
+        "F = (C × 5/9) + 32",
+        "F = C + 273",
+        "F = C × 1.8"
+      ],
+      "correct": "F = (C × 9/5) + 32",
+      "feedback": "The formula converts a temperature from Celsius to Fahrenheit by scaling and adding an offset."
+    },
+    {
+      "question": "Which thermodynamic principle states that energy cannot be created or destroyed?",
+      "options": [
+        "First Law of Thermodynamics",
+        "Second Law of Thermodynamics",
+        "Third Law of Thermodynamics",
+        "Zeroth Law of Thermodynamics"
+      ],
+      "correct": "First Law of Thermodynamics",
+      "feedback": "The First Law describes the conservation of energy, stating it can only change forms."
+    },
+    {
+      "question": "What is viscosity?",
+      "options": [
+        "The resistance to flow in a fluid",
+        "The buoyancy of an object in a liquid",
+        "The density of a fluid",
+        "The elasticity of a material"
+      ],
+      "correct": "The resistance to flow in a fluid",
+      "feedback": "Viscosity describes a fluid's resistance to motion or flow."
+    },
+    {
+      "question": "Which principle explains why objects float?",
+      "options": [
+        "Bernoulli's Principle",
+        "Archimedes' Principle",
+        "Pascal's Law",
+        "Boyle's Law"
+      ],
+      "correct": "Archimedes' Principle",
+      "feedback": "Archimedes' Principle states that the buoyant force on an object is equal to the weight of the fluid displaced by the object."
+    },
+    {
+      "question": "What is the unit of surface tension?",
+      "options": ["N/m", "Pa", "N", "m²/s²"],
+      "correct": "N/m",
+      "feedback": "Surface tension is measured in newtons per meter (N/m), reflecting the force along a line per unit length."
+    },
+    {
+      "question": "How is heat transferred in fluids through convection?",
+      "options": [
+        "By molecular collision",
+        "By mass movement of particles",
+        "By radiation",
+        "By conduction"
+      ],
+      "correct": "By mass movement of particles",
+      "feedback": "Convection transfers heat through the bulk movement of fluid particles from one region to another."
+    },
+    {
+      "question": "Which property of liquids causes a meniscus to form?",
+      "options": ["Viscosity", "Surface tension", "Buoyancy", "Density"],
+      "correct": "Surface tension",
+      "feedback": "Surface tension allows liquids to resist external forces, leading to the curved surface known as the meniscus."
+    },
+    {
+      "question": "Which material is an example of an insulator?",
+      "options": ["Copper", "Plastic", "Aluminum", "Iron"],
+      "correct": "Plastic",
+      "feedback": "Plastic is a poor conductor of heat and electricity, making it an effective insulator."
+    },
+    {
+      "question": "What is the principle behind the working of a barometer?",
+      "options": [
+        "Archimedes' Principle",
+        "Pascal's Principle",
+        "Boyle's Law",
+        "Zeroth Law of Thermodynamics"
+      ],
+      "correct": "Pascal's Principle",
+      "feedback": "Pascal's Principle states that pressure applied to a confined fluid is transmitted equally in all directions."
+    },
+    {
+      "question": "What does the term 'elastic limit' refer to?",
+      "options": [
+        "The maximum stress a material can withstand",
+        "The point at which a material begins to deform permanently",
+        "The ratio of stress to strain in a material",
+        "The maximum strain energy in a material"
+      ],
+      "correct": "The point at which a material begins to deform permanently",
+      "feedback": "The elastic limit is the maximum stress that a material can endure without permanent deformation."
+    },
+    {
+      "question": "What is the unit of pressure?",
+      "options": ["Pascal", "Newton", "Joule", "Watt"],
+      "correct": "Pascal",
+      "feedback": "Pressure is measured in pascals (Pa), defined as one newton per square meter."
+    },
+    {
+      "question": "Which law explains the relationship between stress and strain in elastic materials?",
+      "options": [
+        "Hooke's Law",
+        "Pascal's Law",
+        "Boyle's Law",
+        "Archimedes' Principle"
+      ],
+      "correct": "Hooke's Law",
+      "feedback": "Hooke's Law states that the strain in a material is proportional to the applied stress within the elastic limit."
+    },
+    {
+      "question": "Which property allows gases to expand and fill their container?",
+      "options": ["Density", "Elasticity", "Fluidity", "Compressibility"],
+      "correct": "Compressibility",
+      "feedback": "Compressibility is a property of gases that allows them to expand and adapt to the shape of their container."
+    },
+    {
+      "question": "What is the relationship between pressure and depth in a fluid?",
+      "options": [
+        "Pressure decreases with depth",
+        "Pressure remains constant with depth",
+        "Pressure increases with depth",
+        "Pressure fluctuates with depth"
+      ],
+      "correct": "Pressure increases with depth",
+      "feedback": "In a fluid, pressure increases with depth due to the weight of the overlying fluid."
+    },
+    {
+      "question": "What is the purpose of a manometer?",
+      "options": [
+        "To measure pressure",
+        "To measure temperature",
+        "To measure density",
+        "To measure viscosity"
+      ],
+      "correct": "To measure pressure",
+      "feedback": "A manometer is a device used to measure pressure, often in gases or liquids."
+    },
+    {
+      "question": "Which factor affects the boiling point of a liquid?",
+      "options": [
+        "Ambient pressure",
+        "Volume of the liquid",
+        "Thermal conductivity",
+        "Viscosity"
+      ],
+      "correct": "Ambient pressure",
+      "feedback": "The boiling point of a liquid is influenced by the surrounding pressure; lower pressure reduces the boiling point."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "QuizData",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The name of the quiz."
+        },
+        "time": {
+            "type": "number",
+            "description": "The time limit for the quiz in seconds."
+        },
+        "questions": {
+            "type": "array",
+            "description": "An array of questions in the quiz.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "question": {
+                        "type": "string",
+                        "description": "The question text."
+                    },
+                    "options": {
+                        "type": "array",
+                        "description": "An array of possible answer options.",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 1
+                    },
+                    "correct": {
+                        "type": "string",
+                        "description": "The correct answer."
+                    },
+                    "feedback": {
+                        "type": "string",
+                        "description": "Feedback provided for the answer."
+                    }
+                },
+                "required": [
+                    "question",
+                    "options",
+                    "correct",
+                    "feedback"
+                ]
+            }
+        }
+    },
+    "required": [
+        "name",
+        "time",
+        "questions"
+    ]
+}

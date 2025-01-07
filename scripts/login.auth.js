@@ -3,17 +3,26 @@
 import { googleAuth, login, studentDataIsSaved } from "./firebase.js";
 import { disableFields, handleError } from "./utils.auth.js";
 
-async function proceedWithLogin() {
+/**
+ * @param {User} user
+ */
+async function proceedWithLogin(user) {
   const dataIsSaved = await studentDataIsSaved();
-  location.href = dataIsSaved ? "/" : "/auth/auth.html";
+  if (dataIsSaved) {
+    localStorage.setItem("user-id", user.uid);
+    location.href = "/";
+  } else {
+    location.href = "/auth/auth.html";
+  }
 }
 
 window.addEventListener("load", () => {
-  // @ts-ignore
+  // @ts-expect-error ...
+  // eslint-disable-next-line no-undef
   lucide.createIcons();
 
   const googleBtn = document.querySelector("#google-auth");
-  // @ts-ignore
+  // @ts-expect-error ...
   googleBtn.onclick = () => {
     disableFields();
     googleAuth().then(proceedWithLogin).catch(handleError);
@@ -30,15 +39,15 @@ window.addEventListener("load", () => {
   };
 
   // reveal password
-  // @ts-ignore
+  // @ts-expect-error ...
   document.querySelector("[data-lucide=eye]").onclick = (e) => {
     loginForm.password.type = "text";
     e.currentTarget.classList.add("!hidden");
     e.currentTarget.nextElementSibling.classList.remove("!hidden");
   };
-  
+
   // hide password
-  // @ts-ignore
+  // @ts-expect-error ...
   document.querySelector("[data-lucide=eye-off]").onclick = (e) => {
     loginForm.password.type = "password";
     e.currentTarget.classList.add("!hidden");

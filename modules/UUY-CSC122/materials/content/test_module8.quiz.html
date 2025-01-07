@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 8 Quiz Test</title>
+    <script src="./../../../scripts/firebase.js" type="module"></script>
+    <script type="module">
+        import { uploadResult } from './../../../scripts/firebase.js';
+
+        // Test function
+        function testUploadResult() {
+            const testData = {
+                score: 5,
+                total: 10,
+                course: "UUY_CSC 122"
+            };
+
+            uploadResult(testData)
+                .then(response => {
+                    console.log(response); // Expected: "Data uploaded successfully"
+                    document.getElementById('test-result').innerText = "Test Passed";
+                })
+                .catch(error => {
+                    console.error(error);
+                    document.getElementById('test-result').innerText = "Test Failed";
+                });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            testUploadResult();
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Module 8 Quiz Test</h1>
+    <p id="test-result">Running test...</p>
+</body>
+
+</html>

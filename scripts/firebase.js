@@ -1,32 +1,20 @@
 // @ts-check
 
-// @ts-ignore
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
-// @ts-ignore
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-import {
-  createUserWithEmailAndPassword,
-  getAuth,
-  GoogleAuthProvider,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  updateProfile,
-  // @ts-ignore
-} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
-import {
-  addDoc,
-  collection,
-  doc,
-  getDoc,
-  getDocs,
-  getFirestore,
-  query,
-  serverTimestamp,
-  setDoc,
-  where,
-  // @ts-ignore
-} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+// @ts-expect-error ...
+import * as _firebaseAnalytics from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+// @ts-expect-error ...
+import * as _firebaseApp from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+// @ts-expect-error ...
+import * as _firebaseAuth from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+// @ts-expect-error ...
+import * as _firestore from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+
+const firestore = /** @type {import("firebase/firestore")} */ (_firestore);
+const firebaseApp = /** @type {import("firebase/app")} */ (_firebaseApp);
+const firebaseAuth = /** @type {import("firebase/auth")} */ (_firebaseAuth);
+const firebaseAnalytics = /** @type {import("firebase/analytics")} */ (
+  _firebaseAnalytics
+);
 
 /**
  * Handles errors thrown in the application, formats their messages, and throws them.
@@ -64,10 +52,10 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-getAnalytics(app);
-export const auth = getAuth(app);
-const db = getFirestore(app);
+const app = firebaseApp.initializeApp(firebaseConfig);
+firebaseAnalytics.getAnalytics(app);
+export const auth = firebaseAuth.getAuth(app);
+const db = firestore.getFirestore(app);
 
 /**
  * Create a new account for the user, using their email and password.
@@ -79,7 +67,7 @@ const db = getFirestore(app);
  */
 export async function signUp(email, password) {
   try {
-    await createUserWithEmailAndPassword(auth, email, password);
+    await firebaseAuth.createUserWithEmailAndPassword(auth, email, password);
   } catch (error) {
     handleError(error);
   }
@@ -91,12 +79,17 @@ export async function signUp(email, password) {
  *
  * @param {string} email - User's email address.
  * @param {string} password - User's password.
- * @returns {Promise<void>} Resolves when login is successful.
+ * @returns {Promise<User>} Resolves when login is successful.
  * @throws {Error} If the login process fails.
  */
 export async function login(email, password) {
   try {
-    await signInWithEmailAndPassword(auth, email, password);
+    const { user } = await firebaseAuth.signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    return user;
   } catch (error) {
     handleError(error);
   }
@@ -106,51 +99,44 @@ export async function login(email, password) {
 /**
  * Directs the user to sign in using their Google account via a popup.
  *
- * @returns {Promise<void>} Resolves when Google sign-in is successful.
+ * @returns {Promise<User>} Resolves when Google sign-in is successful.
  * @throws {Error} If the Google sign-in process fails.
  */
 export async function googleAuth() {
-  const provider = new GoogleAuthProvider();
+  const provider = new firebaseAuth.GoogleAuthProvider();
   try {
-    await signInWithPopup(auth, provider);
+    const { user } = await firebaseAuth.signInWithPopup(auth, provider);
+    return user;
   } catch (error) {
     handleError(error);
   }
 }
 
 /**
- * @typedef {object} Record
- * @property {number} total - Total number of questions the user attempted.
- * @property {number} score - Number of questions answered correctly by the user.
- * @property {string} course - Name of the course or subject for which the result pertains.
- * @property {string} duration - The amount of time it took the user to complete the quiz e.g. 10 Mins
- */
-
-/**
  * Save the user's quiz or test results to the database and redirect them
  * to the performance page to see their result.
  *
- * @param {Record} result - An object containing the user's test results.
- * @returns {Promise<void>} Resolves when the result is successfully uploaded
+ * @param {Result} result - An object containing the user's test results.
+ * @returns {Promise<string>} Returns the url to the performance page
  * to Firestore.
  * @throws {Error} If the upload process fails.
  */
 export async function saveResult(result) {
-  const ref = collection(db, "results");
+  const ref = firestore.collection(db, "results");
   const user = await getUser();
   try {
-    const { id } = await addDoc(ref, {
+    const { id } = await firestore.addDoc(ref, {
       ...result,
-      time: serverTimestamp(),
+      time: firestore.serverTimestamp(),
       uid: user.uid,
     });
-    const url = new URL("/modules/performance", location.href);
+    const url = new URL("/modules/performance/index.html", location.href);
     url.searchParams.set("id", id);
     url.searchParams.set("score", result.score.toString());
     url.searchParams.set("total", result.total.toString());
-    url.searchParams.set("duration", result.duration);
+    url.searchParams.set("duration", result.duration.toString());
     url.searchParams.set("course", result.course);
-    location.href = url.href;
+    return url.href;
   } catch (error) {
     handleError(error);
   }
@@ -167,11 +153,11 @@ export async function saveResult(result) {
 export async function saveStudent(data) {
   try {
     const user = await getUser();
-    const ref = doc(db, "users", user.uid);
-    await setDoc(ref, {
+    const ref = firestore.doc(db, "users", user.uid);
+    await firestore.setDoc(ref, {
       ...data,
     });
-    await updateProfile(user, {
+    await firebaseAuth.updateProfile(user, {
       displayName: `${data.firstName} ${data.lastName}`,
     });
     localStorage.setItem("user-id", user.uid);
@@ -182,42 +168,46 @@ export async function saveStudent(data) {
 
 export async function studentDataIsSaved() {
   const user = await getUser();
-  const ref = doc(db, "users", user.uid);
-  const snapshot = await getDoc(ref);
+  const ref = firestore.doc(db, "users", user.uid);
+  const snapshot = await firestore.getDoc(ref);
   return snapshot.exists();
 }
 
 /**
  * Fetch a list of the current user's results from the database.
  *
- * @returns {Promise<Record[]>} A promise that resolves to an array of the user's results.
+ * @returns {Promise<Array<Result & ResultExtra>>} A promise that resolves to an array of the user's results.
  * @throws {Error} If fetching results from Firestore fails.
  */
 export async function getUserResults() {
   try {
     const user = await getUser();
-    const ref = collection(db, "results");
-    const q = query(ref, where("uid", "==", user.uid));
-    const snapshot = await getDocs(q);
-    return snapshot.docs.map((doc) => doc.data());
+    const ref = firestore.collection(db, "results");
+    const q = firestore.query(ref, firestore.where("uid", "==", user.uid));
+    const snapshot = await firestore.getDocs(q);
+    return snapshot.docs.map((doc) => {
+      return {
+        .../** @type {Result & ResultExtra} */ (doc.data()),
+        id: doc.id,
+      };
+    });
   } catch (error) {
     handleError(error);
   }
 }
 
 /**
- * @typedef {object} User
- * @property {string} displayName
- * @property {string} photoURL
- * @property {string} uid
- * @property {string} email
+ * @param {(user: User) => any} [cb]
  * @returns {Promise<User>}
  */
-export function getUser() {
-  return new Promise((res, rej) => {
-    onAuthStateChanged(auth, (user) => {
+export async function getUser(cb) {
+  /** @type {User} */
+  const user = await new Promise((res, rej) => {
+    firebaseAuth.onAuthStateChanged(auth, (user) => {
       if (user) res(user);
       else rej("Unable to fetch user!");
     });
   });
+  if (cb) cb(user);
+  return user;
 }

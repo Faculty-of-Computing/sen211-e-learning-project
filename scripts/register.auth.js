@@ -4,11 +4,12 @@ import { googleAuth, signUp } from "./firebase.js";
 import { disableFields, handleError, toast } from "./utils.auth.js";
 
 window.addEventListener("load", () => {
-  // @ts-ignore
+  // @ts-expect-error ...
+  // eslint-disable-next-line no-undef
   lucide.createIcons();
 
   const googleBtn = document.querySelector("#google-auth");
-  // @ts-ignore
+  // @ts-expect-error ...
   googleBtn.onclick = () => {
     disableFields();
     googleAuth()
@@ -37,7 +38,7 @@ window.addEventListener("load", () => {
 
   // reveal password
   document.querySelectorAll("[data-lucide=eye]").forEach((element) => {
-    // @ts-ignore
+    // @ts-expect-error ...
     element.onclick = (e) => {
       e.currentTarget.parentElement.querySelector("input").type = "text";
       e.currentTarget.classList.add("!hidden");
@@ -47,7 +48,7 @@ window.addEventListener("load", () => {
 
   // hide password
   document.querySelectorAll("[data-lucide=eye-off]").forEach((element) => {
-    // @ts-ignore
+    // @ts-expect-error ...
     element.onclick = (e) => {
       e.currentTarget.parentElement.querySelector("input").type = "password";
       e.currentTarget.classList.add("!hidden");

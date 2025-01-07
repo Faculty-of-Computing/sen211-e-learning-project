@@ -1,0 +1,786 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    color: white;
+    background: black;
+    font-family: "Roboto";
+    padding: 2rem;
+}
+
+@font-face {
+    font-family: Monteserrat;
+    src: url(./Fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Monteserrat-Black;
+    src: url(./Fonts/Montserrat-Black.ttf);
+}
+
+@font-face {
+    font-family: Monteserrat-Light;
+    src: url(./Fonts/Montserrat-Light.ttf);
+}
+
+.Learn {
+    background-color: orange;
+    color: black;
+    font-family: Monteserrat-Black;
+}
+
+header h1 {
+    font-family: Monteserrat-Black;
+    font-size: 20px;
+}
+
+.cos121 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.module-btn span{
+    background-color: orange;
+    color: black;
+    border: none;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;   
+    text-decoration:none;
+}
+
+.nav-links a:hover{
+    color: orange;
+    transition: .5s;
+}
+
+nav ul {
+    display: flex;
+    /* border: 2px solid white; */
+    justify-content: space-around;
+    width: 50vw;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+nav u li:hover {
+  background: #3A3A3A;
+}
+
+
+
+nav ul p:hover {
+    color: orange;
+}
+
+header {
+    margin: 0 0 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+}
+
+header .hamburger div {
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+}
+
+header .hamburger div:nth-child(2) {
+    margin-top: .3em;
+    margin-bottom: .3em;
+}
+
+header .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+
+
+.HomeContent1 {
+    /* border: 1px solid wheat; */
+    height: 20px;
+    justify-self: space-between;
+    padding-left: 30px;
+    padding-top: 60px;
+    /* display: ; */
+}
+
+.Lectures-Overview {
+    margin: 6rem 0 2rem 0;
+    /* border: 1px solid white; */
+    padding-top: 40px
+}
+
+.lectures-overview-header {
+    /* border: 1px solid white; */
+    display: flex;
+    height: 5.5rem;
+    margin: 0 0 1rem 0;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+}
+
+.lecture-text {
+    font-family: Inter;
+    font-weight: 4px;
+    font-size: 24px;
+}
+
+.module-quiz {
+    width: 10rem;
+    height: 3rem;
+    background-color: transparent;
+    color: orange;
+    font-size: 20px;
+    cursor: pointer;
+    border: 4px solid orange;
+    border-radius: 30px;
+    transition: .3s;
+   }
+
+   .module-quiz a{
+    text-decoration: none;
+    color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    float: right;
+   }
+
+.templates {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    /* border: 1px solid; */
+}
+
+.template1 {
+    width: 90%;
+    background: rgb(38, 31, 31);
+    margin: .5rem 0 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 1rem;
+    justify-content: space-between;
+    font-size: 1em;
+    align-items: left;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.template1 p {
+    font-family: Monteserrat-Light;
+    margin: .8em 0;
+}
+
+.template1:hover {
+    transform: scale(1.05);
+}
+
+img {
+    width: 20px;
+}
+
+.readmore {
+    position: relative;
+    width: 7rem;
+    height: 2rem;
+    background: black;
+    color: white;
+    font-size: 12px;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    left: 50%;
+    cursor: pointer;
+}
+
+.readmore:hover {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+}
+
+.readmore a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* mediaquery part @sisco😌 */
+
+
+/* I decided to work on the media query like you asked */
+
+@media only screen and (max-width:1300px) {
+    .templates {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* .template1{
+width: 90%;
+padding: 14px;
+} */
+    /* .lectures-overview-header{
+flex-direction: column;
+height: 7rem;
+} */
+}
+
+@media only screen and (max-width:768px) {
+    .templates {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0%;
+        background: #020100;
+        width: 80%;
+        padding: 20px 0px 25px;
+        display:none;
+        align-items: center;
+        text-align: center;
+        height: 350px;
+        align-items: center;
+        border-radius: 10px;
+        transition: 0.5s ease-in-out;
+        border: 1px solid #3A3A3A;
+        display: ;
+        padding-top: 0;
+    }
+    
+    nav ul li:hover{
+      background: #353331;
+      border-radius: 10px;
+      border: 1px solid   #3A3A3A ;
+    }
+    
+    header .nav-links.active{
+      left:30%;
+      display: block;
+    }
+    header .nav-links li{
+      font-size: 20px;
+      padding: 35px;
+    }
+    header .DropDown-Button{
+      font-size: 20px;
+    }
+
+    header .hamburger{
+        display: block;
+        cursor: pointer ;
+        position: relative;
+        padding: 10px;
+        transition: all 0.3s ease-in-out;
+       
+    }    
+        
+ 
+        
+    
+    
+    
+    .readmore {
+        left: 50%;
+    }
+    /* .template1{
+width: 15rem;
+padding: 14px;
+} */
+    /* .lectures-overview-header{
+flex-direction: column;
+height: 7rem;
+} */
+    section.question-area {
+        /* display: block !important; */
+        flex-direction: column;
+    }
+}
+
+.quizButton {
+    padding: .3em .5em;
+    background: none;
+    transition: .3s;
+    width: 150px;
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: medium;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+    float: right;
+}
+
+.quizButton :hover {
+    /* padding: .5em .8em; */
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+ .quizButton a {
+    padding: .3em .5em;
+    border: 1px solid orange;
+    background: none;
+    color: orange;
+    transition: .3s;
+    width: 150px;
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: medium;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0em;
+    float: right;
+    text-decoration: none;
+} 
+
+.quizButton{
+    background-color: none;
+    border: none;
+}
+
+/* section.content {
+    margin-top: 3em;
+}
+
+section.content .cos {
+    font-family: Monteserrat-Light;
+}
+
+section.content h3 {
+    font-family: Monteserrat;
+}
+
+section.content h2 {
+    margin-top: .3em;
+    margin-bottom: 1em;
+    font-family: Monteserrat-Black;
+}
+
+section p {
+    font-family: Monteserrat-Light;
+}
+
+section.content ol {
+    margin-top: 3em;
+}
+
+section.content ol ul li {
+    margin-top: 1em;
+    list-style-type: lower-roman;
+}
+*/
+
+.pagination{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination a {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+.pagination .prev {
+    width: 30%;
+    text-align: right;
+    padding: .2em .5em;
+    background: none;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination .next {
+    width: 30%;
+    text-align: left;
+    padding: .2em .5em;
+    background: none;
+    color: orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination button{
+    color: none;
+    border: none;
+}
+
+.next a {
+    width: 100%;
+    text-align: left;
+    padding: .2em .5em;
+    border: 1px solid orange;
+    background: none;
+    color: orange;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.prev a {
+    width: 100%;
+    text-align: left;
+    padding: .2em .5em;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+
+
+@media only screen and (min-width: 992px) {
+    section.content {
+        max-width: 70%;
+    }
+}
+
+.content{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+
+/* section.question-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.question-area .options div {
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: .5em;
+    margin-top: 1em;
+}
+
+section.question-area .indicator {
+    margin-top: 2em;
+}
+
+section.question-area .indicator p {
+    font-size: .9em;
+    font-family: Monteserrat-Light;
+}
+
+section.question-area .indicator .bottom {
+    margin-top: 1em;
+}
+
+section.question-area .indicator .bottom div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+section.question-area .indicator .bottom div div.answered {
+    width: 10px;
+    height: 10px;
+    background-color: lime;
+    border-radius: 50%;
+}
+
+section.question-area .indicator .bottom div div.skipped {
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+section.question-area .indicator .bottom div span {
+    font-size: .8rem;
+    font-family: Monteserrat-Light;
+}
+
+section.question-area .answered-questions {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 10px;
+}
+
+section.question-area .answered-questions div {
+    width: 35px;
+    height: 35px; */
+    /* background-color: lime; */
+/*     border: 1px solid #777;
+    margin-top: .5em;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 1.1em;
+    padding-top: 0.3em;
+    font-family: Monteserrat;
+} */
+
+.course-code {
+    font-family: Afacad;
+    font-weight: 400;
+    font-size: 48px;
+}
+
+.learn-text {
+    font-weight: 600;
+    padding-left: 30px;
+    /* padding-bottom: 50px; */
+}
+
+.go-back a {
+    text-decoration: none;
+    color: #fff;
+    padding: .3em .5em;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    transition: .3s;
+    width: 120px;
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: medium;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .7em;
+}
+
+.go-back a:hover {
+    /* padding: .5em .8em; */
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* .go-back-container {
+display: flex;
+} */
+
+.pic {
+    width: 5px !important;
+}
+
+header.search-container {
+    /* padding-bottom: 30px;
+        padding-top: 400px; */
+    position: relative;
+    width: 300px;
+    height: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.search-container img {
+    position: absolute;
+    width: 30px;
+    padding-top: 7px;
+    padding-left: 15px;
+}
+
+.search-container input[type="text"] {
+    width: 100%;
+    height: 1px;
+    padding: 10px 10px 10px 40px;
+    padding-top: 15px;
+    /* Add left padding to accommodate the image */
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #242729;
+    margin-right: 170px;
+}
+
+/* .profile {
+    padding-right: 5px;
+    padding-left: 5px;
+    background-color: #FF2D55;
+    border-radius: 50px;
+    color: Pink;
+    width: 50px;
+    height: 50px;
+    display: flex;
+} */
+
+.profile-text {
+    font-family: Afacad;
+    display: flex;
+}
+
+.course-student {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.evaluation-pic {
+    width: 22px !important;
+    position: relative;
+    padding-left: 14px;
+}
+
+.student-btn {
+    height: 30px;
+    background-color: black;
+    color: #FF9500;
+    border: 1px solid #FF9500;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: .3em .5em;
+    width: 340px;
+    font-size: medium;
+    font-family: Open Sans;
+    font-weight: bold;
+}
+
+.student-btn:hover {
+    padding: .5em .8em;
+    background-color: #FF9500;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: orange;
+    opacity: o.9;
+  }
+ */
+.profile {
+    width: 31px;
+    height: 31px;
+    background-color: #dd3b3b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+
+}
+
+.Sub-header{
+    /* border: 1px solid white; */
+    display: flex;
+    height: 4rem;
+    margin: 0 0 1rem 0;
+    align-items: center;
+    justify-content: space-between;
+   /*  padding-left: 30px; */
+}
+
+.lecture-content{
+    font-size: large; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-display: block;
+    text-align: justify;
+    padding: 10px;
+}
+/*
+ .lecture-module-intro{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*/
+.inner-heading{
+    font-size: 18px;
+    font-weight: bolder;
+    padding-top: 10px;
+    padding-bottom: 5px;
+} 
+
+
+
+.DropDown-Button{
+    background-color:transparent;
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.hidden{
+    position: relative;
+    display: inline-block;
+}
+
+.Drop-Menu{
+    display: none;
+    position: absolute;
+    background-color: rgb(211, 208, 208);
+    min-width: 102px;
+} 
+
+.Drop-Menu a {
+    color: rgb(255, 136, 0);
+    padding: 11px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.Drop-Menu a:hover{
+    background-color: rgb(240, 189, 93);
+    color: black;
+}
+
+.hidden:hover .Drop-Menu{
+    display: Block;
+
+}
+
+.hidden:hover .DropDown-Button{
+    background-color: orange;
+    color: black;
+    width: 4em;
+}
+
+.about-heading{
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}

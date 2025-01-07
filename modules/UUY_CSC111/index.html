@@ -1,110 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uniuyo - CSC 111</title>
+    <link rel="stylesheet" href="../styles/demo.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo App</title>
-    <link rel="stylesheet" href="../styles/demo.css">
-</head>
-
-<body>
+  <body>
     <!-- The header is meant to cover the nav bar too, including the logo -->
     <header>
-        <h1><span id="Learn">Learn</span>ify</h1>
-        <nav>
-            <ul>
-              <li><p>Home</p></li>
-                <li><p>Topics</p></li>
-                <li><p>Module Quiz</p></li>
-                <li><p>About/Feedback</p></li>
-            </ul>
-        </nav>
+      <h1><span id="Learn">Learn</span>ify</h1>
+      <nav>
+        <ul>
+          <li><p>Home</p></li>
+          <li><p>Topics</p></li>
+          <li><p>Module Quiz</p></li>
+          <li><p>About/Feedback</p></li>
+        </ul>
+      </nav>
 
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </header>
 
     <div class="HomeContent1">
-        <h1>CSC 111</h1>
-        <p>Intro </p>
+      <h1>Uniuyo CSC 111</h1>
+      <p>Intro</p>
     </div>
 
     <!-- This is for the Lecture Overview part -->
     <div class="Lectures-Overview">
-        <div class="lectures-overview-header">
-            <h2>Lectures Overview</h2>
+      <div class="lectures-overview-header">
+        <h2>Lectures Overview</h2>
 
-            <button class="quizButton">Module Quiz</button>
+        <button
+          class="quizButton"
+          onclick="location.href = localStorage.getItem('user-id') ? './quiz/' : '/auth/login.html'"
+        >
+          Module Quiz
+        </button>
+      </div>
 
+      <div class="templates">
+        <div class="template1">
+          <img src="../res/book-open-svgrepo-com.svg" alt="" />
+          <p><strong>Computer Ethics</strong></p>
+
+          <button class="readmore">
+            <a href="./lessons/computer_ethics.html"
+              >Read More <img src="../res/arrow-right-svgrepo-com.svg" alt=""
+            /></a>
+          </button>
         </div>
 
-        <div class="templates">
+        <div class="template1">
+          <img src="../res/book-open-svgrepo-com.svg" alt="" />
+          <p><strong>Basic Computer Operation (Booting)</strong></p>
 
-            <div class="template1">
-                <img src="../res/book-open-svgrepo-com.svg" alt="">
-                <p><strong>Kinematics:</strong> Motion, Distance, Displacement, Speed, Velocity, Acceleration. </p>
-
-                <button class="readmore"><a href="../COS111/lessons/details.html">Read More <img src="../res/arrow-right-svgrepo-com.svg" alt=""></a></button>
-            </div>
-
-            <div class="template1">
-                <img src="../res/book-open-svgrepo-com.svg" alt="">
-                <p><strong>Dynamics:</strong> Force[Newton's Laws of Motion: First, Second and Third Laws of Motion]~,Friction, Gravity. </p>
-
-                <button class="readmore">Read More <img src="../res/arrow-right-svgrepo-com.svg" alt=""></button>
-            </div>
-
-            <div class="template1">
-                <img src="../res/book-open-svgrepo-com.svg" alt="">
-                <p> <strong>Energy and Momentum:</strong> Kinetic Energy, Potential Energy, Conservation of Energy, Momentum, Conservation of Momentum.</p>
-
-                <button class="readmore">Read More <img src="../res/arrow-right-svgrepo-com.svg" alt=""></button>
-            </div>
-
-            <div class="template1">
-                <img src="../res/book-open-svgrepo-com.svg" alt="">
-                <p><strong>Physical Quantities:</strong> Types of Physical qualities, Scalar qualities, Victor qualities. </p>
-
-                <button class="readmore">Read More <img src="../res/arrow-right-svgrepo-com.svg" alt=""></button>
-            </div>
-
-            <div class="template1">
-                <img src="../res/book-open-svgrepo-com.svg" alt="">
-                <p><strong>Fundamental Physical Quantities:</strong> Length, Mass, Time, Temperature, Electric Current. </p>
-
-                <button class="readmore">Read More <img src="../res/arrow-right-svgrepo-com.svg" alt=""></button>
-            </div>
-
-            <div class="template1">
-                <img src="../res/book-open-svgrepo-com.svg" alt="">
-                <p><strong>Derived Physical Quantities:</strong>  Area, Volum, Speed, Acceleration, Force.</p>
-
-                <button class="readmore">Read More <img src="../res/arrow-right-svgrepo-com.svg" alt=""></button>
-            </div>
-
-            <div class="template1">
-                <img src="../res/book-open-svgrepo-com.svg" alt="">
-                <p><strong>Units of Measurement:</strong> SI Units, Prefixes. </p>
-
-                <button class="readmore">Read More <img src="../res/arrow-right-svgrepo-com.svg" alt=""></button>
-            </div>
-
-            <div class="template1">
-                <img src="../res/book-open-svgrepo-com.svg" alt="">
-                <p>Innovations In Artificial Intelligence and human Interaction </p>
-
-                <button class="readmore">Read More <img src="../res/arrow-right-svgrepo-com.svg" alt=""></button>
-            </div>
-
-
-
+          <button class="readmore">
+            <a href="./lessons/booting.html"
+              >Read More <img src="../res/arrow-right-svgrepo-com.svg" alt=""
+            /></a>
+          </button>
         </div>
 
+        <div class="template1">
+          <img src="../res/book-open-svgrepo-com.svg" alt="" />
+          <p><strong>Components of Computer System</strong></p>
+
+          <button class="readmore">
+            <a href="./lessons/computer_system.html"
+              >Read More <img src="../res/arrow-right-svgrepo-com.svg" alt=""
+            /></a>
+          </button>
+        </div>
+
+        <div class="template1">
+          <img src="../res/book-open-svgrepo-com.svg" alt="" />
+          <p><strong>File Management</strong></p>
+
+          <button class="readmore">
+            <a href="./lessons/file_management.html"
+              >Read More <img src="../res/arrow-right-svgrepo-com.svg" alt=""
+            /></a>
+          </button>
+        </div>
+
+        <div class="template1">
+          <img src="../res/book-open-svgrepo-com.svg" alt="" />
+          <p><strong>Applications and System Packages</strong></p>
+
+          <button class="readmore">
+            Read More <img src="../res/arrow-right-svgrepo-com.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="template1">
+          <img src="../res/book-open-svgrepo-com.svg" alt="" />
+          <p><strong>Microsoft Office Packages </strong></p>
+
+          <button class="readmore">
+            Read More <img src="../res/arrow-right-svgrepo-com.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="template1">
+          <img src="../res/book-open-svgrepo-com.svg" alt="" />
+          <p><strong>Introduction to Operating Systems</strong></p>
+
+          <button class="readmore">
+            Read More <img src="../res/arrow-right-svgrepo-com.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="template1">
+          <img src="../res/book-open-svgrepo-com.svg" alt="" />
+          <p><strong>SPSS</strong></p>
+
+          <button class="readmore">
+            Read More <img src="../res/arrow-right-svgrepo-com.svg" alt="" />
+          </button>
+        </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

@@ -1,201 +1,216 @@
-[
+{
+  "$schema": "./schema.json",
+  "name": "UNIUYO CSC111",
+  "time": 720,
+  "questions": [
     {
       "question": "What is the primary purpose of computer ethics?",
       "options": [
-         "To protect computer hardware", 
-         "To ensure computer security", 
-         "To promote responsible computer use", 
-         "To increase computer efficiency"
-        ],
-      "answer": 2
+        "To protect computer hardware",
+        "To ensure computer security",
+        "To promote responsible computer use",
+        "To increase computer efficiency"
+      ],
+      "correct": "To promote responsible computer use",
+      "feedback": "Computer ethics guide users and professionals in making responsible decisions while using technology."
     },
     {
       "question": "What is the function of the Central Processing Unit (CPU) in a computer system?",
       "options": [
-         "To store data", 
-         "To provide input/output operations", 
-         "To perform calculations and execute instructions", 
-         "To manage memory"
-        ],
-      "answer": 2
+        "To store data",
+        "To provide input/output operations",
+        "To perform calculations and execute instructions",
+        "To manage memory"
+      ],
+      "correct": "To perform calculations and execute instructions",
+      "feedback": "The CPU is responsible for processing instructions and performing calculations in a computer."
     },
     {
       "question": "What is the difference between a bit and a byte?",
       "options": [
-         "A bit is a group of 8 bytes", 
-         "A byte is a group of 8 bits", 
-         "A bit is a type of computer software", 
-         "A byte is a type of computer hardware"
-        ],
-      "answer": 1
+        "A bit is a group of 8 bytes",
+        "A byte is a group of 8 bits",
+        "A bit is a type of computer software",
+        "A byte is a type of computer hardware"
+      ],
+      "correct": "A byte is a group of 8 bits",
+      "feedback": "A byte consists of 8 bits and is the basic unit of data storage."
     },
     {
       "question": "What is the purpose of a file system in a computer?",
       "options": [
-         "To manage computer hardware", 
-         "To provide computer security", 
-         "To organize and store files", 
-         "To increase computer efficiency"
-        ],
-      "answer": 2
+        "To manage computer hardware",
+        "To provide computer security",
+        "To organize and store files",
+        "To increase computer efficiency"
+      ],
+      "correct": "To organize and store files",
+      "feedback": "A file system organizes and manages files on storage devices, allowing easy access and retrieval."
     },
     {
       "question": "What is the difference between a folder and a file?",
       "options": [
-         "A folder is a type of file", 
-         "A file is a type of folder", 
-         "A folder is a container for files", 
-         "A file is a container for folders"
-        ],
-      "answer": 2
+        "A folder is a type of file",
+        "A file is a type of folder",
+        "A folder is a container for files",
+        "A file is a container for folders"
+      ],
+      "correct": "A folder is a container for files",
+      "feedback": "Folders are used to organize files in a hierarchical structure, whereas files contain data."
     },
     {
       "question": "What is the purpose of the \"Save As\" command in a computer?",
       "options": [
-         "To save a file with a new name or location", 
-         "To open a file", 
-         "To delete a file", 
-         "To print a file"],
-      "answer": 0
+        "To save a file with a new name or location",
+        "To open a file",
+        "To delete a file",
+        "To print a file"
+      ],
+      "correct": "To save a file with a new name or location",
+      "feedback": "The 'Save As' command allows users to create a copy of the file with a different name or in a new location."
     },
     {
       "question": "What is the difference between a hardware component and a software component?",
       "options": [
-         "A hardware component is a type of software", 
-         "A software component is a type of hardware", 
-         "A hardware component is a physical part of a computer", 
-         "A software component is a physical part of a computer"],
-      "answer": 2
+        "A hardware component is a type of software",
+        "A software component is a type of hardware",
+        "A hardware component is a physical part of a computer",
+        "A software component is a physical part of a computer"
+      ],
+      "correct": "A hardware component is a physical part of a computer",
+      "feedback": "Hardware refers to the physical components of a computer, while software refers to the programs."
     },
     {
       "question": "What is the purpose of a computer's operating system?",
       "options": [
-         "To provide computer security", 
-         "To manage computer hardware", 
-         "To provide a platform for running applications", 
-         "To increase computer efficiency"
-        ],
-      "answer": 2
+        "To provide computer security",
+        "To manage computer hardware",
+        "To provide a platform for running applications",
+        "To increase computer efficiency"
+      ],
+      "correct": "To provide a platform for running applications",
+      "feedback": "An operating system acts as an interface between hardware and applications, enabling them to run."
     },
     {
       "question": "What is the difference between a desktop computer and a laptop computer?",
       "options": [
-         "A desktop computer is portable", 
-         "A laptop computer is non-portable", 
-         "A desktop computer is non-portable", 
-         "A laptop computer is a type of desktop computer"
-        ],
-      "answer": 2
+        "A desktop computer is portable",
+        "A laptop computer is non-portable",
+        "A desktop computer is non-portable",
+        "A laptop computer is a type of desktop computer"
+      ],
+      "correct": "A desktop computer is non-portable",
+      "feedback": "Desktop computers are designed for stationary use, whereas laptops are portable."
     },
     {
       "question": "What is the purpose of backing up computer files?",
       "options": [
-         "To increase computer efficiency", 
-         "To provide computer security", 
-         "To prevent data loss", 
-         "To manage computer hardware"
-        ],
-      "answer": 2
-    },
-    {
-      "question": "What is the primary purpose of computer ethics?",
-      "options": [
-         "To protect computer hardware from damage", 
-         "To prevent unauthorized access to computer systems", 
-         "To guide the behavior of computer users and professionals", 
-         "To improve computer performance"
-        ],
-      "answer": 2
+        "To increase computer efficiency",
+        "To provide computer security",
+        "To prevent data loss",
+        "To manage computer hardware"
+      ],
+      "correct": "To prevent data loss",
+      "feedback": "Backing up files ensures that data is not lost in case of hardware failure or accidental deletion."
     },
     {
       "question": "What is the term for the physical parts of a computer system?",
       "options": [
-         "Hardware", 
-         "Software", 
-         "Firmware", 
-         "Malware"
-        ],
-      "answer": 0
+        "Hardware",
+        "Software",
+        "Firmware",
+        "Malware"
+      ],
+      "correct": "Hardware",
+      "feedback": "Hardware refers to the tangible components of a computer, such as the CPU, memory, and motherboard."
     },
     {
       "question": "What is the primary function of the central processing unit (CPU)?",
       "options": [
-         "To store data", 
-         "To provide power to the system", 
-         "To perform calculations and execute instructions", 
-         "To connect peripherals to the system"
-        ],
-      "answer": 2
+        "To store data",
+        "To provide power to the system",
+        "To perform calculations and execute instructions",
+        "To connect peripherals to the system"
+      ],
+      "correct": "To perform calculations and execute instructions",
+      "feedback": "The CPU is the primary component that performs computations and executes program instructions."
     },
     {
       "question": "What is the term for the process of organizing and managing files on a computer?",
       "options": [
-         "File management", 
-         "Data management", 
-         "Storage management", 
-         "Retrieval management"
-        ],
-      "answer": 0
+        "File management",
+        "Data management",
+        "Storage management",
+        "Retrieval management"
+      ],
+      "correct": "File management",
+      "feedback": "File management involves organizing, storing, and maintaining files on a storage device."
     },
     {
       "question": "What is the primary purpose of a file extension?",
       "options": [
-         "To indicate the file type", 
-         "To indicate the file size", 
-         "To indicate the file location", 
-         "To indicate the file author"
-        ],
-      "answer": 0
+        "To indicate the file type",
+        "To indicate the file size",
+        "To indicate the file location",
+        "To indicate the file author"
+      ],
+      "correct": "To indicate the file type",
+      "feedback": "A file extension helps the operating system and users identify the type of file and associated applications."
     },
     {
       "question": "What is the term for the process of copying files from one location to another?",
       "options": [
-         "File transfer", 
-         "File copying", 
-         "File moving", 
-         "File deleting"
-        ],
-      "answer": 1
+        "File transfer",
+        "File copying",
+        "File moving",
+        "File deleting"
+      ],
+      "correct": "File copying",
+      "feedback": "File copying creates a duplicate of the file in a new location while keeping the original intact."
     },
     {
       "question": "What is the primary purpose of a computer password?",
       "options": [
-         "To protect the computer from viruses", 
-         "To prevent unauthorized access to the computer", 
-         "To improve computer performance", 
-         "To provide technical support"
-        ],
-      "answer": 1
+        "To protect the computer from viruses",
+        "To prevent unauthorized access to the computer",
+        "To improve computer performance",
+        "To provide technical support"
+      ],
+      "correct": "To prevent unauthorized access to the computer",
+      "feedback": "Passwords secure computers by restricting access to authorized users only."
     },
     {
       "question": "What is the term for the process of updating software to fix errors or improve performance?",
       "options": [
-         "Patching", 
-         "Updating", 
-         "Upgrading", 
-         "Debugging"
-        ],
-      "answer": 0
+        "Patching",
+        "Updating",
+        "Upgrading",
+        "Debugging"
+      ],
+      "correct": "Patching",
+      "feedback": "Patching involves applying fixes to software to resolve bugs or security vulnerabilities."
     },
     {
       "question": "What is the primary purpose of a computer backup?",
       "options": [
-         "To protect the computer from viruses", 
-         "To prevent data loss in case of a system failure", 
-         "To improve computer performance", 
-         "To provide technical support"
-        ],
-      "answer": 1
+        "To protect the computer from viruses",
+        "To prevent data loss in case of a system failure",
+        "To improve computer performance",
+        "To provide technical support"
+      ],
+      "correct": "To prevent data loss in case of a system failure",
+      "feedback": "Backups are critical for data recovery in the event of hardware failure or accidental data deletion."
     },
     {
       "question": "What is the term for the process of permanently deleting files from a computer?",
       "options": [
-         "File deletion", 
-         "File removal", 
-         "File erasure", 
-         "File destruction"
-        ],
-      "answer": 2
+        "File deletion",
+        "File removal",
+        "File erasure",
+        "File destruction"
+      ],
+      "correct": "File erasure",
+      "feedback": "File erasure involves securely and permanently deleting files, making recovery impossible."
     }
-]
-  
+  ]
+}

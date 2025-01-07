@@ -1,0 +1,115 @@
+.start.review-stage .correct-answer label {
+    color: rgb(17, 180, 17);
+}
+
+.start.review-stage .wrong-answer label {
+    color: rgb(221, 71, 71);
+}
+
+.start.review-stage .questions-container-main {
+    pointer-events: none;
+}
+
+.after-finish {
+    display: none;
+}
+
+.start.review-stage .after-finish {
+    display: grid;
+}
+
+.start.review-stage .before-finish {
+    display: none;
+}
+
+.before-finish {
+    display: grid;
+}
+
+.feedback {
+    display: none;
+    color: rgb(143, 143, 143);
+    font-size: 18px;
+    border: 1px solid rgb(143, 143, 143);
+    padding: 5px;
+}
+
+.start.review-stage .feedback {
+    display: block;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    position: relative;
+}
+
+input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    background-color: #ffa600;
+    border-radius: 50%;
+}
+
+div.option {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 5px;
+    justify-content: start;
+}
+
+label {
+    display: inline;
+    width: 100%;
+}
+
+.timer-head {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 200px;
+    transform: translateX(-50%);
+    border: #ff9100 2px solid;
+    border-top: none;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 4px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    background: black;
+    font-weight: 700;
+    color: #ff9100;
+    z-index: 100;
+}
+
+.timer-head.hide {
+    display: none;
+}
+
+.timer-head.panic {
+    animation: panic 0.5s infinite;
+    border: #ff2626 2px solid;
+    color: #ff2626;
+    border-top: none;
+}
+
+@keyframes panic {
+    0% {
+        transform: scale(1) translateX(-50%);
+    }
+
+    50% {
+        transform: scale(1.04) translateX(-47%);
+    }
+
+    100% {
+        transform: scale(1) translateX(-50%);
+    }
+}

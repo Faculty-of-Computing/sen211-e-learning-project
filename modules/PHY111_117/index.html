@@ -11,7 +11,24 @@
         href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <script src="../../index.js" type="module" defer></script>
+    <script src="./../../scripts/firebase.js" type="module"></script>
+    <script type="module">
+        import { getUser } from './../../scripts/firebase.js';
+
+        getUser((user) => {
+            const welcomeMsg = document.querySelector(".welcome-message");
+            const userSlug = document.querySelector(".user-slug");
+            welcomeMsg.innerText = `Welcome, ${user.displayName}`;
+            if (user.displayName) {
+                const nameParts = user.displayName.split(' ');
+                const firstNameInitial = nameParts[0] ? nameParts[0][0] : '';
+                const lastNameInitial = nameParts.length > 1 ? nameParts[nameParts.length - 1][0] : '';
+                userSlug.innerText = `${firstNameInitial}${lastNameInitial}`.toUpperCase();
+            } else {
+                userSlug.innerText = 'NA';
+            }
+        });
+    </script>
     <title>Module 4</title>
 </head>
 
@@ -20,10 +37,10 @@
         <div class="header-section">
             <img src="../res/module4.png" class="g4-logo" />
             <div class="user-slug">
-                EM
+
             </div>
         </div>
-        <p class="welcome-message">Welcome, Gideon Jones </p>
+        <p class="welcome-message">Welcome,</p>
         <p><a href="../../index.html" class="goto"><i class="fas fa-home"></i> Home</a> / Module 4</p>
         <div class="inside">
             <div class="inside-header">
@@ -172,37 +189,37 @@
                     <div class="section-details-small">
                         <div>30 Questions</div>
                         <div class="line-bw"></div>
-                        <div>40 Mins</div>
+                        <div>30 Mins</div>
                     </div>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item" onclick="location.href='./materials/module4.quiz.html?file=module4.quiz.2.json'">
                     <div class="book-info">
                         <p>PHY111 Quiz 2</p>
                     </div>
                     <div class="section-details-small">
-                        <div>30 Questions</div>
+                        <div>25 Questions</div>
                         <div class="line-bw"></div>
-                        <div>45 Mins</div>
+                        <div>30 Mins</div>
                     </div>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item" onclick="location.href='./materials/module4.quiz.html?file=module4.quiz.3.json'">
                     <div class="book-info">
                         <p>PHY121 Quiz 1</p>
                     </div>
                     <div class="section-details-small">
                         <div>20 Questions</div>
                         <div class="line-bw"></div>
-                        <div>3 Mins</div>
+                        <div>20 Mins</div>
                     </div>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item" onclick="location.href='./materials/module4.quiz.html?file=module4.quiz.4.json'">
                     <div class="book-info">
                         <p>PHY121 Quiz 2</p>
                     </div>
                     <div class="section-details-small">
-                        <div>20 Questions</div>
+                        <div>15 Questions</div>
                         <div class="line-bw"></div>
-                        <div>3 Mins</div>
+                        <div>20 Mins</div>
                     </div>
                 </div>
             </div>
