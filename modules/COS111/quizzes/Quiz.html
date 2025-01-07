@@ -1,112 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="../styles/demo.css">
-</head>
-<body>
-    <header class="desktop-nav">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/demo.css" />
+    <link rel="stylesheet" href="../styles/Footer.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="../styles/module4.quiz.style.css"
+    />
+    <script type="module" src="../scripts/m_quiz.js" ></script>
+    <title>Module 1 Quiz</title>
+  </head>
+
+  <body>
+    <div class="timer-head hide">Time left: ...</div>
+    <div class="main">
+      <div class="header-section">
         <h1><span id="Learn">Module</span> 1</h1>
-        <nav>
-            <ul>
-              <li>Home</li>
-                <li>Topics</li>
-                <li>Module Quiz</li>
-                <li>About/Feedback</li>
-            </ul>
-        </nav>
-
-        <div class="hamburger showOnMobile" onclick="showNav()">
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="user-slug">EM</div>
+      </div>
+      <p class="welcome-message">Welcome</p>
+      <p>
+        <a href="../index.html" class="goto">Home</a> /<a
+          href="../index.html"
+          class="goto"
+          >Module 1</a
+        >/Quiz
+      </p>
+      <span class="status-message" style="font-size: 28px; margin-top: 50px"
+        >AI is Loading your quiz</span
+      >
+      <div class="inside embed wait">
+        <!-- Content will be loaded here -->
+        <div class="inside-header start">
+          <img
+            src="../img/loading_ai.gif"
+            width="50%"
+            style="margin: auto; max-width: 300px"
+            class="loading-gif"
+          />
+          <h1 class="quiz-name"></h1>
+          <span class="quiz-time time-alloc"></span>
+          <a class="link-part end go start hide">Start</a>
         </div>
-
-        <div class="reverse-hamburger" onclick="hideNav()">
-            <div></div>
-            <div></div>
-            <!-- <div></div> -->
+      </div>
+      <div class="inside embed start hide" style="font-size: 22px">
+        <!-- Content will be loaded here -->
+        <h2 class="quiz-name-2"></h2>
+        <div class="questions-container-main"></div>
+        <div class="inside-header-home start before-finish">
+          <span>End of quiz</span>
+          <a href="#" class="link-part end go submit">Submit</a>
         </div>
-    </header>
-
-    <div class="mobile-nav">
-        <nav>
-            <ul>
-              <li>Home <span>></span></li>
-                <li>Topics <span>></span></li>
-                <li>Module Quiz <span>></span></li>
-                <li>About/Feedback <span>></span></li>
-            </ul>
-        </nav>
-
+        <div class="inside-header-home start after-finish">
+          <span>End of quiz</span>
+          <a class="link-part end go finish-review done-review-score-button"
+            >Finish Review</a
+          >
+        </div>
+      </div>
+      <div class="inside embed finish hide">
+        <!-- Content will be loaded here -->
+        <div class="final-score">
+          <h1 class="score-show">Loading score</h1>
+          <p class="review-score-button">Review result</p>
+        </div>
+        <div class="inside-header-small start">
+          <a class="link-part" onclick="location.reload()">Take again</a>
+          <p><a href="../index.html" class="goto">← Back to Module 1</a></p>
+        </div>
+      </div>
     </div>
-
-<div class="GoBack">
-<a href="../lessons/details.html"><button class="goBackButton">< Go back</button></a>
-<div class="time">
-<p>Time: <span>00:10:20</span></p>
-</div>
-</div>
-
-<section class="content">
-    <h4 class="cos">Quiz on:</h4>
-    <h2>Innovation in Artificial Intelligence and Human-Computer Interaction</h2>
-</section>
-
-<section class="question-area">
-    <div>
-        <p>Question <span>5/10</span></p>
-        <p class="question">What is the differnece between null and undefined in JavaScript</p>
-
-        <div class="options">
-            <div><input type="radio" name="option1" id="option1">
-            <label>null is a value, while undefined is a type</label>
-        </div>
-
-        <div><input type="radio" name="option1" id="option2">
-            <label>null is an object, while undefined is a primitive value</label>
-        </div>
-    
-        <div><input type="radio" name="option1" id="option3">
-            <label>null represents an empty object, while undefined is an uninitialized variable</label>
-        </div>
-
-        <div><input type="radio" name="option1" id="option4">
-            <label>null and undefined are interchangable terms</label>
-        </div>
-    </div>        
-    </div>
-
-    <div class="indicator">
-        <!-- <p>Questions</p> -->
-        <div class="answered-questions">
-        <div class="q1">1</div>
-        <div class="q2">2</div>
-        <div class="q3">3</div>
-        <div class="q4">4</div>
-        <div class="q5">5</div>
-        <div class="q6">6</div>
-        <div class="q7">7</div>
-        <div class="q8">8</div>
-        <div class="q9">9</div>
-        <div class="q10">10</div>
-    </div>
-
-    <div class="bottom">
-        <div><div class="answered"></div> <span>Answered questions</span></div>
-        <div><div class="skipped"></div> <span>Skipped questions</span></div>
-    </div>
-</div>
-
-</section>
-
-<div class="pagination2">
-    <button class="prev"><span><</span> Prev Question</button>
-    <button class="next">Next Question <span>></span></button>
-    </div>
-    
-<script src="../scripts/App.js"></script>
-</body>
+  </body>
 </html>
