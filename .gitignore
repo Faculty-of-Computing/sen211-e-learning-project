@@ -8,3 +8,4 @@ pnpm-lock.yaml
 note.ts
 *.idea/
 *.DS_Store
+eslint.config.*

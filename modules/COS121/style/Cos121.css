@@ -44,7 +44,7 @@ header h1 {
     font-weight: normal;
 }
 
-.module-btn span{
+.module-btn span {
     background-color: orange;
     color: black;
     border: none;
@@ -53,11 +53,11 @@ header h1 {
 }
 
 .nav-links a {
-    color: white;   
-    text-decoration:none;
+    color: white;
+    text-decoration: none;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
     color: orange;
     transition: .5s;
 }
@@ -150,9 +150,9 @@ header .hamburger {
     border: 4px solid orange;
     border-radius: 30px;
     transition: .3s;
-   }
+}
 
-   .module-quiz a{
+.module-quiz a {
     text-decoration: none;
     color: orange;
     display: flex;
@@ -160,7 +160,7 @@ header .hamburger {
     justify-content: space-between;
     padding: 10px;
     float: right;
-   }
+}
 
 .templates {
     display: grid;
@@ -238,6 +238,7 @@ img {
     .templates {
         grid-template-columns: repeat(2, 1fr);
     }
+
     /* .template1{
 width: 90%;
 padding: 14px;
@@ -252,15 +253,19 @@ height: 7rem;
     .templates {
         grid-template-columns: repeat(1, 1fr);
     }
+
     header nav ul {
         display: none;
     }
-    header .hamburger {
+
+    /* header .hamburger {
         display: block;
-    }
+    } */
+
     .readmore {
         left: 50%;
     }
+
     /* .template1{
 width: 15rem;
 padding: 14px;
@@ -299,7 +304,7 @@ height: 7rem;
     cursor: pointer;
 }
 
- .quizButton a {
+.quizButton a {
     padding: .3em .5em;
     border: 1px solid orange;
     background: none;
@@ -316,9 +321,9 @@ height: 7rem;
     margin-top: 0em;
     float: right;
     text-decoration: none;
-} 
+}
 
-.quizButton{
+.quizButton {
     background-color: none;
     border: none;
 }
@@ -355,7 +360,7 @@ section.content ol ul li {
 }
 */
 
-.pagination{
+.pagination {
     display: flex;
     justify-content: space-between;
 }
@@ -365,7 +370,7 @@ section.content ol ul li {
     justify-content: space-between;
     margin-top: 3em;
 }
- 
+
 .pagination .prev {
     width: 30%;
     text-align: right;
@@ -389,7 +394,7 @@ section.content ol ul li {
     align-items: center;
 }
 
-.pagination button{
+.pagination button {
     color: none;
     border: none;
 }
@@ -431,7 +436,7 @@ section.content ol ul li {
     }
 }
 
-.content{
+.content {
     display: block;
     justify-content: center;
     align-items: center;
@@ -498,7 +503,7 @@ section.question-area .answered-questions {
 section.question-area .answered-questions div {
     width: 35px;
     height: 35px; */
-    /* background-color: lime; */
+/* background-color: lime; */
 /*     border: 1px solid #777;
     margin-top: .5em;
     text-align: center;
@@ -635,6 +640,7 @@ header.search-container {
     font-weight: bold;
     cursor: pointer;
 }
+
 /* 
 header {
     display: flex;
@@ -659,57 +665,58 @@ header {
 
 }
 
-.Sub-header{
+.Sub-header {
     /* border: 1px solid white; */
     display: flex;
     height: 4rem;
     margin: 0 0 1rem 0;
     align-items: center;
     justify-content: space-between;
-   /*  padding-left: 30px; */
+    /*  padding-left: 30px; */
 }
 
-.lecture-content{
-    font-size: large; 
+.lecture-content {
+    font-size: large;
     font-family: Arial, Helvetica, sans-serif;
     font-display: block;
     text-align: justify;
     padding: 10px;
 }
+
 /*
  .lecture-module-intro{
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
 }
 */
-.inner-heading{
+.inner-heading {
     font-size: 18px;
     font-weight: bolder;
     padding-top: 10px;
     padding-bottom: 5px;
-} 
+}
 
 
 
-.DropDown-Button{
-    background-color:transparent;
+.DropDown-Button {
+    background-color: transparent;
     color: white;
     font-size: 17px;
     border: none;
     cursor: pointer;
 }
 
-.hidden{
+.hidden {
     position: relative;
     display: inline-block;
 }
 
-.Drop-Menu{
+.Drop-Menu {
     display: none;
     position: absolute;
     background-color: rgb(211, 208, 208);
     min-width: 102px;
-} 
+}
 
 .Drop-Menu a {
     color: rgb(255, 136, 0);
@@ -718,25 +725,29 @@ header {
     display: block;
 }
 
-.Drop-Menu a:hover{
+.Drop-Menu a:hover {
     background-color: rgb(240, 189, 93);
     color: black;
 }
 
-.hidden:hover .Drop-Menu{
+.hidden:hover .Drop-Menu {
     display: Block;
 
 }
 
-.hidden:hover .DropDown-Button{
+.hidden:hover .DropDown-Button {
     background-color: orange;
     color: black;
     width: 4em;
 }
 
-.about-heading{
+.about-heading {
     font-size: 25px;
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 5px;
+}
+
+.question {
+    margin-block: 10px;
 }

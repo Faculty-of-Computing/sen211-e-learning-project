@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const file = params.get('file');
+            if (file) {
+                fetch(`./content/${file}`)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('.inside').innerHTML = data;
+                    })
+                    .catch(error => console.error('Error fetching the file:', error));
+            }
+        });
+    </script>
+    <title>Module 4 Note</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header-section">
+            <img src="../../res/module4.png" class="g4-logo" />
+            <div class="user-slug">
+                AM
+            </div>
+        </div>
+        <p class="welcome-message">Welcome, Annabel Eteng </p>
+        <p><a href="../../../index.html" class="goto">Home</a> /<a href="../index.html" class="goto">Module 8</a>/Note
+        </p>
+        <div class="inside embed">
+            <!-- Content will be loaded here -->
+
+        </div>
+        <p><a href="../index.html" class="goto">← Back to Module 8</a></p>
+
+    </div>
+</body>
+
+</html>

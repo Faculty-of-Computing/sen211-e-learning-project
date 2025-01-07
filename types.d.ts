@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 type QuestionData = {
   question: string;
   options: string[];
@@ -23,3 +24,23 @@ type Result = {
 };
 
 type User = import("firebase/auth").User;
+
+declare function setupQuiz(meta: MetaRequirements): void;
+
+type ResultExtra = {
+  id: string;
+  time: {
+    toDate(): Date;
+  };
+};
+
+type MetaRequirements = {
+  /** The group number */
+  moduleNumber: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+  /** A URL to your quiz's json */
+  jsonUrl: string;
+  /** A custom loading message for your quiz */
+  loadingMsg?: string;
+  /** The name of the course for the module */
+  course: string;
+};

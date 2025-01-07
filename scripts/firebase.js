@@ -1,21 +1,17 @@
 // @ts-check
 
-// @ts-ignore
+// @ts-expect-error ...
 import * as _firebaseAnalytics from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
-// @ts-ignore
+// @ts-expect-error ...
 import * as _firebaseApp from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-// @ts-ignore
+// @ts-expect-error ...
 import * as _firebaseAuth from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
-// @ts-ignore
+// @ts-expect-error ...
 import * as _firestore from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
-// @ts-ignore
 const firestore = /** @type {import("firebase/firestore")} */ (_firestore);
-// @ts-ignore
 const firebaseApp = /** @type {import("firebase/app")} */ (_firebaseApp);
-// @ts-ignore
 const firebaseAuth = /** @type {import("firebase/auth")} */ (_firebaseAuth);
-// @ts-ignore
 const firebaseAnalytics = /** @type {import("firebase/analytics")} */ (
   _firebaseAnalytics
 );
@@ -83,12 +79,17 @@ export async function signUp(email, password) {
  *
  * @param {string} email - User's email address.
  * @param {string} password - User's password.
- * @returns {Promise<void>} Resolves when login is successful.
+ * @returns {Promise<User>} Resolves when login is successful.
  * @throws {Error} If the login process fails.
  */
 export async function login(email, password) {
   try {
-    await firebaseAuth.signInWithEmailAndPassword(auth, email, password);
+    const { user } = await firebaseAuth.signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    return user;
   } catch (error) {
     handleError(error);
   }
@@ -98,13 +99,14 @@ export async function login(email, password) {
 /**
  * Directs the user to sign in using their Google account via a popup.
  *
- * @returns {Promise<void>} Resolves when Google sign-in is successful.
+ * @returns {Promise<User>} Resolves when Google sign-in is successful.
  * @throws {Error} If the Google sign-in process fails.
  */
 export async function googleAuth() {
   const provider = new firebaseAuth.GoogleAuthProvider();
   try {
-    await firebaseAuth.signInWithPopup(auth, provider);
+    const { user } = await firebaseAuth.signInWithPopup(auth, provider);
+    return user;
   } catch (error) {
     handleError(error);
   }
@@ -174,7 +176,7 @@ export async function studentDataIsSaved() {
 /**
  * Fetch a list of the current user's results from the database.
  *
- * @returns {Promise<Array<Result & {id : string}>>} A promise that resolves to an array of the user's results.
+ * @returns {Promise<Array<Result & ResultExtra>>} A promise that resolves to an array of the user's results.
  * @throws {Error} If fetching results from Firestore fails.
  */
 export async function getUserResults() {
@@ -184,7 +186,10 @@ export async function getUserResults() {
     const q = firestore.query(ref, firestore.where("uid", "==", user.uid));
     const snapshot = await firestore.getDocs(q);
     return snapshot.docs.map((doc) => {
-      return { id: doc.id, .../** @type {Result} */ (doc.data()) };
+      return {
+        .../** @type {Result & ResultExtra} */ (doc.data()),
+        id: doc.id,
+      };
     });
   } catch (error) {
     handleError(error);
