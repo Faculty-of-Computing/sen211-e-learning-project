@@ -1,116 +1,222 @@
 {
-  "name": "Microsoft Word Quiz",
+  "name": "Microsoft Excel Quiz",
   "time": 1800,
   "questions": [
     {
       "question": "What is the primary function of Microsoft Word?",
       "options": [
         "To create spreadsheets",
-        "To create documents",
-        "To create presentations",
-        "To create databases"
+        "To design presentations",
+        "To write and edit documents",
+        "To manage databases"
       ],
-      "correct": "To create documents",
-      "feedback": "Microsoft Word is primarily used for creating documents such as letters, reports, and essays."
+      "correct": "To write and edit documents",
+      "feedback": "Microsoft Word is primarily used for creating, editing, and formatting text-based documents."
     },
     {
-      "question": "Which tab in Microsoft Word contains options for formatting text?",
-      "options": [
-        "Home",
-        "Insert",
-        "Layout",
-        "Review"
-      ],
-      "correct": "Home",
-      "feedback": "The 'Home' tab contains options for text formatting, such as font size, style, and color."
-    },
-    {
-      "question": "What is the shortcut key to create a new document in Microsoft Word?",
-      "options": [
-        "Ctrl + O",
-        "Ctrl + N",
-        "Ctrl + S",
-        "Ctrl + P"
-      ],
-      "correct": "Ctrl + N",
-      "feedback": "Ctrl + N is the shortcut key to create a new blank document in Microsoft Word."
-    },
-    {
-      "question": "What is the purpose of the 'Find and Replace' feature in Microsoft Word?",
-      "options": [
-        "To insert tables",
-        "To locate and replace text",
-        "To apply styles",
-        "To format paragraphs"
-      ],
-      "correct": "To locate and replace text",
-      "feedback": "The 'Find and Replace' feature helps you quickly locate specific text and replace it with new content."
-    },
-    {
-      "question": "Which file format is commonly used to save Microsoft Word documents?",
+      "question": "What is the file extension for a Word document?",
       "options": [
         ".xlsx",
-        ".pptx",
         ".docx",
+        ".pptx",
         ".pdf"
       ],
       "correct": ".docx",
-      "feedback": "The .docx format is the standard file format for saving Microsoft Word documents."
+      "feedback": ".docx is the default file format for Word documents."
     },
     {
-      "question": "How do you insert a page number in Microsoft Word?",
+      "question": "Which feature in Word is used to check for spelling and grammatical errors?",
       "options": [
-        "Click on the 'Insert' tab and select 'Page Number'",
-        "Click on the 'Home' tab and select 'Page Layout'",
-        "Right-click on the page and select 'Add Page Number'",
-        "Press 'Ctrl + P'"
+        "Thesaurus",
+        "Track Changes",
+        "Spelling and Grammar",
+        "Word Count"
       ],
-      "correct": "Click on the 'Insert' tab and select 'Page Number'",
-      "feedback": "To insert page numbers, go to the 'Insert' tab and choose the 'Page Number' option."
+      "correct": "Spelling and Grammar",
+      "feedback": "The 'Spelling and Grammar' feature checks for and suggests corrections to spelling and grammatical errors."
     },
     {
-      "question": "What is the purpose of the 'Review' tab in Microsoft Word?",
+      "question": "What is the shortcut key to save a Word document?",
       "options": [
-        "To insert images",
-        "To format paragraphs",
-        "To add comments and track changes",
-        "To create tables"
+        "Ctrl + P",
+        "Ctrl + S",
+        "Ctrl + C",
+        "Ctrl + V"
       ],
-      "correct": "To add comments and track changes",
-      "feedback": "The 'Review' tab is used for editing and collaborating on documents, including adding comments and tracking changes."
+      "correct": "Ctrl + S",
+      "feedback": "Ctrl + S is the shortcut key to save a Word document."
     },
     {
-      "question": "Which feature in Microsoft Word allows you to create a table of contents?",
+      "question": "Which tab in Word contains options for changing font style, size, and color?",
       "options": [
-        "Footnotes",
-        "References",
-        "Layout",
-        "Review"
+        "Insert",
+        "Home",
+        "Design",
+        "References"
       ],
-      "correct": "References",
-      "feedback": "The 'References' tab contains the option to create a table of contents for your document."
+      "correct": "Home",
+      "feedback": "The 'Home' tab in Word includes options to modify font style, size, and color."
     },
     {
-      "question": "What is the shortcut key to undo an action in Microsoft Word?",
+      "question": "What is the purpose of the 'Track Changes' feature in Word?",
       "options": [
-        "Ctrl + Z",
-        "Ctrl + Y",
-        "Ctrl + U",
-        "Ctrl + A"
+        "To count the number of words",
+        "To track the time spent editing",
+        "To record and display changes made to a document",
+        "To create a table of contents"
       ],
-      "correct": "Ctrl + Z",
-      "feedback": "Ctrl + Z is the shortcut key to undo the last action in Microsoft Word."
+      "correct": "To record and display changes made to a document",
+      "feedback": "The 'Track Changes' feature highlights edits made to a document, useful for reviewing."
     },
     {
-      "question": "What is the purpose of the 'Spelling & Grammar' feature in Microsoft Word?",
+      "question": "What is the shortcut key to copy text in Microsoft Word?",
       "options": [
-        "To check the formatting of the document",
-        "To find synonyms for words",
-        "To identify spelling and grammar errors",
-        "To create footnotes"
+        "Ctrl + X",
+        "Ctrl + C",
+        "Ctrl + V",
+        "Ctrl + Z"
       ],
-      "correct": "To identify spelling and grammar errors",
-      "feedback": "The 'Spelling & Grammar' feature helps ensure your document is free from spelling and grammatical errors."
+      "correct": "Ctrl + C",
+      "feedback": "Ctrl + C is the shortcut key to copy text in Word."
+    },
+    {
+      "question": "Which feature allows you to insert pre-designed headers and footers in Word?",
+      "options": [
+        "Page Layout",
+        "Insert",
+        "Design",
+        "References"
+      ],
+      "correct": "Insert",
+      "feedback": "The 'Insert' tab includes options for adding headers and footers to your document."
+    },
+    {
+      "question": "What does the 'Word Count' feature in Word display?",
+      "options": [
+        "The number of characters and words",
+        "The time spent editing the document",
+        "The number of pages only",
+        "The font size and style used"
+      ],
+      "correct": "The number of characters and words",
+      "feedback": "The 'Word Count' feature shows the total number of words, characters, and pages in your document."
+    },
+    {
+      "question": "Which tool in Word allows you to align text to the left, center, right, or justify?",
+      "options": [
+        "Paragraph Alignment",
+        "Text Formatting",
+        "Alignment Tool",
+        "Justify Tool"
+      ],
+      "correct": "Paragraph Alignment",
+      "feedback": "The 'Paragraph Alignment' tool helps you align text to the left, center, right, or justify it within the document."
+    },
+    {
+      "question": "What is the purpose of the formula bar in Microsoft Excel?",
+      "options": [
+        "To format cells",
+        "To create charts",
+        "To enter formulas",
+        "To print worksheets"
+      ],
+      "correct": "To enter formulas",
+      "feedback": "The formula bar in Excel is used to enter and edit formulas."
+    },
+    {
+      "question": "What is the main advantage of using templates in Microsoft PowerPoint?",
+      "options": [
+        "To create complex animations",
+        "To add audio clips",
+        "To quickly create presentations",
+        "To customize fonts"
+      ],
+      "correct": "To quickly create presentations",
+      "feedback": "Templates in PowerPoint help users quickly create presentations with a consistent design."
+    },
+    {
+      "question": "What is the purpose of the AutoSum feature in Microsoft Excel?",
+      "options": [
+        "To format cells",
+        "To create charts",
+        "To quickly sum a range of cells",
+        "To print worksheets"
+      ],
+      "correct": "To quickly sum a range of cells",
+      "feedback": "The AutoSum feature in Excel quickly sums a range of selected cells."
+    },
+    {
+      "question": "How do you insert a new slide in Microsoft PowerPoint?",
+      "options": [
+        "Click on the 'Insert' tab and select 'New Slide'",
+        "Click on the 'Home' tab and select 'New Slide'",
+        "Right-click on the slide pane and select 'New Slide'",
+        "Press the 'Ctrl + M' keys"
+      ],
+      "correct": "Click on the 'Home' tab and select 'New Slide'",
+      "feedback": "To insert a new slide in PowerPoint, click on the 'Home' tab and select 'New Slide'."
+    },
+    {
+      "question": "What is the shortcut key to copy a cell in Microsoft Excel?",
+      "options": ["Ctrl + C", "Ctrl + V", "Ctrl + X", "Ctrl + A"],
+      "correct": "Ctrl + C",
+      "feedback": "The shortcut key to copy a cell in Microsoft Excel is Ctrl + C."
+    },
+    {
+      "question": "How do you insert a table in Microsoft PowerPoint?",
+      "options": [
+        "Click on the 'Insert' tab and select 'Table'",
+        "Click on the 'Home' tab and select 'Table'",
+        "Right-click on the slide and select 'Table'",
+        "Press the 'Ctrl + T' keys"
+      ],
+      "correct": "Click on the 'Insert' tab and select 'Table'",
+      "feedback": "To insert a table in PowerPoint, click on the 'Insert' tab and select 'Table'."
+    },
+    {
+      "question": "What is the purpose of the 'Spell Check' feature in Microsoft Word?",
+      "options": [
+        "To format documents",
+        "To insert tables",
+        "To check grammar and spelling",
+        "To print documents"
+      ],
+      "correct": "To check grammar and spelling",
+      "feedback": "The 'Spell Check' feature in Word is used to check grammar and spelling in a document."
+    },
+    {
+      "question": "What is the purpose of conditional formatting in Microsoft Excel?",
+      "options": [
+        "To insert charts",
+        "To highlight cells based on criteria",
+        "To format cells with borders",
+        "To calculate values"
+      ],
+      "correct": "To highlight cells based on criteria",
+      "feedback": "Conditional formatting allows users to apply formatting to cells that meet specific conditions, like highlighting values above a certain threshold."
+    },
+    {
+      "question": "How can you quickly apply a chart to your data in Excel?",
+      "options": [
+        "Select the data and press Ctrl + C",
+        "Select the data and click on the 'Insert' tab, then choose 'Chart'",
+        "Select the data and press Ctrl + P",
+        "Right-click on the data and select 'Chart'"
+      ],
+      "correct": "Select the data and click on the 'Insert' tab, then choose 'Chart'",
+      "feedback": "To insert a chart in Excel, select the data you want to visualize and then click on the 'Insert' tab and choose 'Chart'."
+    },
+    {
+      "question": "What is the purpose of a Pivot Table in Microsoft Excel?",
+      "options": [
+        "To create a chart from data",
+        "To filter data based on specific conditions",
+        "To summarize and analyze data",
+        "To format cells with color"
+      ],
+      "correct": "To summarize and analyze data",
+      "feedback": "A Pivot Table in Excel is used to summarize, analyze, and present large sets of data, making it easier to extract meaningful insights."
     }
+    
   ]
 }

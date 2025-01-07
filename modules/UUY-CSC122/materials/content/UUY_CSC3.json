@@ -102,6 +102,116 @@
       "feedback": "Ctrl + C is the shortcut key to copy selected cells in Excel."
     },
     {
+      "question": "What is Microsoft Excel primarily used for?",
+      "options": [
+        "Creating presentations",
+        "Managing and analyzing data",
+        "Editing photos",
+        "Designing websites"
+      ],
+      "correct": "Managing and analyzing data",
+      "feedback": "Microsoft Excel is primarily used for managing, organizing, and analyzing data using spreadsheets."
+    },
+    {
+      "question": "What is the file extension for an Excel workbook?",
+      "options": [
+        ".docx",
+        ".xlsx",
+        ".pptx",
+        ".pdf"
+      ],
+      "correct": ".xlsx",
+      "feedback": ".xlsx is the default file format for Excel workbooks."
+    },
+    {
+      "question": "What is the purpose of the 'SUM' function in Excel?",
+      "options": [
+        "To calculate the average of numbers",
+        "To add up a range of numbers",
+        "To find the maximum value",
+        "To count the number of cells"
+      ],
+      "correct": "To add up a range of numbers",
+      "feedback": "The 'SUM' function adds all the numbers in a specified range of cells."
+    },
+    {
+      "question": "Which symbol is used to start a formula in Excel?",
+      "options": [
+        "=",
+        "+",
+        "-",
+        "*"
+      ],
+      "correct": "=",
+      "feedback": "Formulas in Excel always begin with an equals sign (=)."
+    },
+    {
+      "question": "Which Excel feature allows you to visually represent data as charts or graphs?",
+      "options": [
+        "Conditional Formatting",
+        "PivotTables",
+        "Data Validation",
+        "Insert Chart"
+      ],
+      "correct": "Insert Chart",
+      "feedback": "The 'Insert Chart' feature in Excel allows you to create visual representations of your data."
+    },
+    {
+      "question": "What does the 'IF' function in Excel do?",
+      "options": [
+        "It calculates the sum of values.",
+        "It performs conditional checks and returns different values based on the condition.",
+        "It sorts data in ascending order.",
+        "It filters rows based on criteria."
+      ],
+      "correct": "It performs conditional checks and returns different values based on the condition.",
+      "feedback": "The 'IF' function checks if a condition is met and returns one value if true and another if false."
+    },
+    {
+      "question": "Which keyboard shortcut is used to save a workbook in Excel?",
+      "options": [
+        "Ctrl + S",
+        "Ctrl + P",
+        "Ctrl + C",
+        "Ctrl + X"
+      ],
+      "correct": "Ctrl + S",
+      "feedback": "Press Ctrl + S to quickly save your workbook."
+    },
+    {
+      "question": "What is the purpose of the 'Freeze Panes' feature in Excel?",
+      "options": [
+        "To highlight duplicate values",
+        "To keep specific rows or columns visible while scrolling",
+        "To merge multiple cells",
+        "To lock the workbook"
+      ],
+      "correct": "To keep specific rows or columns visible while scrolling",
+      "feedback": "The 'Freeze Panes' feature helps you lock rows or columns so they remain visible while scrolling."
+    },
+    {
+      "question": "What is a PivotTable used for in Excel?",
+      "options": [
+        "To perform complex calculations and summarize large datasets",
+        "To create charts and graphs",
+        "To apply conditional formatting",
+        "To merge and center cells"
+      ],
+      "correct": "To perform complex calculations and summarize large datasets",
+      "feedback": "PivotTables help summarize and analyze large amounts of data quickly and efficiently."
+    },
+    {
+      "question": "Which function in Excel is used to find the highest value in a range of cells?",
+      "options": [
+        "MIN",
+        "MAX",
+        "AVERAGE",
+        "COUNT"
+      ],
+      "correct": "MAX",
+      "feedback": "The 'MAX' function returns the highest value in a specified range of cells."
+    },
+    {
       "question": "What is the purpose of the 'Conditional Formatting' feature in Excel?",
       "options": [
         "To apply styles to a cell",
