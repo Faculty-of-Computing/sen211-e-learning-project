@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Lobster&family=Playwrite+HR+Lijeva:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+HR+Lijeva:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+.container {
+    margin-top: -40px;
+}
+body {
+    color: white;
+    background: black;
+    position: relative;
+}
+
+@font-face {
+    font-family: Monteserrat;
+    src: url(./../Fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Monteserrat-Black;
+    src: url(./../Fonts/Montserrat-Black.ttf);
+}
+
+@font-face {
+    font-family: Monteserrat-Light;
+    src: url(./../Fonts/Montserrat-Light.ttf);
+}
+
+#Learn {
+    background-color: orange;
+    color: black;
+    font-family: 'Afacad';
+}
+
+header.desktop-nav h1 {
+    font-family: 'Afacad';
+}
+
+header.desktop-nav nav ul {
+    display: flex;
+    /* border: 2px solid white; */
+    justify-content: space-around;
+    width: 50vw;
+}
+
+header.desktop-nav nav ul li {
+    list-style-type: none;
+}
+
+header.desktop-nav nav ul li {
+    font-size: 1em;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+header.desktop-nav nav ul li:hover {
+    color: orange;
+}
+
+header.desktop-nav {
+    padding: 0 1em;
+    height: 7rem;
+    width: 100%;
+    background: #000;
+    /* border: 2px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    /* top: 50px; */
+    z-index: 900;
+}
+
+header.desktop-nav .hamburger>div {
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+}
+
+header.desktop-nav .hamburger>div:nth-child(2) {
+    margin-top: .3em;
+    margin-bottom: .3em;
+}
+
+header.desktop-nav .reverse-hamburger>div {
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+}
+
+header.desktop-nav .reverse-hamburger>div:nth-child(1) {
+    transform: rotate(-35deg);
+}
+
+header.desktop-nav .reverse-hamburger>div:nth-child(2) {
+    transform: rotate(35deg);
+}
+
+header.desktop-nav .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+header.desktop-nav .reverse-hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.mobile-nav nav {
+    position: fixed;
+    height: 85vh;
+    background-color: #000;
+    width: 100%;
+    z-index: 1000;
+    animation: animateNav .5s;
+    bottom: 0;
+}
+
+@keyframes animateNav {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+.mobile-nav nav ul li {
+    color: #fff;
+    list-style-type: none;
+    margin: 2em 2em;
+    display: flex;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+.mobile-nav nav ul li:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+@media only screen and (min-height:768px) {
+    .mobile-nav nav {
+        height: 91vh;
+    }
+}
+
+.HomeContent1 {
+    height: 5rem;
+    padding: 2em;
+    position: relative;
+    top: 80px;
+    margin-bottom: 5.5em;
+}
+
+.Lectures-Overview {
+    padding: 2rem;
+    margin-top: 1em;
+}
+
+.lectures-overview-header {
+    display: flex;
+    height: 4rem;
+    margin: 0 0 1rem 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.module-quiz {
+    width: 10rem;
+    height: 3rem;
+    background-color: transparent;
+    color: orange;
+    font-size: 20px;
+    cursor: pointer;
+    border: 4px solid orange;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.quizButton:hover {
+    padding: .5em .8em;
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.templates {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    /* border: 1px solid; */
+}
+
+.template1 {
+    width: 90%;
+    background: rgb(38, 31, 31);
+    margin: .5rem 0 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 1rem;
+    justify-content: space-between;
+    font-size: 1em;
+    align-items: left;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.template1 p {
+    font-family: 'Open Sans';
+    font-size: 1.2rem;
+    margin: .8em 0;
+}
+
+.template1:hover {
+    transform: scale(1.05);
+}
+
+.templates .template1 img {
+    width: 100%;
+}
+
+.templates .template1 img.svg {
+    width: 20px;
+}
+
+.readmore {
+    position: relative;
+    width: 7rem;
+    height: 2rem;
+    background: black;
+    color: white;
+    font-size: 12px;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    left: 50%;
+    cursor: pointer;
+}
+
+.readmore:hover {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+}
+
+.template1 a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* mediaquery part @sisco😌 */
+/* I decided to work on the media query like you asked */
+
+@media only screen and (max-width:1300px) {
+
+    .templates {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header.desktop-nav {
+        width: 97%;
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .templates {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    header.desktop-nav nav ul {
+        display: none;
+    }
+
+    .showOnMobile {
+        display: block !important;
+    }
+
+    .readmore {
+        left: 50%;
+    }
+
+    section.question-area {
+        flex-direction: column;
+    }
+}
+
+.GoBack {
+    position: relative;
+    top: 120px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+}
+
+.GoBack .goBackButton {
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.quizButton {
+    padding: .3em .5em;
+    border: 1px solid orange;
+    background: none;
+    color: orange;
+    transition: .3s;
+}
+
+section.content {
+    position: relative;
+    top: 150px;
+    padding: 0 2em;
+}
+
+section.content .cos {
+    font-family: 'Open Sans';
+}
+
+section.content .fetched-content h3 {
+    font-family: 'Open Sans';
+    font-size: 1.8em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+section.content .fetched-content h3:first-child {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+section p {
+    font-family: 'Open Sans';
+    font-size: 1.1rem;
+}
+
+section.content ul li {
+    margin-top: 1em;
+    list-style-type: decimal;
+    font-size: 1.1rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+.pagination2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+    position: relative;
+    bottom: -160px;
+    padding: 0 2em;
+
+    
+}
+
+.pagination .prev,
+.pagination2 .prev {
+    width: 30%;
+    max-width: 200px;
+    text-align: right;
+    padding: 6px;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Open Sans';
+    cursor: pointer;
+
+}
+
+.pagination .next,
+.pagination2 .next {
+    width: 30%;
+    max-width: 200px;
+    text-align: left;
+    padding: 6px;
+    border: 1px solid orange;
+    background: none;
+    color: orange;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Open Sans';
+    cursor: pointer;
+}
+
+.pagination .submit,
+.pagination2 .submit {
+    width: 30%;
+    max-width: 200px;
+    text-align: left;
+    padding: 6px;
+    border: 1px solid orange;
+    background: none;
+    color: orange;
+    border-radius: 5px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 992px) {
+
+    section.content {
+        max-width: 70%;
+    }
+}
+
+.GoBack .time span {
+    color: orange;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+section.question-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2em;
+    position: relative;
+    top: 170px;
+}
+
+section.question-area .options div {
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: .5em;
+    margin-top: 1em;
+}
+
+section.question-area .indicator {
+    margin-top: 2em;
+}
+
+section.question-area .indicator p {
+    font-size: .9em;
+    font-family: 'Open Sans';
+}
+
+section.question-area .indicator .bottom {
+    margin-top: 1em;
+}
+
+section.question-area .indicator .bottom div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+section.question-area .indicator .bottom div div.answered {
+    width: 10px;
+    height: 10px;
+    background-color: lime;
+    border-radius: 50%;
+}
+
+section.question-area .indicator .bottom div div.skipped {
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+section.question-area .indicator .bottom div span {
+    font-size: .8rem;
+    font-family: 'Open Sans';
+}
+
+section.question-area .answered-questions {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 10px;
+}
+
+section.question-area .answered-questions div {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #777;
+    margin-top: .5em;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 1.1em;
+    padding-top: 0.3em;
+    font-family: 'Open Sans';
+}
+
+
+
+
+.footerH1 {
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+footer {
+    width: 100%;
+    height: 12rem;
+    background: rgb(66, 54, 54);
+    color: #ecf0f1;
+    padding: 20px 0;
+    font-family: 'Open Sans';
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+
+    padding: 0 20px;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+    color: orange;
+    font-size: 20px;
+}
+
+.footer-column p {
+    margin: 5px 0;
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.social-media a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.social-media a:hover {
+    color: #3498db;
+}
+
+
+.nav-links {
+    max-width: fit-content;
+    display: grid;
+    gap: 18px
+}
+
+.link-part.end.go.start.hide {
+    visibility: hidden;
+    display: none;
+}
+
+.loading-gif.hide {
+    visibility: hidden;
+    display: none;
+}
+
+.question {
+    margin-block: 30px;
+}
+
+.return{
+    background-color: black;
+    color: orange;
+    padding: 10px;
+    border:  3px solid orange;
+    border-radius: 50px;
+}
+
+@media screen and (max-width:790px) {
+
+    footer {
+        width: 100%;
+        height: 30rem;
+    }
+
+    .footer-container {
+        height: 25rem;
+
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="GoBack">
+        <a href="../Screens/screen3.html">
+            <button class="return">
+                <span class="less-than-sign">&lt;</span><span style="padding-left: 10px;">Go back</span>
+            </button>
+        </a>
+        <div class="time">
+            <p style="font-family: 'Afacad';">Timer: <span id="time" style="font-family: 'Afacad';">10:20</span></p>
+        </div>
+    </div>
+
+    <section class="content">
+        <h4 class="cos">Quiz on:</h4>
+        <h2>MTH 121 ( Mathematical Methods I )</h2>
+    </section>
+
+    <section class="question-area">
+        <div>
+            <p>Question <span id="question-number">1</span>/20</p>
+            <p id="question-text" class="question"></p>
+
+            <div class="options">
+                <div>
+                    <input type="radio" name="option" id="option1" value="0">
+                    <label for="option1" id="option1-label"></label>
+                </div>
+
+                <div>
+                    <input type="radio" name="option" id="option2" value="1">
+                    <label for="option2" id="option2-label"></label>
+                </div>
+
+                <div>
+                    <input type="radio" name="option" id="option3" value="2">
+                    <label for="option3" id="option3-label"></label>
+                </div>
+
+                <div>
+                    <input type="radio" name="option" id="option4" value="3">
+                    <label for="option4" id="option4-label"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="indicator" id="question-indicators"></div>
+        <div class="indicator">
+          
+            <div class="answered-questions">
+            <div class="q1">1</div>
+            <div class="q2">2</div>
+            <div class="q3">3</div>
+            <div class="q4">4</div>
+            <div class="q5">5</div>
+            <div class="q6">6</div>
+            <div class="q7">7</div>
+            <div class="q8">8</div>
+            <div class="q9">9</div>
+             <div class="q10">10</div>
+            <div class="q11">11</div>
+            <div class="q12">12</div>
+            <div class="q13">13</div>
+            <div class="q14">14</div>
+            <div class="q15">15</div>
+            <div class="q16">16</div>
+            <div class="q17">17</div>
+            <div class="q18">18</div>
+            <div class="q19">19</div>
+            <div class="q20">20</div>
+        </div>
+    
+        <div class="bottom">
+            <div><div class="answered"></div> <span>Answered questions</span></div>
+            <div><div class="skipped"></div> <span>Skipped questions</span></div>
+        </div>
+    </div>
+    </section>
+
+    <div class="pagination2">
+        <button class="prev" id="prev-btn">Prev Question</button>
+        <button class="next" id="next-btn">Next Question</button>
+        <button class="submit" id="sub-btn">SUBMIT QUIZ</button>
+    </div>
+</div>
+    </div>
+
+    <script>
+        //Text me if you have questions
+      const questions =[
+    {
+      "question": "Evaluate the limit: lim (x→0) (sin(x) / x)",
+      "options": [
+         "0", 
+         "1", 
+         "π", 
+         "e"
+        ],
+      "answer": 1
+    },
+    {
+      "question": "Find the derivative of the function: f(x) = (3x² + 2x - 5) / (x² + 1)",
+      "options": [
+         "f'(x) = (6x + 2) / (x² + 1)", 
+         "f'(x) = (6x + 2) / (2x + 1)", 
+         "f'(x) = (6x - 2) / (x² + 1)", 
+         "f'(x) = (6x - 2) / (2x - 1)"
+        ],
+      "answer": 0
+    },
+    {
+      "question": "Evaluate the integral: ∫(x² + 2x - 3) dx",
+      "options": [
+         "(x³ / 3) + (x²) - (3x) + C", 
+         "(x³ / 3) + (x²) + (3x) + C", 
+         "(x³ / 3) - (x²) + (3x) + C", 
+         "(x³ / 3) - (x²) - (3x) + C"
+        ],
+      "answer": 0
+    },
+    {
+      "question": "Solve the equation: x³ - 2x² - 5x + 6 = 0",
+      "options": [
+         "x = -1, x = 2, x = 3", 
+         "x = -1, x = 1, x = 6", 
+         "x = 1, x = 2, x = 3", 
+         "x = -2, x = 1, x = 3"
+        ],
+      "answer": 0
+    },
+    {
+      "question": "Find the area under the curve: y = x², from x = 0 to x = 4",
+      "options": [
+         "64/3", 
+         "32/3", 
+         "16/3", 
+         "8/3"
+        ],
+      "answer": 0
+    },
+    {
+      "question": "Evaluate the limit: lim (x→∞) (x² / (x² + 1))",
+      "options": [
+         "0", 
+         "1", 
+         "π", 
+         "e"
+        ],
+      "answer": 1
+    },
+    {
+      "question": "Find the derivative of the function: f(x) = e^(2x)",
+      "options": [
+         "f'(x) = 2e^(2x)", 
+         "f'(x) = e^(2x)", 
+         "f'(x) = 2e^x", 
+         "f'(x) = e^x"
+        ],
+      "answer": 0
+    },
+    {
+      "question": "Solve the equation: x² + 4x - 8 = 0",
+      "options": [
+         "x = -2 ± √6", 
+         "x = -2 ± √2", 
+         "x = 2 ± √6", 
+         "x = 2 ± √2"
+        ],
+      "answer": 0
+    },
+    {
+      "question": "Find the area between the curves: y = x² and y = x, from x = 0 to x = 2",
+      "options": [
+         "2/3", 
+         "1/3", 
+         "1/6", 
+         "1/12"
+        ],
+      "answer": 1
+    },
+    {
+      "question": "Evaluate the integral: ∫(e^x / (e^x + 1)) dx",
+      "options": [
+         "ln|e^x + 1| + C", 
+         "ln|e^x - 1| + C", 
+         "e^x / (e^x + 1) + C", 
+         "e^x / (e^x - 1) + C"
+        ],
+      "answer": 0
+    },
+    {
+      "question": "What is the primary purpose of the concept of a limit in calculus?",
+      "options": [
+         "To define the derivative of a function", 
+         "To define the continuity of a function", 
+         "To define the integral of a function", 
+         "To study the behavior of a function as the input values approach a specific point"
+        ],
+      "answer": 3
+    },
+    {
+      "question": "Which of the following statements about continuity is true?",
+      "options": [
+         "A function can be continuous at a point without being defined at that point", 
+         "A function can be continuous at a point even if it is not differentiable at that point", 
+         "A function must be defined at a point in order to be continuous at that point", 
+         "A function must be differentiable at a point in order to be continuous at that point"
+        ],
+      "answer": 2
+    },
+    {
+      "question": "What is the definition of the derivative of a function f(x) at a point x=a?",
+      "options": [
+         "The limit as h approaches 0 of [f(a+h) - f(a)]/h", 
+         "The limit as h approaches 0 of [f(a+h) + f(a)]/h", 
+         "The limit as h approaches 0 of [f(a+h) - f(a)]/a", 
+         "The limit as h approaches 0 of [f(a+h) + f(a)]/a"
+        ],
+      "answer": 0
+    },
+    {
+      "question": "What is the power rule of differentiation?",
+      "options": [
+         "If f(x) = x^n, then f'(x) = nx^(n-1)", 
+         "If f(x) = x^n, then f'(x) = nx^(n+1)", 
+         "If f(x) = x^n, then f'(x) = (n+1)x^n", 
+         "If f(x) = x^n, then f'(x) = (n-1)x^n"
+        ],
+      "answer": 0
+    },
+    {
+      "question": "What is the fundamental theorem of calculus?",
+      "options": [
+         "The derivative of an integral is equal to the original function", 
+         "The integral of a derivative is equal to the original function", 
+         "The derivative of a sum is equal to the sum of the derivatives", 
+         "The integral of a product is equal to the product of the integrals"
+        ],
+      "answer": 1
+    },
+    {
+      "question": "What is the definition of a definite integral?",
+      "options": [
+         "The limit as n approaches infinity of the sum of the areas of n rectangles", 
+         "The limit as n approaches infinity of the sum of the lengths of n line segments", 
+         "The limit as n approaches infinity of the sum of the volumes of n solids", 
+         "The limit as n approaches infinity of the sum of the areas of n trapezoids"
+        ],
+      "answer": 0
+    },
+    {
+      "question": "What is the substitution rule of integration?",
+      "options": [
+         "If u = g(x), then ∫f(u)du = ∫f(g(x))g'(x)dx", 
+         "If u = g(x), then ∫f(u)du = ∫f(g(x))/g'(x)dx", 
+         "If u = g(x), then ∫f(u)du = ∫f(g(x))dx", 
+         "If u = g(x), then ∫f(u)du = ∫f(g(x))g(x)dx"
+        ],
+      "answer": 0
+    },
+    {
+      "question": "What is the definition of an improper integral?",
+      "options": [
+         "An integral with an infinite limit of integration", 
+         "An integral with a discontinuous integrand", 
+         "An integral with a non-elementary antiderivative", 
+         "An integral with a multivariable integrand"
+        ],
+      "answer": 0
+    },
+    {
+      "question": "What is the purpose of integration by parts?",
+      "options": [
+         "To integrate functions that can be written as a product of two functions", 
+         "To integrate functions that can be written as a sum of two functions", 
+         "To integrate functions that can be written as a difference of two functions", 
+         "To integrate functions that can be written as a quotient of two functions"
+        ],
+      "answer": 0
+    },
+    {
+      "question": "What is the definition of a parametric integral?",
+      "options": [
+         "An integral that is evaluated using a parameter", 
+         "An integral that is evaluated using a substitution", 
+         "An integral that is evaluated using integration by parts", 
+         "An integral that is evaluated using a numerical method"
+        ],
+      "answer": 0
+    }
+]
+  
+
+let currentQuestionIndex = 0;
+let userAnswers = new Array(questions.length).fill(null); 
+
+const questionText = document.getElementById("question-text");
+const option1Label = document.getElementById("option1-label");
+const option2Label = document.getElementById("option2-label");
+const option3Label = document.getElementById("option3-label");
+const option4Label = document.getElementById("option4-label");
+const questionNumber = document.getElementById("question-number");
+const questionIndicators = document.getElementById("question-indicators");
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+
+function loadQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+
+    questionText.textContent = currentQuestion.question;
+    option1Label.textContent = currentQuestion.options[0];
+    option2Label.textContent = currentQuestion.options[1];
+    option3Label.textContent = currentQuestion.options[2];
+    option4Label.textContent = currentQuestion.options[3];
+    questionNumber.textContent = currentQuestionIndex + 1;
+    if (questionNumber.textContent == 20) {
+        document.getElementById("sub-btn").style.display = "flex";
+    }
+    else {
+        document.getElementById("sub-btn").style.display = "none";
+    }
+
+    // Clear previous selection
+    document.querySelectorAll('input[name="option"]').forEach((input) => {
+        input.checked = false;
+    });
+
+    // Restore user's previous answer if available
+    if (userAnswers[currentQuestionIndex] !== null) {
+        document.querySelector(`input[name="option"][value="${userAnswers[currentQuestionIndex]}"]`).checked = true;
+    }
+
+    updateIndicators();
+}
+
+function updateIndicators() {
+    const answeredQuestions = document.querySelector('.answered-questions');
+    const indicators = answeredQuestions.children; 
+
+    for (let i = 0; i < indicators.length; i++) {
+        if (i === currentQuestionIndex) {
+            indicators[i].style.backgroundColor = 'black'; 
+        } else if (userAnswers[i] === null) {
+            indicators[i].style.backgroundColor = 'blue';
+        } else {
+            indicators[i].style.backgroundColor = 'green'; 
+        }
+    }
+}
+
+
+nextBtn.addEventListener("click", () => {
+    const selectedOption = document.querySelector('input[name="option"]:checked');
+    if (selectedOption) {
+        userAnswers[currentQuestionIndex] = parseInt(selectedOption.value); 
+    }
+
+    currentQuestionIndex++;
+    if (currentQuestionIndex >= questions.length) {
+        console.log("Quiz completed!");
+        console.log("User Answers:", userAnswers);
+    } else {
+        loadQuestion();
+    }
+});
+
+prevBtn.addEventListener("click", () => {
+    if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion();
+    }
+});
+//NEW ADDITION Timer function
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+   var interval = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            clearInterval(interval);
+            submitQuiz()
+        }
+    }, 1000);
+    return interval;
+}
+//Submit function, created to be added to timer function.
+function submitQuiz() {
+     const selectedOption = document.querySelector('input[name="option"]:checked'); 
+     if (selectedOption) {
+         userAnswers[currentQuestionIndex] = parseInt(selectedOption.value);
+         } 
+         let correctAnswersCount = 0;
+         for (let i = 0; i < questions.length; i++)  {
+         if (userAnswers[i] === questions[i].answer) {
+         correctAnswersCount++; 
+        } 
+    } 
+      
+    };
+//to start timer function when it loads
+window.onload = function () {
+    var Minutes = (60 * 10) + 20,
+        display = document.querySelector('#time');
+    startTimer(Minutes, display);
+};
+//if we want to submit before the timer is over.
+document.getElementById("sub-btn").addEventListener("click", () => {
+    
+    const selectedOption = document.querySelector('input[name="option"]:checked');
+    if (selectedOption) {
+        userAnswers[currentQuestionIndex] = parseInt(selectedOption.value); 
+    }
+
+    let correctAnswersCount = 0;
+    for (let i = 0; i < questions.length; i++) {
+        if (userAnswers[i] === questions[i].answer) {
+            correctAnswersCount++;
+        }
+    }
+
+    alert(`You got ${correctAnswersCount} out of ${questions.length} questions correct!`);
+    clearInterval(interval);
+});
+loadQuestion();
+    
+    </script>
+</body>
