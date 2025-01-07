@@ -164,17 +164,6 @@
       "feedback": "The fundamental unit of charge is the charge of an electron, approximately -1.6 × 10^-19 Coulombs."
     },
     {
-      "question": "What is the capacitance of a capacitor with a dielectric constant (\\kappa)?",
-      "options": [
-        "(C = \\kappa C_0)",
-        "(C = C_0/\\kappa)",
-        "(C = \\kappa^2 C_0)",
-        "(C = \\kappa + C_0)"
-      ],
-      "correct": "(C = \\kappa C_0)",
-      "feedback": "The capacitance of a capacitor increases by the factor of the dielectric constant (\\kappa) when a dielectric is added."
-    },
-    {
       "question": "Which type of energy is stored in an electric field?",
       "options": [
         "Potential energy",
