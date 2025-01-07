@@ -15,34 +15,19 @@
     },
     {
       "question": "Which tab in PowerPoint contains the 'New Slide' option?",
-      "options": [
-        "Home",
-        "Insert",
-        "Design",
-        "Transitions"
-      ],
+      "options": ["Home", "Insert", "Design", "Transitions"],
       "correct": "Home",
       "feedback": "The 'New Slide' option is located under the 'Home' tab in PowerPoint."
     },
     {
       "question": "What is the shortcut key to start a slideshow in Microsoft PowerPoint?",
-      "options": [
-        "F5",
-        "Ctrl + S",
-        "Alt + F4",
-        "Shift + F5"
-      ],
+      "options": ["F5", "Ctrl + S", "Alt + F4", "Shift + F5"],
       "correct": "F5",
       "feedback": "Pressing F5 starts the slideshow from the beginning."
     },
     {
       "question": "Which feature allows you to apply consistent formatting to all slides in a presentation?",
-      "options": [
-        "Slide Master",
-        "Transitions",
-        "Animations",
-        "Design Ideas"
-      ],
+      "options": ["Slide Master", "Transitions", "Animations", "Design Ideas"],
       "correct": "Slide Master",
       "feedback": "The Slide Master feature allows you to set consistent formatting, such as fonts and layouts, for all slides."
     },
@@ -59,12 +44,7 @@
     },
     {
       "question": "What is the default file extension for PowerPoint presentations?",
-      "options": [
-        ".docx",
-        ".pptx",
-        ".xlsx",
-        ".pdf"
-      ],
+      "options": [".docx", ".pptx", ".xlsx", ".pdf"],
       "correct": ".pptx",
       "feedback": ".pptx is the default file format for PowerPoint presentations."
     },
@@ -103,14 +83,114 @@
     },
     {
       "question": "What is the shortcut key to duplicate a slide in PowerPoint?",
-      "options": [
-        "Ctrl + D",
-        "Ctrl + C",
-        "Ctrl + V",
-        "Ctrl + X"
-      ],
+      "options": ["Ctrl + D", "Ctrl + C", "Ctrl + V", "Ctrl + X"],
       "correct": "Ctrl + D",
       "feedback": "Ctrl + D is the shortcut key to duplicate a selected slide in PowerPoint."
+    },
+    {
+      "question": "Which view allows you to see all the slides in a presentation at once?",
+      "options": ["Slide Sorter", "Normal", "Reading", "Slide Show"],
+      "correct": "Slide Sorter",
+      "feedback": "The Slide Sorter view displays all the slides in a presentation as thumbnails."
+    },
+    {
+      "question": "How can you change the layout of a slide?",
+      "options": [
+        "By using the 'Design' tab",
+        "By using the 'Layout' button in the 'Home' tab",
+        "By using the 'Transitions' tab",
+        "By using the 'Animations' tab"
+      ],
+      "correct": "By using the 'Layout' button in the 'Home' tab",
+      "feedback": "You can change the layout of a slide by using the 'Layout' button in the 'Home' tab."
+    },
+    {
+      "question": "What is the purpose of the 'Notes' section in PowerPoint?",
+      "options": [
+        "To add speaker notes for each slide",
+        "To add comments for reviewers",
+        "To add footnotes",
+        "To add references"
+      ],
+      "correct": "To add speaker notes for each slide",
+      "feedback": "The 'Notes' section allows you to add speaker notes for each slide."
+    },
+    {
+      "question": "Which feature allows you to add a video to a slide?",
+      "options": [
+        "Insert Video",
+        "Insert Media",
+        "Insert Object",
+        "Insert Clipart"
+      ],
+      "correct": "Insert Video",
+      "feedback": "You can add a video to a slide using the 'Insert Video' feature."
+    },
+    {
+      "question": "How do you save a PowerPoint presentation as a PDF?",
+      "options": [
+        "File > Save As > PDF",
+        "File > Export > Create PDF/XPS Document",
+        "File > Print > Save as PDF",
+        "File > Share > PDF"
+      ],
+      "correct": "File > Export > Create PDF/XPS Document",
+      "feedback": "To save a PowerPoint presentation as a PDF, go to File > Export > Create PDF/XPS Document."
+    },
+    {
+      "question": "What is the purpose of the 'Slide Show' tab?",
+      "options": [
+        "To create new slides",
+        "To format text",
+        "To set up and run the presentation",
+        "To add animations"
+      ],
+      "correct": "To set up and run the presentation",
+      "feedback": "The 'Slide Show' tab contains options to set up and run the presentation."
+    },
+    {
+      "question": "Which feature allows you to add a hyperlink to a slide?",
+      "options": [
+        "Insert Link",
+        "Insert Hyperlink",
+        "Insert URL",
+        "Insert Reference"
+      ],
+      "correct": "Insert Hyperlink",
+      "feedback": "You can add a hyperlink to a slide using the 'Insert Hyperlink' feature."
+    },
+    {
+      "question": "How do you change the theme of a presentation?",
+      "options": [
+        "Design > Themes",
+        "Home > Layout",
+        "Insert > Themes",
+        "Transitions > Themes"
+      ],
+      "correct": "Design > Themes",
+      "feedback": "You can change the theme of a presentation by going to Design > Themes."
+    },
+    {
+      "question": "What is the purpose of the 'Format Painter' tool?",
+      "options": [
+        "To copy formatting from one object to another",
+        "To insert images",
+        "To add animations",
+        "To change slide layout"
+      ],
+      "correct": "To copy formatting from one object to another",
+      "feedback": "The 'Format Painter' tool allows you to copy formatting from one object to another."
+    },
+    {
+      "question": "Which feature allows you to add a table to a slide?",
+      "options": [
+        "Insert Table",
+        "Insert Chart",
+        "Insert Object",
+        "Insert Shape"
+      ],
+      "correct": "Insert Table",
+      "feedback": "You can add a table to a slide using the 'Insert Table' feature."
     }
   ]
 }
