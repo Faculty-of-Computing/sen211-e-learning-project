@@ -93,7 +93,6 @@ export async function login(email, password) {
   } catch (error) {
     handleError(error);
   }
-  return;
 }
 
 /**
@@ -140,7 +139,6 @@ export async function saveResult(result) {
   } catch (error) {
     handleError(error);
   }
-  return;
 }
 
 /**

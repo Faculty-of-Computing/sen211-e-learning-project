@@ -14,7 +14,7 @@
     <script type="module" src="./performance.js"></script>
   </head>
   <body>
-    <div class="px-4 py-8">
+    <div>
       <header class="flex flex-col lg:flex-row lg:items-end justify-between">
         <h1
           class="font-open-sans font-bold text-[32px] leading-[44px] [leading-trim:both] [text-edge:cap] text-white"
@@ -23,12 +23,14 @@
         </h1>
       </header>
       <main>
+        <h2 id="loader" style="font-size: 43px; font-family: 'Afacad', serif">
+          Loading...
+        </h2>
         <div
-          class="space-y-8 lg:space-y-8 w-full flex-col xl:flex-row xl:items-center xl:grid xl:grid-cols-2 xl:gap-0 gap-4"
+          class="space-y-8 lg:space-y-8 w-full flex-col xl:flex-row xl:items-center xl:grid xl:grid-cols-2 xl:gap-0 gap-4 unhide-table"
         >
           <div
             id="performance-table"
-            style="display: none"
             class="flex w-full lg:w-auto items-start flex-col"
           ></div>
           <div
@@ -36,8 +38,10 @@
             id="stat-cards"
           ></div>
         </div>
-        <hr class="border-[1px_solid_white] mt-[35px]" />
-        <div>
+        <hr
+          class="border-[1px_solid_white] mt-[35px] unhide-table unhide-history"
+        />
+        <div class="unhide-history">
           <h4
             class="font-afacad font-bold text-[24px] leading-[32px] text-primary"
           >
@@ -61,11 +65,8 @@
               />
               <div
                 class="font-afacad text-[24px] leading-[32px] text-white grid grid-cols-4 gap-y-[25px] my-[21px] text-center"
-                style="display: none"
                 id="history-fields"
-              >
-                Loading...
-              </div>
+              ></div>
             </div>
           </div>
         </div>
