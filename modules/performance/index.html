@@ -14,13 +14,47 @@
     <script type="module" src="./performance.js"></script>
   </head>
   <body>
-    <div>
+    <div class="mx-4 md:mx-10 mt-4 pb-4">
+      <div class="flex justify-between items-center">
+        <img
+          src="/modules/res/logo-main.png"
+          class="max-w-[200px]"
+          alt="Learnify logo"
+        />
+        <div id="user-slug">
+          <img
+            class="hidden size-[50px] rounded-full"
+            alt="your profile image"
+          />
+          <div
+            class="hidden bg-[rgb(61,61,61)] rounded-full size-[50px] text-white font-bold font-afacad items-center justify-center text-2xl"
+          ></div>
+        </div>
+      </div>
       <header class="flex flex-col lg:flex-row lg:items-end justify-between">
         <h1
           class="font-open-sans font-bold text-[32px] leading-[44px] [leading-trim:both] [text-edge:cap] text-white"
         >
           Student Performance Evaluation
         </h1>
+        <a
+          id="headerBtn"
+          href="#"
+          class="no-underline text-black font-afacad font-bold text-xl cursor-pointer inline-block p-[10px_20px] bg-[rgb(255,173,50)] rounded-[4px] [transition:background-color_0.3s,_box-shadow_0.3s] [box-shadow:0px_2px_2px_rgba(0,0,0,0.2)] max-w-fit hover:bg-[#e69500] hover:[box-shadow:0px_4px_4px_rgba(0,0,0,0.2)] focus:bg-[#cc8400] focus:[box-shadow:0px_6px_6px_rgba(0,0,0,0.2)]"
+        ></a>
+        <script>
+          const headerBtn = /** @type {HTMLAnchorElement} */ (
+            document.querySelector("#headerBtn")
+          );
+          const url = new URL(location.href);
+          if (url.searchParams.has("back")) {
+            headerBtn.innerText = "Retake Quiz";
+            headerBtn.href = url.searchParams.get("back");
+          } else {
+            headerBtn.innerText = "Home";
+            headerBtn.href = "/";
+          }
+        </script>
       </header>
       <main>
         <h2 id="loader" style="font-size: 43px; font-family: 'Afacad', serif">

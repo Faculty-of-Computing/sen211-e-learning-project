@@ -135,6 +135,7 @@ export async function saveResult(result) {
     url.searchParams.set("total", result.total.toString());
     url.searchParams.set("duration", result.duration.toString());
     url.searchParams.set("course", result.course);
+    url.searchParams.set("back", location.href);
     return url.href;
   } catch (error) {
     handleError(error);
