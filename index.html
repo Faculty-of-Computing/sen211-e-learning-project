@@ -7,13 +7,27 @@
     <link rel="stylesheet" href="./modules/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <meta property="og:title" content="SEN Project">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://sen211.vercel.app">
     <meta property="og:image" content="http://sen211.vercel.app/modules/res/preview.png">
-    <meta property="og:description" content="Welcome to the SEN Project. Explore various modules and track your performance.">
-    <script src="./index.js"></script>
+    <meta property="og:description"
+        content="Welcome to the SEN Project. Explore various modules and track your performance.">
+    <script src="./index.js" type="module"></script>
+    <script>
+        function checkLogin(targetRoute) {
+            const userId = localStorage.getItem("user-id");
+            if (!userId) {
+                window.location.href = "./auth/login.html";
+            } else {
+                window.location.href = targetRoute;
+            }
+        }
+
+    </script>
     <title>SEN Project</title>
 </head>
 
@@ -22,10 +36,10 @@
         <div class="header-section">
             <img src="./modules/res/logo-main.png" class="g4-logo" />
             <div class="user-slug">
-                EM
+
             </div>
         </div>
-        <p class="welcome-message">Welcome, Gideon Jones </p>
+        <p class="welcome-message">Welcome,</p>
         <div class="inside">
             <div class="inside-header-home">
                 <span>All Modules</span>
