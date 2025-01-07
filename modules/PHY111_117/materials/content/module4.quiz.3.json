@@ -195,6 +195,17 @@
       ],
       "correct": "It is uniform",
       "feedback": "The electric field near an infinite charged plane is uniform and independent of the distance from the plane."
+    },
+    {
+      "question": "What is the relationship between electric field and electric potential energy?",
+      "options": [
+        "Electric field is the negative gradient of electric potential energy",
+        "Electric field is the integral of electric potential energy",
+        "Electric potential energy is proportional to the square of the electric field",
+        "There is no direct relationship"
+      ],
+      "correct": "Electric field is the negative gradient of electric potential energy",
+      "feedback": "The electric field is the negative gradient of the electric potential energy, indicating the direction of the greatest rate of change."
     }
   ]
 }
