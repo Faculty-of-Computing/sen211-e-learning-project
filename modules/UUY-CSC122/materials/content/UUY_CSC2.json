@@ -15,23 +15,13 @@
     },
     {
       "question": "Which tab in Microsoft Word contains options for formatting text?",
-      "options": [
-        "Home",
-        "Insert",
-        "Layout",
-        "Review"
-      ],
+      "options": ["Home", "Insert", "Layout", "Review"],
       "correct": "Home",
       "feedback": "The 'Home' tab contains options for text formatting, such as font size, style, and color."
     },
     {
       "question": "What is the shortcut key to create a new document in Microsoft Word?",
-      "options": [
-        "Ctrl + O",
-        "Ctrl + N",
-        "Ctrl + S",
-        "Ctrl + P"
-      ],
+      "options": ["Ctrl + O", "Ctrl + N", "Ctrl + S", "Ctrl + P"],
       "correct": "Ctrl + N",
       "feedback": "Ctrl + N is the shortcut key to create a new blank document in Microsoft Word."
     },
@@ -48,12 +38,7 @@
     },
     {
       "question": "Which file format is commonly used to save Microsoft Word documents?",
-      "options": [
-        ".xlsx",
-        ".pptx",
-        ".docx",
-        ".pdf"
-      ],
+      "options": [".xlsx", ".pptx", ".docx", ".pdf"],
       "correct": ".docx",
       "feedback": "The .docx format is the standard file format for saving Microsoft Word documents."
     },
@@ -81,23 +66,13 @@
     },
     {
       "question": "Which feature in Microsoft Word allows you to create a table of contents?",
-      "options": [
-        "Footnotes",
-        "References",
-        "Layout",
-        "Review"
-      ],
+      "options": ["Footnotes", "References", "Layout", "Review"],
       "correct": "References",
       "feedback": "The 'References' tab contains the option to create a table of contents for your document."
     },
     {
       "question": "What is the shortcut key to undo an action in Microsoft Word?",
-      "options": [
-        "Ctrl + Z",
-        "Ctrl + Y",
-        "Ctrl + U",
-        "Ctrl + A"
-      ],
+      "options": ["Ctrl + Z", "Ctrl + Y", "Ctrl + U", "Ctrl + A"],
       "correct": "Ctrl + Z",
       "feedback": "Ctrl + Z is the shortcut key to undo the last action in Microsoft Word."
     },
@@ -111,6 +86,76 @@
       ],
       "correct": "To identify spelling and grammar errors",
       "feedback": "The 'Spelling & Grammar' feature helps ensure your document is free from spelling and grammatical errors."
+    },
+    {
+      "question": "Which tab in Microsoft Word allows you to change the page orientation?",
+      "options": ["Home", "Insert", "Layout", "Design"],
+      "correct": "Layout",
+      "feedback": "The 'Layout' tab allows you to change the page orientation between portrait and landscape."
+    },
+    {
+      "question": "What is the shortcut key to save a document in Microsoft Word?",
+      "options": ["Ctrl + O", "Ctrl + N", "Ctrl + S", "Ctrl + P"],
+      "correct": "Ctrl + S",
+      "feedback": "Ctrl + S is the shortcut key to save the current document in Microsoft Word."
+    },
+    {
+      "question": "Which feature in Microsoft Word allows you to create a mail merge?",
+      "options": ["Mailings", "References", "Review", "View"],
+      "correct": "Mailings",
+      "feedback": "The 'Mailings' tab contains the options to create a mail merge for sending bulk letters or emails."
+    },
+    {
+      "question": "What is the purpose of the 'Track Changes' feature in Microsoft Word?",
+      "options": [
+        "To insert images",
+        "To format text",
+        "To track edits made to the document",
+        "To create tables"
+      ],
+      "correct": "To track edits made to the document",
+      "feedback": "The 'Track Changes' feature allows you to see the edits made to the document by different users."
+    },
+    {
+      "question": "Which tab in Microsoft Word contains options for inserting tables, pictures, and shapes?",
+      "options": ["Home", "Insert", "Design", "Layout"],
+      "correct": "Insert",
+      "feedback": "The 'Insert' tab contains options for adding tables, pictures, shapes, and other elements to your document."
+    },
+    {
+      "question": "What is the shortcut key to print a document in Microsoft Word?",
+      "options": ["Ctrl + O", "Ctrl + N", "Ctrl + S", "Ctrl + P"],
+      "correct": "Ctrl + P",
+      "feedback": "Ctrl + P is the shortcut key to open the print dialog box in Microsoft Word."
+    },
+    {
+      "question": "Which feature in Microsoft Word allows you to create a bibliography?",
+      "options": ["Mailings", "References", "Review", "View"],
+      "correct": "References",
+      "feedback": "The 'References' tab contains the options to create a bibliography and manage citations."
+    },
+    {
+      "question": "What is the purpose of the 'Header & Footer' feature in Microsoft Word?",
+      "options": [
+        "To insert images",
+        "To add text at the top and bottom of each page",
+        "To format paragraphs",
+        "To create tables"
+      ],
+      "correct": "To add text at the top and bottom of each page",
+      "feedback": "The 'Header & Footer' feature allows you to add text, such as page numbers or titles, at the top and bottom of each page."
+    },
+    {
+      "question": "Which tab in Microsoft Word allows you to change the document's theme?",
+      "options": ["Home", "Insert", "Design", "Layout"],
+      "correct": "Design",
+      "feedback": "The 'Design' tab allows you to change the document's theme, including colors, fonts, and effects."
+    },
+    {
+      "question": "What is the shortcut key to redo an action in Microsoft Word?",
+      "options": ["Ctrl + Z", "Ctrl + Y", "Ctrl + U", "Ctrl + A"],
+      "correct": "Ctrl + Y",
+      "feedback": "Ctrl + Y is the shortcut key to redo the last action in Microsoft Word."
     }
   ]
 }

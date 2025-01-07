@@ -15,23 +15,13 @@
     },
     {
       "question": "Which symbol is used to start a formula in Microsoft Excel?",
-      "options": [
-        "=",
-        "+",
-        "-",
-        "/"
-      ],
+      "options": ["=", "+", "-", "/"],
       "correct": "=",
       "feedback": "In Excel, all formulas must begin with the equals (=) sign."
     },
     {
       "question": "What is the shortcut key to save an Excel workbook?",
-      "options": [
-        "Ctrl + P",
-        "Ctrl + S",
-        "Ctrl + C",
-        "Ctrl + V"
-      ],
+      "options": ["Ctrl + P", "Ctrl + S", "Ctrl + C", "Ctrl + V"],
       "correct": "Ctrl + S",
       "feedback": "Ctrl + S is the shortcut key to save a workbook in Excel."
     },
@@ -59,23 +49,13 @@
     },
     {
       "question": "What is the file extension for an Excel workbook?",
-      "options": [
-        ".docx",
-        ".xlsx",
-        ".pptx",
-        ".pdf"
-      ],
+      "options": [".docx", ".xlsx", ".pptx", ".pdf"],
       "correct": ".xlsx",
       "feedback": ".xlsx is the default file format for Excel workbooks."
     },
     {
       "question": "Which Excel function is used to find the largest number in a range?",
-      "options": [
-        "SUM",
-        "MIN",
-        "MAX",
-        "AVERAGE"
-      ],
+      "options": ["SUM", "MIN", "MAX", "AVERAGE"],
       "correct": "MAX",
       "feedback": "The MAX function is used to find the largest number in a range of cells."
     },
@@ -92,12 +72,7 @@
     },
     {
       "question": "What is the shortcut key to copy selected cells in Excel?",
-      "options": [
-        "Ctrl + C",
-        "Ctrl + V",
-        "Ctrl + X",
-        "Ctrl + Z"
-      ],
+      "options": ["Ctrl + C", "Ctrl + V", "Ctrl + X", "Ctrl + Z"],
       "correct": "Ctrl + C",
       "feedback": "Ctrl + C is the shortcut key to copy selected cells in Excel."
     },
@@ -111,6 +86,96 @@
       ],
       "correct": "To highlight cells based on specific conditions",
       "feedback": "Conditional Formatting is used to apply formatting to cells that meet certain criteria."
+    },
+    {
+      "question": "Which function is used to calculate the average of a range of cells in Excel?",
+      "options": ["SUM", "AVERAGE", "COUNT", "MEDIAN"],
+      "correct": "AVERAGE",
+      "feedback": "The AVERAGE function calculates the average of a range of cells."
+    },
+    {
+      "question": "What is the shortcut key to undo an action in Excel?",
+      "options": ["Ctrl + Y", "Ctrl + Z", "Ctrl + U", "Ctrl + R"],
+      "correct": "Ctrl + Z",
+      "feedback": "Ctrl + Z is the shortcut key to undo an action in Excel."
+    },
+    {
+      "question": "Which feature in Excel allows you to combine multiple cells into one cell?",
+      "options": [
+        "Merge & Center",
+        "Wrap Text",
+        "Text to Columns",
+        "Format Painter"
+      ],
+      "correct": "Merge & Center",
+      "feedback": "The Merge & Center feature combines multiple cells into one cell and centers the content."
+    },
+    {
+      "question": "What is the purpose of the 'Data Validation' feature in Excel?",
+      "options": [
+        "To restrict the type of data entered in a cell",
+        "To format data",
+        "To sort data",
+        "To filter data"
+      ],
+      "correct": "To restrict the type of data entered in a cell",
+      "feedback": "Data Validation is used to restrict the type of data or the values that users can enter into a cell."
+    },
+    {
+      "question": "Which function is used to count the number of cells that contain numbers in a range?",
+      "options": ["COUNT", "COUNTA", "COUNTIF", "COUNTBLANK"],
+      "correct": "COUNT",
+      "feedback": "The COUNT function counts the number of cells that contain numbers in a range."
+    },
+    {
+      "question": "What is the shortcut key to open the 'Find and Replace' dialog box in Excel?",
+      "options": ["Ctrl + F", "Ctrl + H", "Ctrl + G", "Ctrl + R"],
+      "correct": "Ctrl + H",
+      "feedback": "Ctrl + H is the shortcut key to open the 'Find and Replace' dialog box in Excel."
+    },
+    {
+      "question": "Which feature in Excel allows you to create a visual representation of data?",
+      "options": [
+        "PivotTable",
+        "Chart",
+        "Data Validation",
+        "Conditional Formatting"
+      ],
+      "correct": "Chart",
+      "feedback": "Charts in Excel allow you to create a visual representation of data."
+    },
+    {
+      "question": "What is the purpose of the 'VLOOKUP' function in Excel?",
+      "options": [
+        "To look up a value in a table by matching on the first column",
+        "To calculate the sum of a range",
+        "To find the minimum value in a range",
+        "To count the number of cells that meet a criteria"
+      ],
+      "correct": "To look up a value in a table by matching on the first column",
+      "feedback": "The VLOOKUP function looks up a value in a table by matching on the first column."
+    },
+    {
+      "question": "Which feature in Excel allows you to filter data based on specific criteria?",
+      "options": [
+        "Sort",
+        "Filter",
+        "Conditional Formatting",
+        "Data Validation"
+      ],
+      "correct": "Filter",
+      "feedback": "The Filter feature allows you to filter data based on specific criteria."
+    },
+    {
+      "question": "What is the shortcut key to insert a new worksheet in Excel?",
+      "options": [
+        "Shift + F11",
+        "Ctrl + F11",
+        "Alt + F11",
+        "Ctrl + Shift + F11"
+      ],
+      "correct": "Shift + F11",
+      "feedback": "Shift + F11 is the shortcut key to insert a new worksheet in Excel."
     }
   ]
 }
