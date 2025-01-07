@@ -1,4 +1,4 @@
-import { getUser, saveResult } from "../../scripts/firebase.js";
+import { getUser, saveResult } from "/scripts/firebase.js";
 
 // Wait for the DOM to be loaded before adding event listeners
 document.addEventListener('DOMContentLoaded', function() {
