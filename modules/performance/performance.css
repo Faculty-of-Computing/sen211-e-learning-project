@@ -319,3 +319,6 @@ body {
     background-color: transparent;
   }
 }
+.unhide-table, .unhide-history {
+  display: none;
+}
