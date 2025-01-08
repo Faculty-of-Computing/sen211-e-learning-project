@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./assets/booking.css" />
+    <title>Booking</title>
+  </head>
+  <body>
+    <div class="py-10 lg:py-[66px]">
+      <div class="flex items-center justify-between dent">
+        <figure>
+          <img
+            src="./assets/learnify.png"
+            class="max-w-[123px] max-h-[45px]"
+            alt="Learnify logo"
+          />
+        </figure>
+        <div
+          class="size-[45px] rounded-full bg-primary text-2xl flex items-center justify-center font-bold text-black"
+        >
+          JD
+        </div>
+      </div>
+      <title>Booking</title>
+      <div class="dent mt-10">
+        <h1 class="font-bold text-3xl md:text-[48px] md:leading-[64px]">
+          BOOKING
+        </h1>
+        <p class="text-xl">Book a counselling session with Prof. Confidence</p>
+      </div>
+      <hr
+        class="border-[0.5px] border-solid border-white opacity-40 my-6 w-[95%] mx-auto"
+      />
+      <div class="dent">
+        <h2 class="font-semibold text-[40px] leading-[53px] text-primary">
+          Counsellor's Profile:
+        </h2>
+        <div class="m-4 font-semibold text-xl space-y-1">
+          <h3 class="text-[36px] mb-2">Banny Confidence</h3>
+          <p>HOD Faculty of Computing</p>
+          <p>University Of Uyo.</p>
+          <a
+            href="mailto:bannyconfidence@gmail.com"
+            class="no-underline hover:underline text-sm text-white font-normal tracking-wider"
+            >bannyconfidence@gmail.com</a
+          >
+        </div>
+      </div>
+      <hr
+        class="border-[0.5px] border-solid border-white opacity-40 my-6 w-[95%] mx-auto"
+      />
+      <form class="dent flex flex-col gap-10 md:gap-y-[48px]">
+        <h4 class="text-[36px] leading-[48px] text-primary font-medium">
+          Booking Form
+        </h4>
+        <div class="grid md:grid-cols-2 gap-10">
+          <label for="first-name" class="space-y-[22px] booking-label">
+            <span class="font-medium text-xl md:text-[32px] leading-[43px]"
+              >First Name</span
+            >
+            <input name="first-name" type="text" required />
+          </label>
+          <label for="last-name" class="space-y-[22px] booking-label">
+            <span class="font-medium text-xl md:text-[32px] leading-[43px]"
+              >Last Name</span
+            >
+            <input name="last-name" type="text" required />
+          </label>
+        </div>
+        <label for="email" class="space-y-[22px] booking-label">
+          <span class="font-medium text-xl md:text-[32px] leading-[43px]"
+            >Email Address</span
+          >
+          <input name="email" type="email" required />
+        </label>
+        <label for="tel" class="space-y-[22px] booking-label">
+          <span class="font-medium text-xl md:text-[32px] leading-[43px]"
+            >Phone Number</span
+          >
+          <input name="tel" type="tel" required />
+        </label>
+        <label for="challenge" class="space-y-[22px] booking-label">
+          <span class="font-medium text-xl md:text-[32px] leading-[43px]"
+            >In Less than 200 Words Describe The Academic Challenges you
+            Currently Face</span
+          >
+          <textarea name="challenge" required maxlength="1200"></textarea>
+        </label>
+        <div class="flex justify-center">
+          <button
+            type="submit"
+            class="bg-primary w-[447px] h-[56px] rounded-[8px] [box-shadow:inset_0px_0px_2px_rgba(255,255,255,0.5)]"
+          >
+            Book a Session
+          </button>
+        </div>
+      </form>
+      <script
+        type="module"
+        src="./assets/booking.js"
+      ></script>
+    </div>
+  </body>
+</html>
