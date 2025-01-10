@@ -538,3 +538,88 @@ header.search-container {
 .performance-text {
     color: #ff9500;
 }
+
+@media only screen and (max-width: 500px) {
+    html,
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        padding: 0.8rem;
+    }
+    .main-content {
+        padding-left: 0px;
+        max-width: 100%;
+    }
+    .learn-text {
+        font-size: 20px;
+    }
+    .search-container {
+        width: fit-content;
+        font-size: 10px;
+    }
+    .search-container input[type="text"] {
+        font-size: 9px;
+    }
+    .course-code {
+        font-size: 20px;
+    }
+    .student-btn {
+        width: 106px;
+        height: 68px;
+        font-size: 13px;
+        /* padding: 0.3em 0.5em; */
+    }
+    header {
+        column-gap: 22px;
+    }
+    .profile-text {
+        font-size: 11px;
+    }
+    .profile {
+        width: fit-content;
+    }
+    .performance-text {
+        font-size: 13px;
+    }
+    .course-student {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 65px;
+    }
+    .lectures-overview-header {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 139px;
+    }
+    .quizButton {
+        font-size: 11px;
+        width: 100px;
+    }
+    .template1 {
+        width: 217px;
+    }
+    .readmore {
+        width: 70px;
+    }
+    .GoBack {
+        column-gap: 160px;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .course-description {
+        font-size: 20px;
+    }
+    .go-back {
+        font-size: 10px;
+        width: 60px;
+        height: 21px;
+    }
+}
