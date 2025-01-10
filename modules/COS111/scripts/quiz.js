@@ -1,27 +1,15 @@
-// @ts-check
+// @ts-nocheck
 
-import { getUser, saveResult } from "../../../scripts/firebase.js";
+import { getUser, saveResult } from "./scripts/firebase.js";
 
 /** @type {string} */
-var performanceUrl;
+let performanceUrl;
 
 getUser((user) => {
   const welcomeMsg = /** @type {HTMLElement} */ (
     document.querySelector(".welcome-message")
   );
-  const userSlug = /** @type {HTMLElement} */ (
-    document.querySelector(".user-slug")
-  );
   welcomeMsg.innerText = `Welcome, ${user.displayName}`;
-  if (user.displayName) {
-    const nameParts = user.displayName.split(" ");
-    const firstNameInitial = nameParts[0] ? nameParts[0][0] : "";
-    const lastNameInitial =
-      nameParts.length > 1 ? nameParts[nameParts.length - 1][0] : "";
-    userSlug.innerText = `${firstNameInitial}${lastNameInitial}`.toUpperCase();
-  } else {
-    userSlug.innerText = "NA";
-  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -174,26 +162,21 @@ document.addEventListener("DOMContentLoaded", function () {
               ).innerText += " (✅Correct Option)";
               try {
                 selectedOption.parentElement.classList.add("wrong-answer");
-              } catch (e) {}
+              } catch (e) {
+                console.log("No selected option");
+              }
             }
           });
 
           console.log("Final Score:", score);
-          saveResult({
-            score: score,
-            total: quizData.questions.length,
+          performanceUrl = await saveResult({
             course: quizData.name,
-            duration: quizData.time,
-          })
-            .then((response) => {
-              console.log(response); // Expected: "Data uploaded successfully"
-              performanceUrl = response;
-              console.log(performanceUrl);
-              /** @type {HTMLElement} */ (
-                document.querySelector(".score-show")
-              ).innerText = `Your scored ${score}/${quizData.questions.length}`;
-            })
-            .catch((error) => console.error("Error fetching the file:", error));
+            // FIXME DURATION IS THE TIME TAKEN FOR THE QUIZ,
+            //  NOT THE TIME LEFT CHECK THE VALIDITY OF THIS LOGIC
+            duration: timeLeft,
+            score,
+            total: quizData.questions.length,
+          });
         };
       })
       .catch((error) => console.error("Error fetching the file:", error));
