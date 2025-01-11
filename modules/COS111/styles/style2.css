@@ -1,0 +1,271 @@
+* {
+  color: white;
+  user-select: none;
+}
+
+* {
+  font-family: "Afacad", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  background-color: black;
+}
+
+.main {
+  margin: auto;
+  max-width: 1000px;
+  padding: 10px;
+}
+
+.header-section {
+  margin-top: 0px;
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  align-items: center;
+}
+
+.g4-logo {
+  max-width: 200px;
+}
+
+.user-slug {
+  font-weight: bold;
+  font-size: 24px;
+  background-color: rgb(61, 61, 61);
+  color: rgb(255, 255, 255);
+  width: fit-content;
+  height: 36px;
+  justify-self: end;
+  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+}
+
+.inside {
+  display: flex;
+  flex-direction: column;
+}
+
+.inside-header-home {
+  font-size: 20px;
+  margin-top: 10px;
+  max-width: 100%;
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.inside-header {
+  font-size: 20px;
+  margin-top: 10px;
+  max-width: 100%;
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.inside-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 100%;
+  gap: 20px;
+}
+
+.grid-item {
+  width: 100%;
+  background-color: #1d1f21;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.grid-item:hover {
+  background-color: #2e3133;
+}
+
+.grid-item:active {
+  background-color: rgb(255, 173, 50);
+}
+
+.book-img {
+  width: 12%;
+  display: inline;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+.book-info p {
+  padding-inline: 10px;
+  font-size: 24px;
+  margin-block: 10px;
+}
+
+.book-info-small p {
+  padding-inline: 10px;
+  font-size: 18px;
+  margin-block: 10px;
+}
+
+.book-info-small span {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 16px;
+}
+
+.welcome-message {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+a.link-part {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(255, 173, 50);
+  border-radius: 4px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  max-width: fit-content;
+  justify-self: end;
+}
+
+a.link-part:hover {
+  background-color: #e69500;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+a.link-part:active {
+  background-color: #cc8400;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+a.link-part.end {
+  text-align: right;
+}
+
+a.goto {
+  color: #cc8400;
+}
+
+a.goto:hover {
+  color: #e65400;
+}
+
+.wide-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.section-details {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 20px;
+  background-color: black;
+  margin: 10px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.section-details-small {
+  display: grid;
+  grid-template-columns: 2fr 1px 1fr;
+  gap: 20px;
+  background-color: black;
+  margin: 10px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.line-bw {
+  background-color: #2e3133;
+  margin-block: 2px;
+  width: 2px;
+}
+
+.book-detail p {
+  font-size: 14px;
+  margin-block: 10px;
+  margin-inline: 10px;
+  color: #aaaaaa;
+}
+
+.inside.embed {
+  font-size: 18px;
+}
+
+.embed {
+  transform: translateY(0px);
+  opacity: 1;
+  display: block;
+  transition: all 0.25s;
+}
+
+.embed.hide {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transform: translateY(10px);
+  transition: all 0.4s;
+}
+
+.final-score {
+  text-align: center;
+}
+
+.final-score p {
+  font-size: 24px;
+  margin-bottom: 70px;
+  margin-inline: 10px;
+  color: #cc8400;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.final-score p:hover {
+  color: #e65400;
+}
+
+#Learn {
+    background-color: orange;
+    color: black;
+    font-family: Monteserrat-Black;
+}
+
+@media (min-width: 992px) {
+  .grid-item:hover {
+    transform: scale(1.03);
+  }
+}
+
+@media (max-width: 992px) {
+  .inside-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .inside-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 390px) {
+  .inside-grid {
+    grid-template-columns: 1fr;
+  }
+}

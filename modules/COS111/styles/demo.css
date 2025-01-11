@@ -123,7 +123,7 @@ header.desktop-nav .reverse-hamburger {
     width: 100%;
     z-index: 1000;
     animation: animateNav .5s;
-    bottom: 0;
+   top: 100px;
 }
 
 @keyframes animateNav {
@@ -298,7 +298,13 @@ header.desktop-nav .reverse-hamburger {
     }
 
     .readmore {
-        left: 50%;
+        left: 60%;
+        width: 6rem;
+        height: 2.3rem;
+        display: flex;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
     }
 
     section.question-area {
@@ -310,6 +316,7 @@ header.desktop-nav .reverse-hamburger {
     position: relative;
     top: 120px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 0 2em;
 }
@@ -331,12 +338,15 @@ header.desktop-nav .reverse-hamburger {
 
 section.content {
     position: relative;
-    top: 150px;
-    padding: 2rem 2em;
+    top: 7rem;
+    padding: 0rem 0 3rem 0;
+    margin: 2rem ;
+    font-size: 1.1em;
 }
 
 section.content .cos {
     font-family: Monteserrat-Light;
+    margin: 1.5rem 0;
 }
 
 section.content .fetched-content h3 {
@@ -364,17 +374,32 @@ section.content .fetched-content a {
 section p {
     font-family: Monteserrat-Light;
     font-size: 1.1rem;
+    margin-bottom: 2em;
 }
 
-section.content ul li {
+section.content ol li {
     margin-top: 1em;
     margin-bottom: 1em;
     list-style-type: decimal;
     font-size: 1.1rem;
 }
 
-section.content ul, p {
+section.content ol {
     margin-bottom: 2em;
+    margin-left: 1em;
+}
+
+@counter-style dash {
+    system: cyclic;
+    symbols: "-";
+    suffix: "  ";
+  }
+
+
+section.content ul li {
+    list-style-type:dash;
+    margin: 1em 0;
+    font-size: 1.1rem;
 }
 
 .pagination {
@@ -531,7 +556,7 @@ footer {
 }
 
 .footer-column {
-
+    
     padding: 0 20px;
 }
 
@@ -566,6 +591,22 @@ footer {
     color: #3498db;
 }
 
+footer img{
+    width: 1.5rem;
+}
+
+footer ul li{
+    display: flex;
+    align-items: center;
+}
+
+.footer-column ul{
+    display: flex;
+    flex-direction: row;
+    width: 6rem;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
 
 .nav-links {
     max-width: fit-content;
@@ -591,15 +632,19 @@ footer {
 
     footer {
         width: 100%;
-        height: 25rem;
+        height: 22rem;
     }
 
     .footer-container {
-        height: 22rem;
+        height: 20rem;
 
         display: flex;
         flex-direction: column;
         /* justify-content: space-between; */
+    }
+    .footer-column ul{
+        display: flex;
+        flex-direction: column;
     }
 
 }
@@ -654,8 +699,10 @@ footer {
     height: 100%;
 }
 
-.cos{
-    font-family: Monteserrat-Light;
-    font-size: 2.2rem;
-    margin: 1rem 0;
+
+.GoBack:hover {
+    color: orange;
+    
 }
+
+

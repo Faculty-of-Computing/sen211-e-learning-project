@@ -13,7 +13,7 @@
         <h1><span id="Learn">Module</span> 1</h1>
         <nav>
             <ul class="nav-links">
-                <li onclick="location.href='./../../index.html'">Home</li>
+                <li onclick="location.href='../index.html'">Home</li>
                 <li onclick="location.href='./quizzes/quiz.quiz.html'">Module Quiz</li>
             </ul>
         </nav>
@@ -33,16 +33,15 @@
     <div class="mobile-nav">
         <nav>
             <ul>
-                <li onclick="location.href='./../../index.html'">Home <span>></span></li>
+                <li onclick="location.href='../index.html'">Home <span>></span></li>
                 <li onclick="location.href='../quizzes/quiz.quiz.html'">Module Quiz <span>></span></li>
             </ul>
         </nav>
 
     </div>
     <div class="GoBack">
-        <a href="../index.html"><button class="goBackButton">
-                << Go back</button></a>
-        <a href="../quizzes/quiz.quiz.html"><button class="quizButton"> Module quiz</button></a>
+        <a href="../index.html"><button class="goBackButton"> << Go back</button></a>
+        <a href="../quizzes/Quiz.html"><button class="quizButton"> Module quiz</button></a>
     </div>
 
     <section class="content">
@@ -75,11 +74,9 @@
             </ol>
         </div>
 
-
     </section>
 
     <script src="../scripts/App.js"></script>
-    <!-- <script src="API.js"></script> -->
     <script>
         let fetchedContent = JSON.parse(localStorage.getItem("Content"));
         if (fetchedContent) {
