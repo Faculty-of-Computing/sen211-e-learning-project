@@ -204,7 +204,10 @@ export async function getUser(cb) {
   const user = await new Promise((res, rej) => {
     firebaseAuth.onAuthStateChanged(auth, (user) => {
       if (user) res(user);
-      else rej("Unable to fetch user!");
+      else {
+        localStorage.removeItem("user-id");
+        rej("Unable to fetch user!");
+      }
     });
   });
   if (cb) cb(user);
