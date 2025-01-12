@@ -13,13 +13,7 @@ if %ERRORLEVEL% NEQ 0 (
 
 :: Prepare Virtual Environment
 echo Preparing Virtual Environment...
-if exist venv\Scripts\activate(
-    echo Virtual Environment already exists. Skipping creation.
-)else (
-    echo Virtual Environment does not exist. Creating new Virtual Environment.
-    python -m venv venv
-
-)
+python -m venv venv
 echo Activating Virtual Environment...
 call venv\Scripts\activate
 
