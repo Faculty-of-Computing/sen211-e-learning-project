@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../styles/module4.quiz.style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script defer>
+        var quizState = 'wait'
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const file = params.get('file');
+            const waitSection = document.querySelector('.inside.embed.wait')
+            const startSection = document.querySelector('.inside.embed.start')
+            const finishSection = document.querySelector('.inside.embed.finish')
+            const quizName = document.querySelector('.quiz-name')
+            const quizName2 = document.querySelector('.quiz-name-2')
+            const startButton = document.querySelector('.go.start')
+            const submitButton = document.querySelector('.go.submit')
+            const statusMessage = document.querySelector('.status-message')
+            const questionContainer = document.querySelector('.questions-container-main')
+            const reviewScore = document.querySelector('.review-score-button')
+            const doneReviewScore = document.querySelector('.done-review-score-button')
+            const timeAlloc = document.querySelector('.time-alloc')
+            const timerDisplay = document.querySelector('.timer-head')
+            var timeLeft = 0 //s
+            var i
+            if (file) {
+                fetch(`./content/${file}`)
+                    .then(response => response.text())
+                    .then(data => {
+                        const quizData = JSON.parse(data)
+                        console.log(quizData)
+                        quizName.innerText = quizData.name
+                        quizName2.innerText = quizData.name
+                        const minutes = Math.floor(quizData.time / 60);
+                        const seconds = quizData.time % 60;
+                        timeAlloc.innerText = `Time Allocated: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                        timeLeft = quizData.time
+                        statusMessage.innerText = ""
+                        const questionsContainer = document.createElement('div');
+                        questionsContainer.classList.add('questions-container');
+
+                        quizData.questions.forEach((questionData, index) => {
+                            const questionElement = document.createElement('div');
+                            questionElement.classList.add('question');
+
+                            const questionText = document.createElement('p');
+                            questionText.innerText = `${index + 1}. ${questionData.question}`;
+                            questionElement.appendChild(questionText);
+
+                            questionData.options.forEach((option, optionIndex) => {
+                                const optionElement = document.createElement('div');
+                                optionElement.classList.add('option');
+
+                                const inputElement = document.createElement('input');
+                                inputElement.type = 'radio';
+                                inputElement.name = `question-${index}`;
+                                inputElement.value = option;
+                                inputElement.id = `question-${index}-option-${optionIndex}`;
+                                optionElement.appendChild(inputElement);
+
+                                const labelElement = document.createElement('label');
+                                labelElement.innerText = option;
+                                labelElement.htmlFor = `question-${index}-option-${optionIndex}`;
+                                optionElement.appendChild(labelElement);
+
+                                questionElement.appendChild(optionElement);
+                            });
+                            if (questionData.feedback) {
+                                const feedbackElement = document.createElement('p');
+                                feedbackElement.classList.add('feedback');
+                                feedbackElement.innerText = "Feedback: " + questionData.feedback;
+                                questionElement.appendChild(feedbackElement);
+                            }
+                            questionsContainer.appendChild(questionElement);
+                        });
+
+                        questionContainer.appendChild(questionsContainer);
+
+                        submitButton.onclick = () => {
+                            console.log("Submit")
+                            startSection.classList.toggle('hide', true)
+                            finishSection.classList.toggle('hide', false)
+                            timerDisplay.classList.toggle('panic', false)
+                            timerDisplay.classList.toggle('hide', true)
+                            clearInterval(i);
+
+                            let score = 0;
+                            const questions = document.querySelectorAll('.question');
+                            questions.forEach((question, index) => {
+                                const selectedOption = question.querySelector('input[type="radio"]:checked');
+                                console.log(selectedOption)
+                                if (selectedOption && selectedOption.value == quizData.questions[index].correct) {
+                                    score++;
+                                    selectedOption.parentElement.classList.add('correct-answer');
+                                    selectedOption.parentElement.parentElement.firstChild.innerText += " (✅Correct)"
+                                }
+                                else {
+                                    question.firstChild.innerText += " (❌Wrong)"
+                                    const correctOption = question.querySelector(`input[value="${quizData.questions[index].correct}"]`)
+                                    console.log(correctOption)
+                                    correctOption.nextElementSibling.innerText += " (✅Correct Option)"
+                                    try {
+                                        selectedOption.parentElement.classList.add('wrong-answer');
+                                    }
+                                    catch (e) {
+                                        console.log("No selected option")
+                                    }
+                                }
+                            });
+
+                            console.log("Final Score:", score);
+                            document.querySelector('.score-show').innerText = `Your scored ${score}/${quizData.questions.length}`
+                        }
+                    })
+                    .catch(error => console.error('Error fetching the file:', error));
+            }
+            else {
+                console.warn("Dev: Pass a quiz data file to continue")
+            }
+            startButton.onclick = () => {
+                console.log("Start")
+                waitSection.classList.toggle('hide', true)
+                startSection.classList.toggle('hide', false)
+                timerDisplay.classList.toggle('hide', false)
+                i = setInterval(() => {
+                    if (timeLeft <= 0) {
+                        console.log("Time up")
+                        submitButton.click()
+                        timerDisplay.classList.toggle('panic', false)
+                        timerDisplay.classList.toggle('hide', true)
+                        clearInterval(i);
+                    }
+                    else {
+                        timeLeft -= 1
+                        const minutes = Math.floor(timeLeft / 60);
+                        const seconds = timeLeft % 60;
+                        timerDisplay.innerText = `Time left: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
+                    }
+                    if (timeLeft < 10) {
+                        timerDisplay.classList.toggle('panic', true)
+                    }
+                }, 1000)
+            }
+            reviewScore.onclick = () => {
+                console.log("Review score")
+                finishSection.classList.toggle('hide', true)
+                startSection.classList.toggle('hide', false)
+                startSection.classList.toggle('review-stage', true)
+            }
+            doneReviewScore.onclick = () => {
+                console.log("Done reviewing")
+                finishSection.classList.toggle('hide', false)
+                startSection.classList.toggle('hide', true)
+            }
+        });
+    </script>
+    <title>Module 4 Quiz</title>
+</head>
+
+<body>
+    <div class="timer-head hide">Time left: ...</div>
+    <div class="main">
+        <div class="header-section">
+            <img src="../../res/module4.png" class="g4-logo" />
+            <div class="user-slug">
+                EM
+            </div>
+        </div>
+        <p class="welcome-message">Welcome, Gideon Jones </p>
+        <p><a href="../../../index.html" class="goto">Home</a> /<a href="../index.html" class="goto">Module 4</a>/Quiz
+        </p>
+        <span class="status-message">Loading quiz...</span>
+        <div class="inside embed wait">
+            <!-- Content will be loaded here -->
+            <div class="inside-header start">
+                <h1 class="quiz-name"></h1>
+                <span class="quiz-time time-alloc"></span>
+                <a class="link-part end go start">Start</a>
+            </div>
+        </div>
+        <div class="inside embed start hide" style="font-size: 22px;">
+            <!-- Content will be loaded here -->
+            <h2 class="quiz-name-2">Hey</h2>
+            <div class="questions-container-main">
+
+            </div>
+            <div class="inside-header-home start before-finish">
+                <span>End of quiz</span>
+                <a class="link-part end go submit">Submit</a>
+            </div>
+            <div class="inside-header-home start after-finish">
+                <span>End of quiz</span>
+                <a class="link-part end go finish-review done-review-score-button">Finish Review</a>
+            </div>
+        </div>
+        <div class="inside embed finish hide">
+            <!-- Content will be loaded here -->
+            <div class="final-score">
+                <h1 class="score-show">Loading score</h1>
+                <p class="review-score-button">Review result</p>
+            </div>
+            <div class="inside-header-small start">
+                <a class="link-part" onclick="location.reload()">Take again</a>
+                <p><a href="../index.html" class="goto">← Back to Module 4</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

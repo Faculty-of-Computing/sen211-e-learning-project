@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/demo.css" />
+    <link rel="stylesheet" href="../styles/Footer.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="../styles/module4.quiz.style.css"
+    />
+    <script type="module" src="../scripts/m_quiz.js" ></script>
+    <title>Module 1 Quiz</title>
+  </head>
+
+  <body>
+    <div class="timer-head hide">Time left: ...</div>
+    <div class="main">
+      <div class="header-section">
+        <h1><span id="Learn">Module</span> 1</h1>
+        <div class="user-slug">EM</div>
+      </div>
+      <p class="welcome-message">Welcome</p>
+      <p>
+        <a href="../index.html" class="goto">Home</a> /<a
+          href="../index.html"
+          class="goto"
+          >Module 1</a
+        >/Quiz
+      </p>
+      <span class="status-message" style="font-size: 28px; margin-top: 50px"
+        >AI is Loading your quiz</span
+      >
+      <div class="inside embed wait">
+        <!-- Content will be loaded here -->
+        <div class="inside-header start">
+          <img
+            src="../img/loading_ai.gif"
+            width="50%"
+            style="margin: auto; max-width: 300px"
+            class="loading-gif"
+          />
+          <h1 class="quiz-name"></h1>
+          <span class="quiz-time time-alloc"></span>
+          <a class="link-part end go start hide">Start</a>
+        </div>
+      </div>
+      <div class="inside embed start hide" style="font-size: 22px">
+        <!-- Content will be loaded here -->
+        <h2 class="quiz-name-2"></h2>
+        <div class="questions-container-main"></div>
+        <div class="inside-header-home start before-finish">
+          <span>End of quiz</span>
+          <a href="#" class="link-part end go submit">Submit</a>
+        </div>
+        <div class="inside-header-home start after-finish">
+          <span>End of quiz</span>
+          <a class="link-part end go finish-review done-review-score-button"
+            >Finish Review</a
+          >
+        </div>
+      </div>
+      <div class="inside embed finish hide">
+        <!-- Content will be loaded here -->
+        <div class="final-score">
+          <h1 class="score-show">Loading score</h1>
+          <p class="review-score-button">Review result</p>
+        </div>
+        <div class="inside-header-small start">
+          <a class="link-part" onclick="location.reload()">Take again</a>
+          <p><a href="../index.html" class="goto">← Back to Module 1</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

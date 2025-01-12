@@ -13,15 +13,9 @@ if %ERRORLEVEL% NEQ 0 (
 
 :: Prepare Virtual Environment
 echo Preparing Virtual Environment...
-if exist venv\Scripts\activate(
-    echo Virtual Environment already exists. Skipping creation.
-)else (
-    echo Virtual Environment does not exist. Creating new Virtual Environment.
-    python -m venv venv
-
-)
+python -m venv venv
 echo Activating Virtual Environment...
-call venv\Scripts\activate
+venv\Scripts\activate
 
 :: Ensure pip is up-to-date
 python -m pip install --upgrade pip
@@ -34,6 +28,9 @@ pip install playwright
 echo Installing Playwright browsers...
 python -m playwright install
 
+:: Create the standalone executable
+echo Building the executable with PyInstaller...
+playwright install 
 
 :: Notify user of completion
 if %ERRORLEVEL% EQU 0 (
