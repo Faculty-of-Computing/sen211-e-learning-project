@@ -638,7 +638,8 @@ header.search-container {
     }
     .quizButton {
         font-size: 11px;
-        width: 100px;
+        width: 110px;
+        /* height: 90px; */
     }
     .template1 {
         width: 217px;
