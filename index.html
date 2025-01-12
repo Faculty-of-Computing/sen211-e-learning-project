@@ -1,143 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./modules/styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./modules/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <meta property="og:title" content="SEN Project">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://sen211.vercel.app">
-    <meta property="og:image" content="http://sen211.vercel.app/modules/res/preview.png">
-    <meta property="og:description"
-        content="Welcome to the SEN Project. Explore various modules and track your performance.">
+      href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta property="og:title" content="SEN Project" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://sen211.vercel.app" />
+    <meta
+      property="og:image"
+      content="http://sen211.vercel.app/modules/res/preview.png"
+    />
+    <meta
+      property="og:description"
+      content="Welcome to the SEN Project. Explore various modules and track your performance."
+    />
     <script src="./index.js" type="module"></script>
     <script>
-        function checkLogin(targetRoute) {
-            const userId = localStorage.getItem("user-id");
-            if (!userId) {
-                window.location.href = "./auth/login.html";
-            } else {
-                window.location.href = targetRoute;
-            }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      function checkLogin(targetRoute) {
+        const userId = localStorage.getItem("user-id");
+        if (!userId) {
+          window.location.href = "./auth/login.html";
+        } else {
+          window.location.href = targetRoute;
         }
-
+      }
     </script>
     <title>SEN Project</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main">
-        <div class="header-section">
-            <img src="./modules/res/logo-main.png" class="g4-logo" />
-            <div class="user-slug">
-
-            </div>
+      <div class="header-section">
+        <img src="./modules/res/logo-main.png" class="g4-logo" />
+        <div class="user-slug"></div>
+      </div>
+      <p class="welcome-message">Welcome,</p>
+      <div class="inside">
+        <div class="inside-header-home">
+          <span>All Modules</span>
+          <a
+            id="performance-link"
+            class="link-part end"
+            href="./modules/performance/index.html"
+            >My Performance</a
+          >
+          <script>
+            document
+              .querySelector("#performance-link")
+              ?.setAttribute(
+                "href",
+                localStorage.getItem("user-id")
+                  ? "/modules/performance/index.html"
+                  : "/auth/login.html"
+              );
+          </script>
         </div>
-        <p class="welcome-message">Welcome,</p>
-        <div class="inside">
-            <div class="inside-header-home">
-                <span>All Modules</span>
-                <a class="link-part end" href="./modules/performance/index.html">My Performance</a>
+        <div class="inside-grid">
+          <div
+            class="grid-item"
+            onclick="window.checkLogin('./modules/COS111/index.html')"
+          >
+            <img
+              src="./modules/res/book-open-svgrepo-com.svg"
+              alt=""
+              class="book-img"
+            />
+            <div class="book-info">
+              <p>COS 111</p>
             </div>
-            <div class="inside-grid">
-                <div class="grid-item" onclick="window.checkLogin('./modules/COS111/index.html')">
-                    <img src="./modules/res/book-open-svgrepo-com.svg" alt="" class="book-img">
-                    <div class="book-info">
-                        <p>COS 111</p>
-                    </div>
-                    <div class="section-details">
-                        <div>8 Courses</div>
-                        <div class="line-bw"></div>
-                        <div>3 Quizzes</div>
-                    </div>
-                </div>
-                <div class="grid-item" onclick="window.checkLogin('./modules/COS121/index.html')">
-                    <img src="./modules/res/book-open-svgrepo-com.svg" alt="" class="book-img">
-                    <div class="book-info">
-                        <p>COS 121</p>
-                    </div>
-                    <div class="section-details">
-                        <div>8 Courses</div>
-                        <div class="line-bw"></div>
-                        <div>3 Quizzes</div>
-                    </div>
-                </div>
-                <div class="grid-item" onclick="window.checkLogin('./g3/index.html')">
-                    <img src="./modules/res/book-open-svgrepo-com.svg" alt="" class="book-img">
-                    <div class="book-info">
-                        <p>MTH 111/121</p>
-                    </div>
-                    <div class="section-details">
-                        <div>8 Courses</div>
-                        <div class="line-bw"></div>
-                        <div>3 Quizzes</div>
-                    </div>
-                </div>
-                <div class="grid-item" onclick="window.checkLogin('./modules/PHY111_117/index.html')">
-                    <img src="./modules/res/book-open-svgrepo-com.svg" alt="" class="book-img">
-                    <div class="book-info">
-                        <p>PHY 111/121</p>
-                    </div>
-                    <div class="section-details">
-                        <div>2 Courses</div>
-                        <div class="line-bw"></div>
-                        <div>4 Quizzes</div>
-                    </div>
-                </div>
+            <div class="section-details">
+              <div>8 Courses</div>
+              <div class="line-bw"></div>
+              <div>3 Quizzes</div>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="window.checkLogin('./modules/COS121/index.html')"
+          >
+            <img
+              src="./modules/res/book-open-svgrepo-com.svg"
+              alt=""
+              class="book-img"
+            />
+            <div class="book-info">
+              <p>COS 121</p>
+            </div>
+            <div class="section-details">
+              <div>8 Courses</div>
+              <div class="line-bw"></div>
+              <div>3 Quizzes</div>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="window.checkLogin('/modules/MTH111_112/index.html')"
+          >
+            <img
+              src="./modules/res/book-open-svgrepo-com.svg"
+              alt=""
+              class="book-img"
+            />
+            <div class="book-info">
+              <p>MTH 111/121</p>
+            </div>
+            <div class="section-details">
+              <div>8 Courses</div>
+              <div class="line-bw"></div>
+              <div>3 Quizzes</div>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="window.checkLogin('./modules/PHY111_117/index.html')"
+          >
+            <img
+              src="./modules/res/book-open-svgrepo-com.svg"
+              alt=""
+              class="book-img"
+            />
+            <div class="book-info">
+              <p>PHY 111/121</p>
+            </div>
+            <div class="section-details">
+              <div>2 Courses</div>
+              <div class="line-bw"></div>
+              <div>4 Quizzes</div>
+            </div>
+          </div>
 
-                <div class="grid-item" onclick="window.checkLogin('./modules/UUY_CSC111/index.html')">
-                    <img src="./modules/res/book-open-svgrepo-com.svg" alt="" class="book-img">
-                    <div class="book-info">
-                        <p>UNIUYO-CSC 111</p>
-                    </div>
-                    <div class="section-details">
-                        <div>8 Courses</div>
-                        <div class="line-bw"></div>
-                        <div>3 Quizzes</div>
-                    </div>
-                </div>
-                <div class="grid-item" onclick="window.checkLogin('./modules/UUY_CSC112/index.html')">
-                    <img src="./modules/res/book-open-svgrepo-com.svg" alt="" class="book-img">
-                    <div class="book-info">
-                        <p>UNIUYO-CSC 112</p>
-                    </div>
-                    <div class="section-details">
-                        <div>6 Courses</div>
-                        <div class="line-bw"></div>
-                        <div>1 Quiz</div>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <img src="./modules/res/book-open-svgrepo-com.svg" alt="" class="book-img">
-                    <div class="book-info">
-                        <p>UNIUYO-CSC 121</p>
-                    </div>
-                    <div class="section-details">
-                        <div>8 Courses</div>
-                        <div class="line-bw"></div>
-                        <div>3 Quizzes</div>
-                    </div>
-                </div>
-                <div class="grid-item" onclick="window.checkLogin('./modules/UUY-CSC122/index.html')">
-                    <img src="./modules/res/book-open-svgrepo-com.svg" alt="" class="book-img">
-                    <div class="book-info">
-                        <p>UNIUYO-CSC 122</p>
-                    </div>
-                    <div class="section-details">
-                        <div>3 Courses</div>
-                        <div class="line-bw"></div>
-                        <div>4 Quizzes</div>
-                    </div>
-                </div>
+          <div
+            class="grid-item"
+            onclick="window.checkLogin('./modules/UUY_CSC111/index.html')"
+          >
+            <img
+              src="./modules/res/book-open-svgrepo-com.svg"
+              alt=""
+              class="book-img"
+            />
+            <div class="book-info">
+              <p>UNIUYO-CSC 111</p>
             </div>
+            <div class="section-details">
+              <div>8 Courses</div>
+              <div class="line-bw"></div>
+              <div>3 Quizzes</div>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="window.checkLogin('./modules/UUY_CSC112/index.html')"
+          >
+            <img
+              src="./modules/res/book-open-svgrepo-com.svg"
+              alt=""
+              class="book-img"
+            />
+            <div class="book-info">
+              <p>UNIUYO-CSC 112</p>
+            </div>
+            <div class="section-details">
+              <div>6 Courses</div>
+              <div class="line-bw"></div>
+              <div>1 Quiz</div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="./modules/res/book-open-svgrepo-com.svg"
+              alt=""
+              class="book-img"
+            />
+            <div class="book-info">
+              <p>UNIUYO-CSC 121</p>
+            </div>
+            <div class="section-details">
+              <div>8 Courses</div>
+              <div class="line-bw"></div>
+              <div>3 Quizzes</div>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="window.checkLogin('./modules/UUY-CSC122/index.html')"
+          >
+            <img
+              src="./modules/res/book-open-svgrepo-com.svg"
+              alt=""
+              class="book-img"
+            />
+            <div class="book-info">
+              <p>UNIUYO-CSC 122</p>
+            </div>
+            <div class="section-details">
+              <div>3 Courses</div>
+              <div class="line-bw"></div>
+              <div>4 Quizzes</div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

@@ -1,230 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <script src="./../../scripts/firebase.js" type="module"></script>
+      href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <script type="module">
-        import { getUser } from './../../scripts/firebase.js';
+      import { getUser } from "/scripts/firebase.js";
 
-        getUser((user) => {
-            const welcomeMsg = document.querySelector(".welcome-message");
-            const userSlug = document.querySelector(".user-slug");
-            welcomeMsg.innerText = `Welcome, ${user.displayName}`;
-            if (user.displayName) {
-                const nameParts = user.displayName.split(' ');
-                const firstNameInitial = nameParts[0] ? nameParts[0][0] : '';
-                const lastNameInitial = nameParts.length > 1 ? nameParts[nameParts.length - 1][0] : '';
-                userSlug.innerText = `${firstNameInitial}${lastNameInitial}`.toUpperCase();
-            } else {
-                userSlug.innerText = 'NA';
-            }
-        });
+      getUser((user) => {
+        const welcomeMsg = document.querySelector(".welcome-message");
+        const userSlug = document.querySelector(".user-slug");
+        welcomeMsg.innerText = `Welcome, ${user.displayName}`;
+        if (user.displayName) {
+          const nameParts = user.displayName.split(" ");
+          const firstNameInitial = nameParts[0] ? nameParts[0][0] : "";
+          const lastNameInitial =
+            nameParts.length > 1 ? nameParts[nameParts.length - 1][0] : "";
+          userSlug.innerText =
+            `${firstNameInitial}${lastNameInitial}`.toUpperCase();
+        } else {
+          userSlug.innerText = "NA";
+        }
+      });
     </script>
     <title>Module 4</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main">
-        <div class="header-section">
-            <img src="../res/module4.png" class="g4-logo" />
-            <div class="user-slug">
-
-            </div>
+      <div class="header-section">
+        <img src="../res/module4.png" class="g4-logo" />
+        <div class="user-slug"></div>
+      </div>
+      <p class="welcome-message">Welcome,</p>
+      <p>
+        <a href="../../index.html" class="goto"
+          ><i class="fas fa-home"></i> Home</a
+        >
+        / Module 4
+      </p>
+      <div class="inside">
+        <div class="inside-header">
+          <span><i class="fas fa-book"></i> Course materials</span>
         </div>
-        <p class="welcome-message">Welcome,</p>
-        <p><a href="../../index.html" class="goto"><i class="fas fa-home"></i> Home</a> / Module 4</p>
-        <div class="inside">
-            <div class="inside-header">
-                <span><i class="fas fa-book"></i> Course materials</span>
+        <div class="inside-grid">
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.pdf.html?file=phy111.pdf'"
+          >
+            <img
+              src="../res/electromagnetic-theory.jpg"
+              alt=""
+              class="wide-img"
+            />
+            <div class="book-info-small">
+              <p>
+                COLLEGE PHYSICS Ninth Edition
+                <span>PDF</span>
+              </p>
             </div>
-            <div class="inside-grid">
-                <div class="grid-item" onclick="location.href='./materials/module4.pdf.html?file=phy111.pdf'">
-                    <img src="../res/electromagnetic-theory.jpg" alt="" class="wide-img">
-                    <div class="book-info-small">
-                        <p>COLLEGE PHYSICS Ninth Edition
-                            <span>PDF</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item" onclick="location.href='./materials/module4.pdf.html?file=phy111_2.pdf'">
-                    <img src="../res/cool_img.jpg" alt="" class="wide-img">
-                    <div class="book-info-small">
-                        <p>Elementary Mechanics, Heat and Properties
-                            of Matter
-                            <span>PDF</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item" onclick="location.href='./materials/module4.pdf.html?file=phy121.pdf'">
-                    <img src="../res/coil.jpg" alt="" class="wide-img">
-                    <div class="book-info-small">
-                        <p>Electricity and Magnetism
-                            <span>PDF</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item" onclick="location.href='./materials/module4.pdf.html?file=phy121_2.pdf'">
-                    <img src="../res/go.png" alt="" class="wide-img">
-                    <div class="book-info-small">
-                        <p>Electricity, Magnetism and Modern Physics
-                            <span>PDF</span>
-                        </p>
-                    </div>
-                </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.pdf.html?file=phy111_2.pdf'"
+          >
+            <img src="../res/cool_img.jpg" alt="" class="wide-img" />
+            <div class="book-info-small">
+              <p>
+                Elementary Mechanics, Heat and Properties of Matter
+                <span>PDF</span>
+              </p>
             </div>
-            <div class="inside-header">
-                <span><i class="fas fa-note-sticky"></i> Lectures and notes</span>
+          </div>
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.pdf.html?file=phy121.pdf'"
+          >
+            <img src="../res/coil.jpg" alt="" class="wide-img" />
+            <div class="book-info-small">
+              <p>
+                Electricity and Magnetism
+                <span>PDF</span>
+              </p>
             </div>
-            <div class="inside-grid">
-                <div class="grid-item"
-                    onclick="location.href='./materials/module4.note.html?file=module4.phy111_1.html'">
-                    <div class="book-info">
-                        <p>Foundational Mechanics</p>
-                    </div>
-                    <div class="book-detail">
-                        <p>
-                            Covers introductory concepts like vectors, uniformly accelerated motion, and Newton's laws
-                            of motion.
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item"
-                    onclick="location.href='./materials/module4.note.html?file=module4.phy111_2.html'">
-                    <div class="book-info">
-                        <p>Equilibrium and Energy</p>
-                    </div>
-                    <div class="book-detail">
-                        <p>
-                            Explores static equilibrium, rigid body equilibrium under coplanar forces,
-                            power, and simple machines.
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item"
-                    onclick="location.href='./materials/module4.note.html?file=module4.phy111_3.html'">
-                    <div class="book-info">
-                        <p>Fluid and Thermodynamics</p>
-                    </div>
-                    <div class="book-detail">
-                        <p>
-                            Thermodynamics; covering heat transfer, heat quantities, the first and second laws of
-                            thermodynamics.
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item"
-                    onclick="location.href='./materials/module4.note.html?file=module4.phy111_4.html'">
-                    <div class="book-info">
-                        <p>Waves, Electricity, Modern Physics</p>
-                    </div>
-                    <div class="book-detail">
-                        <p>
-                            The hydrogen atom, and multielectron atoms, along with
-                            nuclear physics and its applications.
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item"
-                    onclick="location.href='./materials/module4.note.html?file=module4.phy121_1.html'">
-                    <div class="book-info">
-                        <p>Vectors, Fields, and Electric Charge Basics</p>
-                    </div>
-                    <div class="book-detail">
-                        <p>
-                            Introduction to vector operations, fields, and electric charge properties.
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item"
-                    onclick="location.href='./materials/module4.note.html?file=module4.phy121_2.html'">
-                    <div class="book-info">
-                        <p>Electric Fields and Gauss’s Theorem</p>
-                    </div>
-                    <div class="book-detail">
-                        <p>
-                            Electric fields, superposition principles, and Gauss's theorem with applications.
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item"
-                    onclick="location.href='./materials/module4.note.html?file=module4.phy121_3.html'">
-                    <div class="book-info">
-                        <p>Electrostatic Potential and Conductors</p>
-                    </div>
-                    <div class="book-detail">
-                        <p>
-                            Electrostatic potential, energy principles, and conductor properties in electrostatics.
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item"
-                    onclick="location.href='./materials/module4.note.html?file=module4.phy121_4.html'">
-                    <div class="book-info">
-                        <p> Capacitance, Circuits, and Materials</p>
-                    </div>
-                    <div class="book-detail">
-                        <p>
-                            Capacitance, circuit principles, and material properties like dielectrics and conductivity.
-                        </p>
-                    </div>
-                </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.pdf.html?file=phy121_2.pdf'"
+          >
+            <img src="../res/go.png" alt="" class="wide-img" />
+            <div class="book-info-small">
+              <p>
+                Electricity, Magnetism and Modern Physics
+                <span>PDF</span>
+              </p>
             </div>
-            <div class="inside-header">
-                <span><i class="fa-solid fa-puzzle-piece"></i> Module Quizzes</span>
-            </div>
-            <div class="inside-grid">
-                <div class="grid-item" onclick="location.href='./materials/module4.quiz.html?file=module4.quiz.1.json'">
-                    <div class="book-info">
-                        <p>PHY111 Quiz 1</p>
-                    </div>
-                    <div class="section-details-small">
-                        <div>30 Questions</div>
-                        <div class="line-bw"></div>
-                        <div>30 Mins</div>
-                    </div>
-                </div>
-                <div class="grid-item" onclick="location.href='./materials/module4.quiz.html?file=module4.quiz.2.json'">
-                    <div class="book-info">
-                        <p>PHY111 Quiz 2</p>
-                    </div>
-                    <div class="section-details-small">
-                        <div>25 Questions</div>
-                        <div class="line-bw"></div>
-                        <div>30 Mins</div>
-                    </div>
-                </div>
-                <div class="grid-item" onclick="location.href='./materials/module4.quiz.html?file=module4.quiz.3.json'">
-                    <div class="book-info">
-                        <p>PHY121 Quiz 1</p>
-                    </div>
-                    <div class="section-details-small">
-                        <div>20 Questions</div>
-                        <div class="line-bw"></div>
-                        <div>20 Mins</div>
-                    </div>
-                </div>
-                <div class="grid-item" onclick="location.href='./materials/module4.quiz.html?file=module4.quiz.4.json'">
-                    <div class="book-info">
-                        <p>PHY121 Quiz 2</p>
-                    </div>
-                    <div class="section-details-small">
-                        <div>15 Questions</div>
-                        <div class="line-bw"></div>
-                        <div>20 Mins</div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="inside-header">
+          <span><i class="fas fa-note-sticky"></i> Lectures and notes</span>
+        </div>
+        <div class="inside-grid">
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.note.html?file=module4.phy111_1.html'"
+          >
+            <div class="book-info">
+              <p>Foundational Mechanics</p>
+            </div>
+            <div class="book-detail">
+              <p>
+                Covers introductory concepts like vectors, uniformly accelerated
+                motion, and Newton's laws of motion.
+              </p>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.note.html?file=module4.phy111_2.html'"
+          >
+            <div class="book-info">
+              <p>Equilibrium and Energy</p>
+            </div>
+            <div class="book-detail">
+              <p>
+                Explores static equilibrium, rigid body equilibrium under
+                coplanar forces, power, and simple machines.
+              </p>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.note.html?file=module4.phy111_3.html'"
+          >
+            <div class="book-info">
+              <p>Fluid and Thermodynamics</p>
+            </div>
+            <div class="book-detail">
+              <p>
+                Thermodynamics; covering heat transfer, heat quantities, the
+                first and second laws of thermodynamics.
+              </p>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.note.html?file=module4.phy111_4.html'"
+          >
+            <div class="book-info">
+              <p>Waves, Electricity, Modern Physics</p>
+            </div>
+            <div class="book-detail">
+              <p>
+                The hydrogen atom, and multielectron atoms, along with nuclear
+                physics and its applications.
+              </p>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.note.html?file=module4.phy121_1.html'"
+          >
+            <div class="book-info">
+              <p>Vectors, Fields, and Electric Charge Basics</p>
+            </div>
+            <div class="book-detail">
+              <p>
+                Introduction to vector operations, fields, and electric charge
+                properties.
+              </p>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.note.html?file=module4.phy121_2.html'"
+          >
+            <div class="book-info">
+              <p>Electric Fields and Gauss’s Theorem</p>
+            </div>
+            <div class="book-detail">
+              <p>
+                Electric fields, superposition principles, and Gauss's theorem
+                with applications.
+              </p>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.note.html?file=module4.phy121_3.html'"
+          >
+            <div class="book-info">
+              <p>Electrostatic Potential and Conductors</p>
+            </div>
+            <div class="book-detail">
+              <p>
+                Electrostatic potential, energy principles, and conductor
+                properties in electrostatics.
+              </p>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.note.html?file=module4.phy121_4.html'"
+          >
+            <div class="book-info">
+              <p>Capacitance, Circuits, and Materials</p>
+            </div>
+            <div class="book-detail">
+              <p>
+                Capacitance, circuit principles, and material properties like
+                dielectrics and conductivity.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="inside-header">
+          <span><i class="fa-solid fa-puzzle-piece"></i> Module Quizzes</span>
+        </div>
+        <div class="inside-grid">
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.quiz.html?file=module4.quiz.1.json'"
+          >
+            <div class="book-info">
+              <p>PHY111 Quiz 1</p>
+            </div>
+            <div class="section-details-small">
+              <div>30 Questions</div>
+              <div class="line-bw"></div>
+              <div>30 Mins</div>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.quiz.html?file=module4.quiz.2.json'"
+          >
+            <div class="book-info">
+              <p>PHY111 Quiz 2</p>
+            </div>
+            <div class="section-details-small">
+              <div>25 Questions</div>
+              <div class="line-bw"></div>
+              <div>30 Mins</div>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.quiz.html?file=module4.quiz.3.json'"
+          >
+            <div class="book-info">
+              <p>PHY121 Quiz 1</p>
+            </div>
+            <div class="section-details-small">
+              <div>20 Questions</div>
+              <div class="line-bw"></div>
+              <div>20 Mins</div>
+            </div>
+          </div>
+          <div
+            class="grid-item"
+            onclick="location.href='./materials/module4.quiz.html?file=module4.quiz.4.json'"
+          >
+            <div class="book-info">
+              <p>PHY121 Quiz 2</p>
+            </div>
+            <div class="section-details-small">
+              <div>15 Questions</div>
+              <div class="line-bw"></div>
+              <div>20 Mins</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

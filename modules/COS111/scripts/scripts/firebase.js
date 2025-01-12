@@ -93,6 +93,7 @@ export async function login(email, password) {
   } catch (error) {
     handleError(error);
   }
+  return;
 }
 
 /**
@@ -135,11 +136,11 @@ export async function saveResult(result) {
     url.searchParams.set("total", result.total.toString());
     url.searchParams.set("duration", result.duration.toString());
     url.searchParams.set("course", result.course);
-    url.searchParams.set("back", location.href);
     return url.href;
   } catch (error) {
     handleError(error);
   }
+  return;
 }
 
 /**
@@ -204,10 +205,7 @@ export async function getUser(cb) {
   const user = await new Promise((res, rej) => {
     firebaseAuth.onAuthStateChanged(auth, (user) => {
       if (user) res(user);
-      else {
-        localStorage.removeItem("user-id");
-        rej("Unable to fetch user!");
-      }
+      else rej("Unable to fetch user!");
     });
   });
   if (cb) cb(user);

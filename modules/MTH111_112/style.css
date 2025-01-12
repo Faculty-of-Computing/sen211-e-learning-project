@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  background-color: #000000;
+  color: white;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-size: 16px;
+  font-family: "Afacad", 'Open Sans';
+}
+
+.search-bar-alignment {
+  /*This code helped me align the headers*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 430px;
+}
+
+.search-bar::placeholder {
+  color: #BBBBBB;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.6;
+  font-family: "Afacad";
+}
+
+.search-icon {
+  color: #242728;
+  background: transparent;
+  width: 14px;
+  position: relative;
+  left: 8px;
+  top: 3px;
+  right: 2px;
+  opacity: 0.6;
+
+}
+
+.search-bar-input {
+  background-color: #242728;
+  color: #ffffff;
+  border: none;
+  min-width: 250px;
+  position: absolute;
+  font-weight: 700;
+  display: flex;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 6px;
+  cursor: initial;
+}
+
+.css-logo {
+  background-color: #FF9500;
+  color: black;
+  font-size: 25px;
+  font-weight: 1000;
+
+}
+
+.css-logo-2,
+.math-course{
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 1000;
+}
+
+.greetings,
+.modules{
+  margin-top: 70px;
+}
+.user-name{
+  display: block;
+  font-size: 40px;
+}
+.general-course-container{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.MTH-container{
+  background-color:#242728;
+  display: inline-block;
+  border-radius: 10px;
+  width: 550px;
+  height: 300px;
+  padding: 20px;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding:10px 20px ;
+  border-radius: 10px;
+  font-weight: 500;
+  margin-top: 70px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /*THis would give the button a slight shadow*/
+  cursor: pointer;
+  transition: 0.15s;
+}
+.button:hover{
+  background-color: #FF9500;
+  color: #000000;
+  opacity: 0.5;
+}
+.button:active{
+  opacity: 0.3;
+}
+.text{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.divider{
+  width: 1px;
+  height: 20px;
+  background-color: #ffffff;
+  opacity: 6px;
+  margin: 0 10px;
+}
+.quotes{
+  width: 60px;
+  filter: brightness(0) saturate(100%) invert(41%) sepia(90%)
+  saturate(1005%) hue-rotate(2deg) brightness(103%) contrast(102%);
+  margin-bottom: 50px;
+}
+

@@ -1,0 +1,48 @@
+@media ((min-width: 300px) and (max-width: 790px)) {
+  body{
+    padding: 20px;
+  }
+  .search-bar-alignment {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+  }
+  .general-course-container{
+    flex-direction: column;
+    width: auto;
+  }
+  .MTH-container{
+    width: 280px;
+    height: 100%;
+  }
+  .search-bar-input{
+    padding: auto;
+    padding-left: 35px;
+    min-width: 100%;
+    max-width: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  .greetings,
+  .modules{
+    margin-top: 40px;
+  }
+  .user-name{
+    margin-top: 40px;
+  }
+  .search-icon{
+    position: absolute;
+    left: 8px;
+    top: 38px;
+    transform: translateY(-51%);
+    width: 15px;
+    height: 25px;
+  }
+  .text-container{
+    margin-top: 70px;
+  }
+    .NavBar{
+    display: flex;
+    flex: 1; 
+   }
+}

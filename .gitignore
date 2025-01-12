@@ -9,3 +9,4 @@ note.ts
 *.idea/
 *.DS_Store
 eslint.config.*
+venv
