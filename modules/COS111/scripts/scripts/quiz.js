@@ -1,13 +1,7 @@
-// @ts-check
-
 import { getUser, saveResult } from "./firebase.js";
 
 const scriptUrl = new URL(import.meta.url);
 const jsonParam = scriptUrl.searchParams.get("json");
-
-await new Promise((res) => {
-  document.addEventListener("DOMContentLoaded", res);
-});
 
 /** @type {string} */
 let performanceUrl;

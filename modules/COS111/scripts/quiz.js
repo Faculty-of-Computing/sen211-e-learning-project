@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 
 import { getUser, saveResult } from "./scripts/firebase.js";
@@ -57,133 +59,129 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   var timeLeft = 0; //s
   var i;
-  if (true) {
-    fetch("https://cos1.vercel.app/api/ran_quiz")
-      .then((response) => response.text())
-      .then(async (data) => {
-        /** @type {QuizData} */
-        const quizData = JSON.parse(data);
-        quizName.innerText = quizData.name;
-        quizName2.innerText = quizData.name;
-        const minutes = Math.floor(quizData.time / 60);
-        const seconds = quizData.time % 60;
-        timeAlloc.innerText = `Time Allocated: ${minutes}:${
-          seconds < 10 ? "0" : ""
-        }${seconds}`;
-        timeLeft = quizData.time;
-        statusMessage.innerText = "";
-        startButton.classList.toggle("hide", false); // Show the start button
-        loadingGif.classList.toggle("hide", true); // Hide the loading gif
+  fetch("https://cos1.vercel.app/api/ran_quiz")
+    .then((response) => response.text())
+    .then(async (data) => {
+      /** @type {QuizData} */
+      const quizData = JSON.parse(data);
+      quizName.innerText = quizData.name;
+      quizName2.innerText = quizData.name;
+      const minutes = Math.floor(quizData.time / 60);
+      const seconds = quizData.time % 60;
+      timeAlloc.innerText = `Time Allocated: ${minutes}:${
+        seconds < 10 ? "0" : ""
+      }${seconds}`;
+      timeLeft = quizData.time;
+      statusMessage.innerText = "";
+      startButton.classList.toggle("hide", false); // Show the start button
+      loadingGif.classList.toggle("hide", true); // Hide the loading gif
 
-        const questionsContainer = /** @type {HTMLElement} */ (
+      const questionsContainer = /** @type {HTMLElement} */ (
+        document.createElement("div")
+      );
+      questionContainer.classList.add("questions-container");
+
+      quizData.questions.forEach((questionData, index) => {
+        const questionElement = /** @type {HTMLElement} */ (
           document.createElement("div")
         );
-        questionContainer.classList.add("questions-container");
+        questionElement.classList.add("question");
 
-        quizData.questions.forEach((questionData, index) => {
-          const questionElement = /** @type {HTMLElement} */ (
+        const questionText = /** @type {HTMLElement} */ (
+          document.createElement("p")
+        );
+        questionText.innerText = `${index + 1}. ${questionData.question}`;
+        questionElement.appendChild(questionText);
+
+        questionData.options.forEach((option, optionIndex) => {
+          const optionElement = /** @type {HTMLElement} */ (
             document.createElement("div")
           );
-          questionElement.classList.add("question");
+          optionElement.classList.add("option");
 
-          const questionText = /** @type {HTMLElement} */ (
+          const inputElement = document.createElement("input");
+          inputElement.type = "radio";
+          inputElement.name = `question-${index}`;
+          inputElement.value = option;
+          inputElement.id = `question-${index}-option-${optionIndex}`;
+          optionElement.appendChild(inputElement);
+
+          const labelElement = document.createElement("label");
+          labelElement.innerText = option;
+          labelElement.htmlFor = `question-${index}-option-${optionIndex}`;
+          optionElement.appendChild(labelElement);
+
+          questionElement.appendChild(optionElement);
+        });
+        if (questionData.feedback) {
+          const feedbackElement = /** @type {HTMLElement} */ (
             document.createElement("p")
           );
-          questionText.innerText = `${index + 1}. ${questionData.question}`;
-          questionElement.appendChild(questionText);
+          feedbackElement.classList.add("feedback");
+          feedbackElement.innerText = "Feedback: " + questionData.feedback;
+          questionElement.appendChild(feedbackElement);
+        }
+        questionsContainer.appendChild(questionElement);
+      });
 
-          questionData.options.forEach((option, optionIndex) => {
-            const optionElement = /** @type {HTMLElement} */ (
-              document.createElement("div")
+      questionContainer.appendChild(questionsContainer);
+
+      submitButton.onclick = async () => {
+        startSection.classList.toggle("hide", true);
+        finishSection.classList.toggle("hide", false);
+        timerDisplay.classList.toggle("panic", false);
+        timerDisplay.classList.toggle("hide", true);
+        clearInterval(i);
+
+        let score = 0;
+        const questions = /** @type {NodeListOf<HTMLElement>} */ (
+          document.querySelectorAll(".question")
+        );
+        questions.forEach((question, index) => {
+          const selectedOption = /** @type {HTMLInputElement} */ (
+            question.querySelector('input[type="radio"]:checked')
+          );
+          if (
+            selectedOption &&
+            selectedOption.value == quizData.questions[index].correct
+          ) {
+            score++;
+            selectedOption.parentElement.classList.add("correct-answer");
+            /** @type {HTMLElement} */ (
+              selectedOption.parentElement.parentElement.firstChild
+            ).innerText += " (✅Correct)";
+          } else {
+            /** @type {HTMLElement} */ (question.firstChild).innerText +=
+              " (❌Wrong)";
+            const correctOption = /** @type {HTMLInputElement} */ (
+              question.querySelector(
+                `input[value="${quizData.questions[index].correct}"]`
+              )
             );
-            optionElement.classList.add("option");
-
-            const inputElement = document.createElement("input");
-            inputElement.type = "radio";
-            inputElement.name = `question-${index}`;
-            inputElement.value = option;
-            inputElement.id = `question-${index}-option-${optionIndex}`;
-            optionElement.appendChild(inputElement);
-
-            const labelElement = document.createElement("label");
-            labelElement.innerText = option;
-            labelElement.htmlFor = `question-${index}-option-${optionIndex}`;
-            optionElement.appendChild(labelElement);
-
-            questionElement.appendChild(optionElement);
-          });
-          if (questionData.feedback) {
-            const feedbackElement = /** @type {HTMLElement} */ (
-              document.createElement("p")
-            );
-            feedbackElement.classList.add("feedback");
-            feedbackElement.innerText = "Feedback: " + questionData.feedback;
-            questionElement.appendChild(feedbackElement);
+            /** @type {HTMLElement} */ (
+              correctOption.nextElementSibling
+            ).innerText += " (✅Correct Option)";
+            try {
+              selectedOption.parentElement.classList.add("wrong-answer");
+            } catch {
+              console.log("No selected option");
+            }
           }
-          questionsContainer.appendChild(questionElement);
         });
 
-        questionContainer.appendChild(questionsContainer);
+        console.log("Final Score:", score);
+        performanceUrl = await saveResult({
+          course: quizData.name,
+          // FIXME DURATION IS THE TIME TAKEN FOR THE QUIZ,
+          //  NOT THE TIME LEFT CHECK THE VALIDITY OF THIS LOGIC
+          duration: timeLeft,
+          score,
+          total: quizData.questions.length,
+        });
+      };
+    })
+    .catch((error) => console.error("Error fetching the file:", error));
 
-        submitButton.onclick = async () => {
-          startSection.classList.toggle("hide", true);
-          finishSection.classList.toggle("hide", false);
-          timerDisplay.classList.toggle("panic", false);
-          timerDisplay.classList.toggle("hide", true);
-          clearInterval(i);
-
-          let score = 0;
-          const questions = /** @type {NodeListOf<HTMLElement>} */ (
-            document.querySelectorAll(".question")
-          );
-          questions.forEach((question, index) => {
-            const selectedOption = /** @type {HTMLInputElement} */ (
-              question.querySelector('input[type="radio"]:checked')
-            );
-            if (
-              selectedOption &&
-              selectedOption.value == quizData.questions[index].correct
-            ) {
-              score++;
-              selectedOption.parentElement.classList.add("correct-answer");
-              /** @type {HTMLElement} */ (
-                selectedOption.parentElement.parentElement.firstChild
-              ).innerText += " (✅Correct)";
-            } else {
-              /** @type {HTMLElement} */ (question.firstChild).innerText +=
-                " (❌Wrong)";
-              const correctOption = /** @type {HTMLInputElement} */ (
-                question.querySelector(
-                  `input[value="${quizData.questions[index].correct}"]`
-                )
-              );
-              /** @type {HTMLElement} */ (
-                correctOption.nextElementSibling
-              ).innerText += " (✅Correct Option)";
-              try {
-                selectedOption.parentElement.classList.add("wrong-answer");
-              } catch (e) {
-                console.log("No selected option");
-              }
-            }
-          });
-
-          console.log("Final Score:", score);
-          performanceUrl = await saveResult({
-            course: quizData.name,
-            // FIXME DURATION IS THE TIME TAKEN FOR THE QUIZ,
-            //  NOT THE TIME LEFT CHECK THE VALIDITY OF THIS LOGIC
-            duration: timeLeft,
-            score,
-            total: quizData.questions.length,
-          });
-        };
-      })
-      .catch((error) => console.error("Error fetching the file:", error));
-  } else {
-    // TODO REMOVE THIS CODE BLOCK WHEN NO LONGER NEEDED
-    console.warn("Dev: Pass a quiz data file to continue");
-  }
   startButton.onclick = () => {
     console.log("Start");
     waitSection.classList.toggle("hide", true);
