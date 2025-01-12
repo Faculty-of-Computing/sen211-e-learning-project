@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Learnify
+  </title>
+  
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  background-color: #000000;
+  color: white;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-size: 16px;
+}
+.general-layout{
+  font-family: "Afacad", 'Open Sans';
+  
+}
+
+.search-bar-alignment {
+  /*This code helped me align the headers*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding:50px;
+}
+
+.search-bar::placeholder {
+  color: #BBBBBB;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.6;
+  font-family: "Afacad";
+}
+
+.search-icon {
+  color: #242728;
+  background: transparent;
+  opacity: 0.6;
+  position: absolute; 
+  left: 10px; 
+  top: 85%; 
+  transform: translateY(-50%);
+   width: 20px; 
+   height: 20px;
+}
+
+.search-bar-input {
+  background-color: #242728;
+  color: #ffffff;
+  border: none;
+  min-width: 250px;
+  position: absolute;
+  font-weight: 700;
+  display: flex;
+  padding-right: 30px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding: 20px;
+  border-radius: 6px;
+  cursor: initial;
+  padding-left: 40px; 
+  width: auto;
+}
+
+.css-logo {
+  background-color: #FF9500;
+  color: black;
+  font-size: 25px;
+  font-weight: 1000;
+
+}
+
+.css-logo-2,
+.math-course{
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 1000;
+}
+
+.greetings,
+.modules{
+  margin-top: 70px;
+}
+.user-name{
+  display: block;
+  font-size: 40px;
+}
+.general-course-container{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.MTH-container{
+  background-color:#242728;
+  display: inline-block;
+  border-radius: 10px;
+  width: 550px;
+  height: 300px;
+  padding: 20px;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding:10px 20px ;
+  border-radius: 10px;
+  font-weight: 500;
+  margin-top: 70px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); 
+  cursor: pointer;
+  transition: 0.15s;
+}
+.button:hover{
+  background-color: #FF9500;
+  color: #000000;
+  opacity: 0.5;
+}
+.button:active{
+  opacity: 0.3;
+}
+.text{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.divider{
+  width: 1px;
+  height: 20px;
+  background-color: #ffffff;
+  opacity: 6px;
+  margin: 0 10px;
+}
+.quotes{
+  width: 40px;
+  filter: brightness(0) saturate(100%) invert(41%) sepia(90%)
+  saturate(1005%) hue-rotate(2deg) brightness(103%) contrast(102%);
+  margin-bottom: 50px;
+}
+.NavBar{
+position: relative; 
+display: inline-block;
+}
+
+
+
+@media (min-width: 1200px) {
+  .NavBar{
+    margin-left:-150px;
+  }
+}  
+  </style>
+  <link rel="stylesheet" media="((min-width: 300px) and (max-width: 790px))" href = "media.css">
+</head>
+
+<body>
+  <div class="general-layout">
+  <div class="search-bar-alignment">
+    <div>
+      <span class="css-logo">Learn</span><span class="css-logo-2">ify.</span>
+    </div>
+    <div class="NavBar">
+      <input class="search-bar-input" placeholder="What do you want to study today?">
+      <img class="search-icon" src="assets/icons8-search.svg">
+    </div>
+  </div>
+  <div class="text-container">
+  <p class="greetings">Welcome, <span class="user-name">"Student Name"</span></p>
+  <p class="modules">Course modules</p>
+  </div>
+  <div class="general-course-container">
+    <a href="Screens/screen2.html">
+    <div class="MTH-container">
+      <img class="quotes" src="assets/library.png">
+      <p class="math-course">MTH 111</p>
+      <div class="button">
+        <span class="text">13 Courses</span>
+        <span class="divider"></span>
+        <span class="text">6 Quizzes</span>
+      </div>
+    </div>
+    </a>
+    <a href="Screens/screen3.html">
+    <div class="MTH-container">
+      <img class="quotes" src="assets/library.png">
+      <p class="math-course">MTH 121</p>
+      <div class="button">
+        <span class="text">13 Courses</span>
+        <span class="divider"></span>
+        <span class="text">6 Quizzes</span>
+      </div>
+    </div>
+    </a>
+  </div>
+  </div>
+  <script type="module">
+
+  </script>
+</body>
+
+</html>

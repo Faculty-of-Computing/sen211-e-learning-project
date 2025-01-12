@@ -7,6 +7,13 @@ body{
   padding-top: 60px;
   padding-bottom: 50px;
   font-family: "Afacad",'Open Sans';
+<<<<<<<< HEAD:modules/MTH/Notes/MTH-style.css
+========
+  font-size: 25px;
+}
+a{
+  text-decoration: none;
+>>>>>>>> 8e0123c485cc2f59754937d28cfcaa1f45eaf887:modules/MTH111_112/Notes/MTH-style.css
 }
 header > p{
   font-size: 17px;
@@ -19,8 +26,12 @@ header > p{
 }
 .examples{
   margin-top: 40px;
+<<<<<<<< HEAD:modules/MTH/Notes/MTH-style.css
   font-size: 17px;
   text-decoration: underline;
+========
+  font-size: 27px;
+>>>>>>>> 8e0123c485cc2f59754937d28cfcaa1f45eaf887:modules/MTH111_112/Notes/MTH-style.css
 }
 .go-back-button{
   display: flex;
@@ -35,7 +46,11 @@ header > p{
   border-style: solid;
   border-color: #ffffff;
   padding-bottom: 6px;
+<<<<<<<< HEAD:modules/MTH/Notes/MTH-style.css
   padding-top: 6px;
+========
+  padding-top: 9px;
+>>>>>>>> 8e0123c485cc2f59754937d28cfcaa1f45eaf887:modules/MTH111_112/Notes/MTH-style.css
   transition: color 0.15s;
   text-decoration: none;
 }

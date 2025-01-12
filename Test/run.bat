@@ -15,7 +15,7 @@ if %ERRORLEVEL% NEQ 0 (
 echo Preparing Virtual Environment...
 python -m venv venv
 echo Activating Virtual Environment...
-venv\Scripts\activate
+call venv\Scripts\activate
 
 :: Ensure pip is up-to-date
 python -m pip install --upgrade pip
@@ -28,9 +28,6 @@ pip install playwright
 echo Installing Playwright browsers...
 python -m playwright install
 
-:: Create the standalone executable
-echo Building the executable with PyInstaller...
-playwright install 
 
 :: Notify user of completion
 if %ERRORLEVEL% EQU 0 (

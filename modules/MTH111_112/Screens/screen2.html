@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Learnify
+  </title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    body {
+      background-color: #000000;
+      color: white;
+      padding-left: 100px;
+      padding-right: 100px;
+      font-size: 16px;
+      font-family: "Afacad", "Open Sans";
+    }
+
+    .search-bar-alignment {
+      /*This code helped me align the headers*/
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 50px;
+    }
+
+    .search-bar::placeholder {
+      color: #BBBBBB;
+      font-size: 14px;
+      font-weight: 700;
+      opacity: 0.6;
+      font-family: "Afacad";
+    }
+
+    .search-icon {
+      color: #242728;
+      background: transparent;
+      opacity: 0.6;
+      position: absolute;
+      left: 10px;
+      top: 25px;
+      transform: translateY(-30%);
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-bar-input {
+      background-color: #242728;
+      color: #ffffff;
+      border: none;
+      min-width: 250px;
+      position: absolute;
+      font-weight: 700;
+      display: flex;
+      padding-right: 30px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding: 20px;
+      border-radius: 6px;
+      cursor: initial;
+      padding-left: 40px;
+      width: auto;
+      font-size: 15px;
+    }
+
+    .css-logo {
+      background-color: #FF9500;
+      color: black;
+      font-size: 25px;
+      font-weight: 1000;
+
+    }
+
+    .css-logo-2 {
+      color: #ffffff;
+      font-size: 25px;
+      font-weight: 1000;
+    }
+
+    .math-course {
+      font-size: 17px;
+      color: white;
+      font-weight: 100;
+    }
+
+
+    .modules {
+      font-size: 20px;
+      margin-top: 70px;
+      margin-bottom: 50px;
+    }
+
+    .course-title {
+      display: block;
+      font-size: 40px;
+    }
+
+    .general-course-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 50px;
+    }
+
+    .MTH-container {
+      background-color: #242728;
+      display: inline-block;
+      border-radius: 10px;
+      width: 200px;
+      height: auto;
+      padding: 20px;
+    }
+
+    .MTH-container:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s ease-in-out;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000000;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: 500;
+      margin-top: 0px;
+      margin-left: 40px;
+      margin-bottom: 0px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: 0.15s;
+    }
+
+    .button:hover {
+      background-color: #FF9500;
+      color: #000000;
+      opacity: 0.5;
+    }
+
+    .button:active {
+      opacity: 0.3;
+    }
+
+    .quotes {
+      width: 20px;
+      filter: brightness(0) saturate(100%) invert(41%) sepia(90%) saturate(1005%) hue-rotate(2deg) brightness(103%) contrast(102%);
+      margin-bottom: 0px;
+    }
+
+    .NavBar {
+      position: relative;
+      display: inline-block;
+    }
+
+    .header-1-alignment,
+    .header-2-align {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .student-evaluation-button{
+      height: 40px;
+      padding-left: 20px;
+      padding-right: 30px;
+      border-width: 2px;
+      border-style: solid;
+      border-color: #FF9500;
+      background-color: #000000;
+      color: #FF9500;
+      font-weight: 700;
+      position: relative;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+    
+    .module-quiz {
+      height: 40px;
+      padding-left: 20px;
+      padding-right: 30px;
+      border-width: 2px;
+      border-style: solid;
+      border-color: #FF9500;
+      background-color: #000000;
+      color: #FF9500;
+      font-weight: 700;
+      position: relative;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+
+    .student-evaluation-button {
+      display: inline-block;
+      max-width: 300px;
+      min-width: 300px;
+      width: 100%;
+    }
+
+    .entity-1 {
+      font-size: 19px;
+      font-weight: 100;
+      position: absolute;
+      top: 7.5px;
+      margin-left: 10px;
+      opacity: 0.5;
+    }
+    a {
+      text-decoration: none;
+    }
+   
+
+    .discover-button {
+      color: #ffffff;
+      font-size: 14px;
+      opacity: 0.5;
+      transition: 0.15s;
+    }
+
+    .discover-button:hover {
+      color: #000000;
+      opacity: 1;
+    }
+
+    .right-arrow-entity {
+      margin-left: 14px;
+    }
+  </style>
+  <link rel="stylesheet" media="((min-width: 300px) and (max-width: 790px))" href="../media-2.css">
+</head>
+
+<body>
+  <div class="general-layout">
+    <div class="search-bar-alignment">
+      <div>
+        <span class="css-logo">Learn</span><span class="css-logo-2">ify.</span>
+      </div>
+      <div class="NavBar">
+        <input class="search-bar-input" placeholder="What do you want to study today?">
+        <img class="search-icon" src="../assets/icons8-search.svg">
+      </div>
+    </div>
+    <div class="text-container">
+
+
+      <div class="header-1-alignment">
+        <p><span class="course-title">MTH 111: General Mathematics</span></p>
+        <button class="student-evaluation-button">Student Performance Evaluation <span class="entity-1">&gt;</span>
+        </button>
+      </div>
+
+      <div class="header-2-align">
+        <p class="modules">Lectures overview</p>
+        <a href="../Quiz/quiz111.html">
+        <button class="module-quiz" style="display: inline-block; align-items: center; padding: 10px 15px; border: 2px solid #FF9500; border-radius: 5px; background-color: #000000;">
+          Module quiz
+          <img src="../assets/quiz-02.png" alt="Lightbulb Icon" style="width: 20px; height: 20px; margin-left: 5px; vertical-align: middle;" />
+        </button>
+      </a>
+        
+        
+        
+      </div>
+    </div>
+    <div class="general-course-container">
+       <div class="MTH-container">
+        <img class="quotes" src="../assets/openbook.png">
+        <p class="math-course">Logarithm and Indices</p>
+        <a href="../Notes/MTH-111-note1.html">
+        <div class="button">
+          <span class="discover-button">Explore Further<span class="right-arrow-entity">&rarr;</span></span>
+        </div>
+      </a>
+      </div>
+   
+      <div class="MTH-container">
+        <img class="quotes" src="../assets/openbook.png">
+        <p class="math-course">Sets and Venn Diagrams</p>
+        <a href="../Notes/MTH-111-note2.html">
+          <div class="button">
+            <span class="discover-button">Explore Further<span class="right-arrow-entity">&rarr;</span></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="MTH-container">
+        <img class="quotes" src="../assets/openbook.png">
+        <p class="math-course">Surds</p>
+        <a href="../Notes/MTH111-Surds.html">
+        <div class="button">
+        <span class="discover-button">Explore Further <span class="right-arrow-entity">&rarr;</span></span>
+        </div>
+      </a>
+      </div>
+
+      <div class="MTH-container">
+        <img class="quotes" src="../assets/openbook.png">
+        <p class="math-course">Roots of Quadratic</p>
+        <a href="../Notes/MTH111-roots-of-quad.html">
+        <div class="button">
+        <span class="discover-button">Explore Further <span class="right-arrow-entity">&rarr;</span></span>
+        </div>
+      </a>
+      </div>
+
+      <div class="MTH-container">
+        <img class="quotes" src="../assets/openbook.png">
+        <p class="math-course">Binomial Theorem</p>
+        <a href="../Notes/MTH111-Binomial.html">
+        <div class="button">
+          <span class="discover-button">Explore Further <span class="right-arrow-entity">&rarr;</span></span>
+        </div>
+        </a>
+      </div>
+      <div class="MTH-container">
+        <img class="quotes" src="../assets/openbook.png">
+        <p class="math-course">Partial Fraction</p>
+        <a href="../Notes/MTH-111-note3.html">
+          <div class="button">
+            <span class="discover-button">Explore Further <span class="right-arrow-entity">&rarr;</span></span>
+          </div>
+          </a>
+      </div>
+      <div class="MTH-container">
+        <img class="quotes" src="../assets/openbook.png">
+        <p class="math-course">Complex Numbers</p>
+        <a href="../Notes/MTH-111-note4.html">
+          <div class="button">
+            <span class="discover-button">Explore Further <span class="right-arrow-entity">&rarr;</span></span>
+          </div>
+          </a>
+      </div>
+      <div class="MTH-container">
+        <img class="quotes" src="../assets/openbook.png">
+        <p class="math-course">Mathematical Induction</p>
+        <a href="../Notes/MTH111-maths-induction.html">
+          <div class="button">
+            <span class="discover-button">Explore Further <span class="right-arrow-entity">&rarr;</span></span>
+          </div>
+          </a>
+      </div>
+      <div class="MTH-container">
+        <img class="quotes" src="../assets/openbook.png">
+        <p class="math-course">Trigonometry</p>
+        <a href="../Notes/MTH111-trigonometry.html">
+          <div class="button">
+            <span class="discover-button">Explore Further <span class="right-arrow-entity">&rarr;</span></span>
+          </div>
+          </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
