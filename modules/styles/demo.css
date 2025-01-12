@@ -571,6 +571,12 @@ header.search-container {
     color: black;
 }
 
+.book-info span {
+    font-family: Afacad;
+    font-weight: 800;
+    padding-left: 89px;
+}
+
 @media only screen and (max-width: 500px) {
     html,
     body {
@@ -667,5 +673,8 @@ header.search-container {
     }
     .book-info {
         width: 80px;
+    }
+    .book-info span {
+        padding-left: 30px;
     }
 }
