@@ -539,6 +539,41 @@ header.search-container {
     color: #ff9500;
 }
 
+.material-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image {
+    width: 200px;
+}
+
+.image1 {
+    width: 200px;
+    height: 300px;
+}
+
+.image2 {
+    height: 300px;
+    width: 200px;
+}
+
+.course-materials {
+    font-weight: 700;
+    font-family: Open Sans;
+}
+
+.book-info {
+    background-color: white;
+    justify-content: center;
+    border-radius: 10px;
+    color: black;
+}
+
+.book-info span {
+    padding-left: 89px;
+}
+
 @media only screen and (max-width: 500px) {
     html,
     body {
@@ -621,5 +656,22 @@ header.search-container {
         font-size: 10px;
         width: 60px;
         height: 21px;
+    }
+    .image {
+        width: 80px;
+    }
+    .image1 {
+        width: 80px;
+        height: 120px;
+    }
+    .image2 {
+        width: 80px;
+        height: 120px;
+    }
+    .book-info {
+        width: 80px;
+    }
+    .book-info span {
+        padding-left: 30px;
     }
 }
