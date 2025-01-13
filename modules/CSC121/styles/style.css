@@ -147,3 +147,81 @@ ol li, ul li {
 .content {
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
 }
+
+/* Quiz */
+
+/* Add this to the existing styles */
+.quiz-container {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+#quiz {
+  margin: 20px 0;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.options {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.options li {
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.submit-quiz {
+  background-color: #f39c12;
+  border: none;
+  padding: 10px 20px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.submit-quiz:hover {
+  background-color: #e67e22;
+}
+
+
+.result-box {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #222;
+  border-radius: 8px;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.result-item {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+}
+
+.result-item.correct {
+  color: green;
+}
+
+.result-item.wrong {
+  color: red;
+}
