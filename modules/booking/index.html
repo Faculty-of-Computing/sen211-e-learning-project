@@ -3,29 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <link rel="icon" type="image/png" href="../G9/assets/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="./assets/booking.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" id="css" href="../G9/assets/index.css" />
     <title>Booking</title>
+    <script src="../G9/assets/user.js" type="module"></script>
   </head>
   <body>
     <div class="py-10 lg:py-[66px]">
       <div class="flex items-center justify-between dent">
-        <figure>
+        <figure class="m-0">
           <img
-            src="./assets/learnify.png"
+            src="../G9/assets/learnify.png"
             class="max-w-[123px] max-h-[45px]"
             alt="Learnify logo"
           />
         </figure>
-        <div
-          class="size-[45px] rounded-full bg-primary text-2xl flex items-center justify-center font-bold text-black"
-        >
-          JD
+        <div class="flex items-center justify-end gap-4">
+          <div class="space-x-3 hidden md:inline-block">
+            <a
+              href="/"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Home
+            </a>
+            <a
+              href="../performance/index.html"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Performance
+            </a>
+            <a
+              href="../forum/index.html"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Forum
+            </a>
+            <a
+              href="../booking/index.html"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Booking
+            </a>
+          </div>
+          <div
+            class="size-[45px] rounded-full bg-primary text-2xl flex items-center justify-center font-bold text-black"
+          >
+            JD
+          </div>
         </div>
       </div>
-      <title>Booking</title>
+      <div class="md:hidden flex justify-evenly items-center mt-4 -mb-6 dent">
+        <a
+          href="/"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Home
+        </a>
+        <a
+          href="../performance/index.html"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Performance
+        </a>
+        <a
+          href="../forum/index.html"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Forum
+        </a>
+        <a
+          href="../booking/index.html"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Booking
+        </a>
+      </div>
+      <script>
+        const indexRegex = /\/index\.html$/;
+        const pagePathName = location.pathname.replace(indexRegex, "");
+        document.querySelectorAll("a.nav-link").forEach((link) => {
+          const linkPathName = new URL(link.href).pathname.replace(
+            indexRegex,
+            ""
+          );
+          if (linkPathName === pagePathName) {
+            link.classList.remove("text-white");
+            link.classList.add("text-primary");
+          }
+        });
+      </script>
       <div class="dent mt-10">
         <h1 class="font-bold text-3xl md:text-[48px] md:leading-[64px]">
           BOOKING
@@ -58,37 +126,43 @@
           Booking Form
         </h4>
         <div class="grid md:grid-cols-2 gap-10">
-          <label for="first-name" class="space-y-[22px] booking-label">
+          <label
+            for="first-name"
+            class="flex flex-col gap-y-[22px] booking-label"
+          >
             <span class="font-medium text-xl md:text-[32px] leading-[43px]"
               >First Name</span
             >
-            <input name="first-name" type="text" required />
+            <input name="first-name" type="text" required="" />
           </label>
-          <label for="last-name" class="space-y-[22px] booking-label">
+          <label
+            for="last-name"
+            class="flex flex-col gap-y-[22px] booking-label"
+          >
             <span class="font-medium text-xl md:text-[32px] leading-[43px]"
               >Last Name</span
             >
-            <input name="last-name" type="text" required />
+            <input name="last-name" type="text" required="" />
           </label>
         </div>
-        <label for="email" class="space-y-[22px] booking-label">
+        <label for="email" class="flex flex-col gap-y-[22px] booking-label">
           <span class="font-medium text-xl md:text-[32px] leading-[43px]"
             >Email Address</span
           >
-          <input name="email" type="email" required />
+          <input name="email" type="email" required="" />
         </label>
-        <label for="tel" class="space-y-[22px] booking-label">
+        <label for="tel" class="flex flex-col gap-y-[22px] booking-label">
           <span class="font-medium text-xl md:text-[32px] leading-[43px]"
             >Phone Number</span
           >
-          <input name="tel" type="tel" required />
+          <input name="tel" type="tel" required="" />
         </label>
-        <label for="challenge" class="space-y-[22px] booking-label">
+        <label for="challenge" class="flex flex-col gap-y-[22px] booking-label">
           <span class="font-medium text-xl md:text-[32px] leading-[43px]"
             >In Less than 200 Words Describe The Academic Challenges you
             Currently Face</span
           >
-          <textarea name="challenge" required maxlength="1200"></textarea>
+          <textarea name="challenge" required="" maxlength="1200"></textarea>
         </label>
         <div class="flex justify-center">
           <button
@@ -99,10 +173,27 @@
           </button>
         </div>
       </form>
-      <script
-        type="module"
-        src="./assets/booking.js"
-      ></script>
+      <script>
+        const formElement = document.querySelector("form");
+        formElement.onsubmit = (e) => {
+          e.preventDefault();
+          const form = new FormData(formElement);
+
+          const firstName = encodeURIComponent(form.get("first-name"));
+          const lastName = encodeURIComponent(form.get("last-name"));
+          const email = encodeURIComponent(form.get("email"));
+          const phone = encodeURIComponent(form.get("tel"));
+          const challenge = encodeURIComponent(form.get("challenge"));
+          const subject = encodeURIComponent("Book Counselling");
+          const body =
+            `First Name: ${firstName}%0A` +
+            `Last Name: ${lastName}%0A` +
+            `Email: ${email}%0A` +
+            `Phone Number: ${phone}%0A` +
+            `Challenge: ${challenge}`;
+          window.location.href = `mailto:bannyconfidence@gmail.com?subject=${subject}&body=${body}`;
+        };
+      </script>
     </div>
   </body>
 </html>

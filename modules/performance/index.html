@@ -10,64 +10,94 @@
       href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./performance.css" />
-    <link rel="stylesheet" href="../COS121/style/Cos121.css"
+    <link rel="stylesheet" href="../G9/assets/index.css" />
     <script type="module" src="./performance.js"></script>
   </head>
   <body>
-      <!-- The header is meant to cover the nav bar too, including the logo -->
-    <div class="profile">RA</div>
-    <header class="desktop-nav">
-        <h1><span class="Learn">Learn</span>ify</h1>
-        <nav>
-            <ul class="nav-links">
-                <li>
-                    <p><a href="../../index.html">Home</a></p>
-                </li>
-
-                <li>
-                    <p>
-                    <div class="hidden">
-                        <button class="DropDown-Button">More</button>
-                        <div class="Drop-Menu">
-                            <a href="../counselling/index.html">Counseling</a>
-                            <a href="../forum/index.html">Forum</a>
-                        </div>
-                    </div>
-                    </p>
-                </li>
-                <li>
-                    <p><a href="../COS121/Quiz/module2.quiz.html">Module Quiz</a></p>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </header>
-
-
-    <div class="mx-4 md:mx-10 mt-4 pb-4">
-      <div class="flex justify-between items-center">
-        <img
-          src="/modules/res/logo-main.png"
-          class="max-w-[200px]"
-          alt="Learnify logo"
-        />
-        <div id="user-slug">
+    <div class="py-10 lg:py-[66px]">
+      <div class="flex items-center justify-between dent">
+        <figure class="m-0">
           <img
-            class="hidden size-[50px] rounded-full"
-            alt="your profile image"
+            src="../G9/assets/learnify.png"
+            class="max-w-[123px] max-h-[45px]"
+            alt="Learnify logo"
           />
+        </figure>
+        <div class="flex items-center justify-end gap-4">
+          <div class="space-x-3 hidden md:inline-block">
+            <a
+              href="/"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Home
+            </a>
+            <a
+              href="../performance/index.html"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Performance
+            </a>
+            <a
+              href="../forum/index.html"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Forum
+            </a>
+            <a
+              href="../booking/index.html"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Booking
+            </a>
+          </div>
           <div
-            class="hidden bg-[rgb(61,61,61)] rounded-full size-[50px] text-white font-bold font-afacad items-center justify-center text-2xl"
-          ></div>
+            class="size-[45px] rounded-full bg-primary text-2xl flex items-center justify-center font-bold text-black"
+          >
+            JD
+          </div>
         </div>
       </div>
-      <header class="flex flex-col lg:flex-row lg:items-end justify-between">
+      <div class="md:hidden flex justify-evenly items-center mt-4 -mb-6 dent">
+        <a
+          href="/"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Home
+        </a>
+        <a
+          href="../performance/index.html"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Performance
+        </a>
+        <a
+          href="../forum/index.html"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Forum
+        </a>
+        <a
+          href="../booking/index.html"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Booking
+        </a>
+      </div>
+      <script>
+        const indexRegex = /\/index\.html$/;
+        const pagePathName = location.pathname.replace(indexRegex, "");
+        document.querySelectorAll("a.nav-link").forEach((link) => {
+          const linkPathName = new URL(link.href).pathname.replace(
+            indexRegex,
+            ""
+          );
+          if (linkPathName === pagePathName) {
+            link.classList.remove("text-white");
+            link.classList.add("text-primary");
+          }
+        });
+      </script>
+      <header class="flex flex-col lg:flex-row lg:items-end justify-between dent">
         <h1
           class="font-open-sans font-bold text-[32px] leading-[44px] [leading-trim:both] [text-edge:cap] text-white"
         >
@@ -92,7 +122,7 @@
           }
         </script>
       </header>
-      <main>
+      <main class="dent">
         <h2 id="loader" style="font-size: 43px; font-family: 'Afacad', serif">
           Loading...
         </h2>
@@ -142,18 +172,5 @@
         </div>
       </main>
     </div>
-
-    <script>
-        
-      const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () =>{
-navLinks.classList.toggle('active');
-hamburger.classList.toggle('active');
-
-});
-      
-  </script>
   </body>
 </html>

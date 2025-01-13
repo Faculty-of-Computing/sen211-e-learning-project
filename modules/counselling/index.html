@@ -2,174 +2,225 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="Author" content="Group 9" />
-    <title>QUIZ</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="../G9/assets/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Afacad:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./counselling.css" />
-    <link rel="stylesheet" href="../COS121/style/Cos121.css"
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" id="css" href="../G9/assets/index.css" />
+    <script src="../G9/assets/user.js" type="module"></script>
+    <style>
+      .content {
+        font-family: "Inter";
+        font-style: none;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 29.05px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+      .blog p {
+        padding-bottom: 30px;
+      }
+    </style>
+    <title>Lecture</title>
   </head>
-
   <body>
-    <!-- The header is meant to cover the nav bar too, including the logo -->
-    <div class="profile">RA</div>
-    <header class="desktop-nav">
-        <h1><span class="Learn">Learn</span>ify</h1>
-        <nav>
-            <ul class="nav-links">
-                <li>
-                    <p><a href="../../index.html">Home</a></p>
-                </li>
-
-                <li>
-                    <p>
-                    <div class="hidden">
-                        <button class="DropDown-Button">More</button>
-                        <div class="Drop-Menu">
-                            <a href="./index.html">Counseling</a>
-                            <a href="../forum/index.html">Forum</a>
-                        </div>
-                    </div>
-                    </p>
-                </li>
-                <li>
-                    <p><a href="../COS121/Quiz/module2.quiz.html">Module Quiz</a></p>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
+    <div class="py-10 lg:py-[66px]">
+      <div class="flex items-center justify-between dent">
+        <figure class="m-0">
+          <img
+            src="../G9/assets/learnify.png"
+            class="max-w-[123px] max-h-[45px]"
+            alt="Learnify logo"
+          />
+        </figure>
+        <div class="flex items-center justify-end gap-4">
+          <div class="space-x-3 hidden md:inline-block">
+            <a
+              href="/"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Home
+            </a>
+            <a
+              href="../performance/index.html"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Performance
+            </a>
+            <a
+              href="../forum/index.html"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Forum
+            </a>
+            <a
+              href="../booking/index.html"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Booking
+            </a>
+          </div>
+          <div
+            class="size-[45px] rounded-full bg-primary text-2xl flex items-center justify-center font-bold text-black"
+          >
+            JD
+          </div>
         </div>
-    </header>
-
-    <div id="topic">
-      <h1>
-        Counselling: <span id="subtopic">Fostering Acedemic Excellence</span>
-      </h1>
-      <p id="review">
-        6 Jan 2025 by Banny Confidence .DOA <br />
-        Reviewed by David Etuk Asst. DOA
-      </p>
-      <hr />
+      </div>
+      <div class="md:hidden flex justify-evenly items-center mt-4 -mb-6 dent">
+        <a
+          href="/"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Home
+        </a>
+        <a
+          href="../performance/index.html"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Performance
+        </a>
+        <a
+          href="../forum/index.html"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Forum
+        </a>
+        <a
+          href="../booking/index.html"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Booking
+        </a>
+      </div>
+      <script>
+        const indexRegex = /\/index\.html$/;
+        const pagePathName = location.pathname.replace(indexRegex, "");
+        document.querySelectorAll("a.nav-link").forEach((link) => {
+          const linkPathName = new URL(link.href).pathname.replace(
+            indexRegex,
+            "",
+          );
+          if (linkPathName === pagePathName) {
+            link.classList.remove("text-white");
+            link.classList.add("text-primary");
+          }
+        });
+      </script>
+      <div class="dent mt-6">
+        <h1 class="font-bold text-3xl md:text-[48px] md:leading-[64px]">
+          Counselling: Fostering Acedemic Excellence
+        </h1>
+        <p class="font-lighter">
+          6 Jan 2025 by Banny Confidence .DOA <br />
+          Reviewed by David Etuk Asst. DOA
+        </p>
+        <hr
+          class="border-[0.5px] border-solid border-white opacity-40 my-6 w-[95%] mx-auto"
+        />
+        <div class="blog font-inter font-bold text-[24px] leading-[29px] dent">
+          <p>
+            Academic Guidance and Counseling <br />
+            <span class="content">
+              Welcome to Learnify academic guidance and counseling Lecture ! As
+              your academic advisor, I am committed to helping you achieve your
+              academic goals and reach your full potential.
+            </span>
+          </p>
+          <p>
+            Segment 1: Setting Academic Goals <br />
+            <span class="content">
+              To begin, let's set some academic goals for the semester/year.
+              What do you hope to achieve in your studies? Do you have any
+              specific goals or targets in mind?
+              <br /><br />
+              - Identify your strengths and weaknesses
+              <br />
+              - Set SMART (Specific, Measurable, Achievable, Relevant,
+              Time-bound) goals
+              <br />
+              - Prioritize your goals and focus on the most important ones
+            </span>
+          </p>
+          <p>
+            Segment 2: Understanding Academic Requirements<br />
+            <span class="content">
+              Next, let's review the academic requirements for your program.
+              What are the course requirements, credit hours, and GPA needed to
+              graduate?
+              <br /><br />
+              - Understand the program curriculum and course sequence
+              <br />
+              - Familiarize yourself with the academic policies and procedures
+              <br />
+              - Know the resources available to support your academic success
+            </span>
+          </p>
+          <p>
+            Segment 3: Developing a Study Plan
+            <br />
+            <span class="content">
+              Now, let's create a study plan that suits your learning style and
+              schedule. How do you plan to manage your time, stay organized, and
+              review course materials?
+              <br /><br />
+              - Create a study schedule and stick to it
+              <br />
+              - Use active learning techniques, such as note-taking and
+              summarizing
+              <br />
+              - Review course materials regularly and seek help when needed
+            </span>
+          </p>
+          <p>
+            Segment 4: Managing Academic Challenges<br />
+            <span class="content">
+              We all face academic challenges at some point. What strategies do
+              you use to manage stress, stay motivated, and overcome obstacles?
+              <br /><br />
+              - Identify your stressors and develop coping mechanisms
+              <br />
+              - Break down large tasks into smaller, manageable chunks
+              <br />
+              - Seek help from instructors, classmates, or support services when
+              needed
+            </span>
+          </p>
+          <p>
+            Segment 5: Exploring Campus Resources
+            <br />
+            <span class="content">
+              Finally, let's explore the campus resources available to support
+              your academic success. What resources do you know about, and how
+              can you access them?
+              <br /><br />
+              - Familiarize yourself with the campus library, academic support
+              centers, and counseling services
+              <br />
+              - Know how to access online resources, such as course materials
+              and academic advising
+              <br />
+              - Take advantage of campus events, workshops, and seminars to
+              enhance your academic experience
+            </span>
+          </p>
+          <p>
+            Conclusion
+            <br />
+            <span class="content">
+              Remember, academic success is a journey, not a destination. Stay
+              focused, motivated, and committed to your goals. Don't hesitate to
+              reach out to me or other campus resources when you need support.
+              <br /><br />
+              Keep in mind that this is a general guide, and you should tailor
+              your counseling session to the individual student's needs and
+              concerns. Good luck!
+            </span>
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="blog">
-      <p>
-        Academic Guidance and Counseling <br />
-        <span id="content">
-          Welcome to Learnify academic guidance and counseling Lecture ! As your
-          academic advisor, I am committed to helping you achieve your academic
-          goals and reach your full potential.
-        </span>
-      </p>
-      <p>
-        Segment 1: Setting Academic Goals <br />
-        <span id="content">
-          To begin, let's set some academic goals for the semester/year. What do
-          you hope to achieve in your studies? Do you have any specific goals or
-          targets in mind?
-          <br /><br />
-          - Identify your strengths and weaknesses
-          <br />
-          - Set SMART (Specific, Measurable, Achievable, Relevant, Time-bound)
-          goals
-          <br />
-          - Prioritize your goals and focus on the most important ones
-        </span>
-      </p>
-      <p>
-        Segment 2: Understanding Academic Requirements<br />
-        <span id="content">
-          Next, let's review the academic requirements for your program. What
-          are the course requirements, credit hours, and GPA needed to graduate?
-          <br /><br />
-          - Understand the program curriculum and course sequence
-          <br />
-          - Familiarize yourself with the academic policies and procedures
-          <br />
-          - Know the resources available to support your academic success
-        </span>
-      </p>
-      <p>
-        Segment 3: Developing a Study Plan
-        <br />
-        <span id="content">
-          Now, let's create a study plan that suits your learning style and
-          schedule. How do you plan to manage your time, stay organized, and
-          review course materials?
-          <br /><br />
-          - Create a study schedule and stick to it
-          <br />
-          - Use active learning techniques, such as note-taking and summarizing
-          <br />
-          - Review course materials regularly and seek help when needed
-        </span>
-      </p>
-      <p>
-        Segment 4: Managing Academic Challenges<br />
-        <span id="content">
-          We all face academic challenges at some point. What strategies do you
-          use to manage stress, stay motivated, and overcome obstacles?
-          <br /><br />
-          - Identify your stressors and develop coping mechanisms
-          <br />
-          - Break down large tasks into smaller, manageable chunks
-          <br />
-          - Seek help from instructors, classmates, or support services when
-          needed
-        </span>
-      </p>
-      <p>
-        Segment 5: Exploring Campus Resources
-        <br />
-        <span id="content">
-          Finally, let's explore the campus resources available to support your
-          academic success. What resources do you know about, and how can you
-          access them?
-          <br /><br />
-          - Familiarize yourself with the campus library, academic support
-          centers, and counseling services
-          <br />
-          - Know how to access online resources, such as course materials and
-          academic advising
-          <br />
-          - Take advantage of campus events, workshops, and seminars to enhance
-          your academic experience
-        </span>
-      </p>
-      <p>
-        Conclusion
-        <br />
-        <span id="content">
-          Remember, academic success is a journey, not a destination. Stay
-          focused, motivated, and committed to your goals. Don't hesitate to
-          reach out to me or other campus resources when you need support.
-          <br /><br />
-          Keep in mind that this is a general guide, and you should tailor your
-          counseling session to the individual student's needs and concerns.
-          Good luck!
-        </span>
-      </p>
-    </div>
-
-    <script>
-        
-      const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () =>{
-navLinks.classList.toggle('active');
-hamburger.classList.toggle('active');
-
-});
-      
-  </script>
   </body>
 </html>

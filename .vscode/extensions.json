@@ -4,7 +4,6 @@
         "exodiusstudios.comment-anchors",
         "dbaeumer.vscode-eslint",
         "ritwickdey.liveserver",
-        "esbenp.prettier-vscode",
-        "standard.vscode-standard"
+        "esbenp.prettier-vscode"
     ]
 }

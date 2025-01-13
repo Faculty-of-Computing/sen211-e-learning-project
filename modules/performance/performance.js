@@ -1,10 +1,7 @@
 // @ts-check
 import "/lib/chart.js";
 import { getUser, getUserResults } from "/scripts/firebase.js";
-
-await new Promise((res) => {
-  document.addEventListener("DOMContentLoaded", res);
-});
+import "../G9/assets/user.js";
 
 const loader = /** @type {HTMLDivElement} */ (
   document.getElementById("loader")
@@ -29,27 +26,6 @@ if (!localStorage.getItem("user-id")) {
   loader.replaceWith(info);
   throw new Error("User not signed in!");
 }
-
-getUser(({ photoURL, displayName }) => {
-  const userSlug = /** @type {HTMLDivElement} */ (
-    document.querySelector("#user-slug")
-  );
-  if (photoURL) {
-    const img = /** @type {HTMLImageElement} */ (userSlug.querySelector("img"));
-    img.classList.remove("hidden");
-    img.src = photoURL;
-  } else if (displayName) {
-    const userName = /** @type {HTMLDivElement} */ (
-      userSlug.querySelector("div")
-    );
-    userName.classList.remove("hidden");
-    userName.classList.add("flex");
-    userName.innerText = displayName
-      .split(" ")
-      .map((name) => name[0].toUpperCase())
-      .join("");
-  }
-});
 
 /** @param {number} duration  */
 function calcDuration(duration) {

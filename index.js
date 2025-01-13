@@ -1,6 +1,6 @@
 // @ts-check
 
-import { getUser } from "./scripts/firebase.js";
+import { getUser } from "/scripts/firebase.js";
 
 getUser((user) => {
   const welcomeMsg = /** @type {HTMLElement} */ (
@@ -11,11 +11,8 @@ getUser((user) => {
   );
   welcomeMsg.innerText = `Welcome, ${user.displayName}`;
   if (user.displayName) {
-    const nameParts = user.displayName.split(" ");
-    const firstNameInitial = nameParts[0] ? nameParts[0][0] : "";
-    const lastNameInitial =
-      nameParts.length > 1 ? nameParts[nameParts.length - 1][0] : "";
-    userSlug.innerText = `${firstNameInitial}${lastNameInitial}`.toUpperCase();
+    const nameParts = user.displayName.split(" ").map((part) => part[0].toUpperCase());
+    userSlug.innerText = nameParts.slice(0, 2).join("");
   } else {
     userSlug.innerText = "NA";
   }

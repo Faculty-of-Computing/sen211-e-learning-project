@@ -2,75 +2,263 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./forum.css" />
-    <link rel="stylesheet" href="../COS121/style/Cos121.css"
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="../G9/assets/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Learnify - Forum</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" id="css" href="../G9/assets/index.css" />
+    <title>Forum</title>
+    <script src="../G9/assets/user.js" type="module"></script>
   </head>
-
-  <body class="pb-[50px] bg-black">
-    <!-- The header is meant to cover the nav bar too, including the logo -->
-    <div class="profile">RA</div>
-    <header class="desktop-nav">
-        <h1><span class="Learn">Learn</span>ify</h1>
-        <nav>
-            <ul class="nav-links">
-                <li>
-                    <p><a href="../../index.html">Home</a></p>
-                </li>
-
-                <li>
-                    <p>
-                    <div class="hidden">
-                        <button class="DropDown-Button">More</button>
-                        <div class="Drop-Menu">
-                            <a href="../counselling/index.html">Counseling</a>
-                            <a href="./index.html">Forum</a>
-                        </div>
-                    </div>
-                    </p>
-                </li>
-                <li>
-                    <p><a href="../COS121/Quiz/module2.quiz.html">Module Quiz</a></p>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
+  <body>
+    <div class="py-10 lg:py-[66px]">
+      <div class="flex items-center justify-between dent">
+        <figure class="m-0">
+          <img
+            src="../G9/assets/learnify.png"
+            class="max-w-[123px] max-h-[45px]"
+            alt="Learnify logo"
+          />
+        </figure>
+        <div class="flex items-center justify-end gap-4">
+          <div class="space-x-3 hidden md:inline-block">
+            <a
+              href="/"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Home
+            </a>
+            <a
+              href="../performance/index.html"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Performance
+            </a>
+            <a
+              href="../forum/index.html"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Forum
+            </a>
+            <a
+              href="../booking/index.html"
+              class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+            >
+              Booking
+            </a>
+          </div>
+          <div
+            class="size-[45px] rounded-full bg-primary text-2xl flex items-center justify-center font-bold text-black"
+          >
+            JD
+          </div>
         </div>
-    </header>
-    <div class="container mx-auto px-1 lg:px-4">
-      <div>
-        <h1 class="text-white text-[1.7rem] pt-1">
-          Community Forum : Share Your Experience
-        </h1>
-        <p class="text-white text-[1.2rem]">
-          Share Your Experience So far to Encourage Others And Enlighten
-        </p>
       </div>
-      <div id="outsidebox" class="lg:pt-5 mt-10"></div>
+      <div class="md:hidden flex justify-evenly items-center mt-4 -mb-6 dent">
+        <a
+          href="/"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Home
+        </a>
+        <a
+          href="../performance/index.html"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Performance
+        </a>
+        <a
+          href="../forum/index.html"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Forum
+        </a>
+        <a
+          href="../booking/index.html"
+          class="font-medium text-white no-underline hover:text-primary hover:underline hover:underline-offset-2 nav-link"
+        >
+          Booking
+        </a>
+      </div>
+      <script>
+        const indexRegex = /\/index\.html$/;
+        const pagePathName = location.pathname.replace(indexRegex, "");
+        document.querySelectorAll("a.nav-link").forEach((link) => {
+          const linkPathName = new URL(link.href).pathname.replace(
+            indexRegex,
+            "",
+          );
+          if (linkPathName === pagePathName) {
+            link.classList.remove("text-white");
+            link.classList.add("text-primary");
+          }
+        });
+      </script>
+      <div class="dent mt-4">
+        <div>
+          <h1 class="font-bold text-3xl md:text-[48px] md:leading-[64px]">
+            Community Forum : Share Your Experience
+          </h1>
+          <p class="text-white text-xl">
+            Share Your Experience So far to Encourage Others And Enlighten
+          </p>
+        </div>
+        <div id="outsidebox" class="lg:pt-5 mt-10">
+          <div
+            class="bg-[#242728] border-[0.4px] border-solid border-[rgb(131,130,130)] mt-3"
+          >
+            <div class="px-4 pt-4 pb-4">
+              <div class="float-right text-white mt-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-three-dots-vertical"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex gap-2">
+                <div
+                  class="flex translate-y-2 items-center justify-center rounded-full bg-[#B3B3B3] size-8"
+                >
+                  IB
+                </div>
+                <div>
+                  <p class="text-[1.45rem] text-white">Isreal Blessing</p>
+                  <p class="text-white">17/10/14</p>
+                </div>
+              </div>
+              <p class="text-white text-[1.4rem] pt-3">
+                I was advised to install a MetaMask extention to my Android
+                browser but I was not able to. Instead I have installed the
+                MetaMask-app and configured the Polygon network there. Is this
+                as safe as the browser extension?I was advised to install a
+                MetaMask extention to my Android browser but I was not able to.
+                Instead I have installed the MetaMask-app and configured the
+                Polygon network there. Is this as safe as the browser extension?
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[#242728] border-[0.4px] border-solid border-[rgb(131,130,130)] mt-3"
+          >
+            <div class="px-4 pt-4 pb-4">
+              <div class="float-right text-white mt-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-three-dots-vertical"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex gap-2">
+                <div
+                  class="flex translate-y-2 items-center justify-center rounded-full bg-[#B3B3B3] size-8"
+                >
+                  C
+                </div>
+                <div>
+                  <p class="text-[1.45rem] text-white">Confidence</p>
+                  <p class="text-white">17/10/14</p>
+                </div>
+              </div>
+              <p class="text-white text-[1.4rem] pt-3">
+                As I reflect on my academic journey, I am reminded of the
+                numerous challenges I faced along the way. From struggling to
+                balance coursework and extracurricular activities to success is
+                not solely defined by grades, but by the skills, knowledge, and
+                experince
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[#242728] border-[0.4px] border-solid border-[rgb(131,130,130)] mt-3"
+          >
+            <div class="px-4 pt-4 pb-4">
+              <div class="float-right text-white mt-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-three-dots-vertical"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex gap-2">
+                <div
+                  class="flex translate-y-2 items-center justify-center rounded-full bg-[#B3B3B3] size-8"
+                >
+                  IB
+                </div>
+                <div>
+                  <p class="text-[1.45rem] text-white">Itoro Benard</p>
+                  <p class="text-white">17/10/14</p>
+                </div>
+              </div>
+              <p class="text-white text-[1.4rem] pt-3">
+                I was advised to install a MetaMask extention to my Android
+                browser but I was not able to. Instead I have installed the
+                MetaMask-app and configured the Polygon network there. Is this
+                as safe as the browser extension?
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[#242728] border-[0.4px] border-solid border-[rgb(131,130,130)] mt-3"
+          >
+            <div class="px-4 pt-4 pb-4">
+              <div class="float-right text-white mt-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-three-dots-vertical"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex gap-2">
+                <div
+                  class="flex translate-y-2 items-center justify-center rounded-full bg-[#B3B3B3] size-8"
+                >
+                  Dc
+                </div>
+                <div>
+                  <p class="text-[1.45rem] text-white">Daniel Cletus</p>
+                  <p class="text-white">17/10/14</p>
+                </div>
+              </div>
+              <p class="text-white text-[1.4rem] pt-3">
+                As I reflect on my academic journey, I am reminded of the
+                numerous challenges I faced along the way. From struggling to
+                balance coursework and extracurricular activities to success is
+                not solely defined by grades, but by the skills, knowledge, and
+                experince
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
-  <script>
-        
-    const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () =>{
-navLinks.classList.toggle('active');
-hamburger.classList.toggle('active');
-
-});
-    
-</script>
-  <script src="./forum.js"></script>
 </html>
