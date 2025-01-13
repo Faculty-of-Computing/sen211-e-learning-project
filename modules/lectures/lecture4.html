@@ -28,13 +28,8 @@
             </nav>
         
 
-            <div class="hamburger showOnMobile" onclick="showNav()">
+            <div class="hamburger">
                 <div></div>
-                <div></div>
-                <div></div>
-            </div>
-    
-            <div class="reverse-hamburger" onclick="hideNav()">
                 <div></div>
                 <div></div>
             </div>
@@ -175,8 +170,21 @@
         </main>
         <div class="pagination">
             <button class="prev"><a href="../lectures/lecture3.html"><span><</span> Prev Lecture</a></button>
-            <button class="next"><a href="../lectures/lecture5.html">Lecture <span>></span></a></button>
+            <button class="next"><a href="../lectures/lecture5.html">Next Lecture <span>></span></a></button>
         </div>
     </section>
+
+    <script>
+        
+        const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () =>{
+  navLinks.classList.toggle('active');
+  hamburger.classList.toggle('active');
+
+});
+        
+    </script>
 </body>
 </html>

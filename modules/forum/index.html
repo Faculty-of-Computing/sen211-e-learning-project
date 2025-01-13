@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./forum.css" />
+    <link rel="stylesheet" href="../COS121/style/Cos121.css"
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +15,39 @@
   </head>
 
   <body class="pb-[50px] bg-black">
+    <!-- The header is meant to cover the nav bar too, including the logo -->
+    <div class="profile">RA</div>
+    <header class="desktop-nav">
+        <h1><span class="Learn">Learn</span>ify</h1>
+        <nav>
+            <ul class="nav-links">
+                <li>
+                    <p><a href="../../index.html">Home</a></p>
+                </li>
+
+                <li>
+                    <p>
+                    <div class="hidden">
+                        <button class="DropDown-Button">More</button>
+                        <div class="Drop-Menu">
+                            <a href="../counselling/index.html">Counseling</a>
+                            <a href="./index.html">Forum</a>
+                        </div>
+                    </div>
+                    </p>
+                </li>
+                <li>
+                    <p><a href="../COS121/Quiz/module2.quiz.html">Module Quiz</a></p>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
     <div class="container mx-auto px-1 lg:px-4">
       <div>
         <h1 class="text-white text-[1.7rem] pt-1">
@@ -26,5 +60,17 @@
       <div id="outsidebox" class="lg:pt-5 mt-10"></div>
     </div>
   </body>
+  <script>
+        
+    const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () =>{
+navLinks.classList.toggle('active');
+hamburger.classList.toggle('active');
+
+});
+    
+</script>
   <script src="./forum.js"></script>
 </html>
