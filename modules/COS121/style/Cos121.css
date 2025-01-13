@@ -261,22 +261,18 @@ height: 7rem;
 
     header .nav-links {
         position: fixed;
-        top: 60px;
-        left: 0%;
+        top: 0;
+        left: -50%; /* Initially off-screen */
         background: #020100;
-        width: 80%;
+        width: 50%; /* Half the page width */
+        height: 100vh; /* Full viewport height */
         padding: 20px 0px 25px;
-        display:none;
+        display: none;
         align-items: center;
         text-align: center;
-        height: 350px;
-        align-items: center;
-        border-radius: 10px;
         transition: 0.5s ease-in-out;
         border: 1px solid #3A3A3A;
-        display: none;
-        padding-top: 0;
-        z-index: 1000px;
+        z-index: 1000;
     }
 
     nav ul li:hover{
@@ -286,25 +282,47 @@ height: 7rem;
       }
   
       header .nav-links.active{
-        left:30%;
+        left: 0; /* Slide into view from the left */
         display: block;
-      }
-      header .nav-links li{
+    }
+    
+    header .nav-links li{
         font-size: 20px;
         padding: 35px;
-      }
+    }
+
       header .DropDown-Button{
         font-size: 20px;
-      }
-  
-      header .hamburger{
-          display: block;
-          cursor: pointer ;
-          position: relative;
-          padding: 10px;
-          transition: all 0.3s ease-in-out;
-  
-      }    
+    }
+
+    header .hamburger{
+        display: block;
+        cursor: pointer;
+        position: relative;
+        padding: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .hamburger span {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
   
       .readmore {
           left: 50%;
