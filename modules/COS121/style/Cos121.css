@@ -91,13 +91,13 @@ header {
     font-size: 17px;
 }
 
-header .hamburger>div {
+header .hamburger div {
     width: 50px;
     height: 3px;
     background-color: #fff;
 }
 
-header .hamburger>div:nth-child(2) {
+header .hamburger div:nth-child(2) {
     margin-top: .3em;
     margin-bottom: .3em;
 }
@@ -259,16 +259,69 @@ height: 7rem;
         grid-template-columns: repeat(1, 1fr);
     }
 
-    header nav ul {
+    header .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0%;
+        background: #020100;
+        width: 80%;
+        padding: 20px 0px 25px;
+        display:none;
+        align-items: center;
+        text-align: center;
+        height: 350px;
+        align-items: center;
+        border-radius: 10px;
+        transition: 0.5s ease-in-out;
+        border: 1px solid #3A3A3A;
         display: none;
+        padding-top: 0;
     }
 
-    /* header .hamburger {
+    nav ul li:hover{
+        background: #353331;
+        border-radius: 10px;
+        border: 1px solid   #3A3A3A ;
+      }
+  
+      header .nav-links.active{
+        left:30%;
         display: block;
-    } */
+      }
+      header .nav-links li{
+        font-size: 20px;
+        padding: 35px;
+      }
+      header .DropDown-Button{
+        font-size: 20px;
+      }
+  
+      header .hamburger{
+          display: block;
+          cursor: pointer ;
+          position: relative;
+          padding: 10px;
+          transition: all 0.3s ease-in-out;
+  
+      }    
+  
+      .readmore {
+          left: 50%;
+      }
+      /* .template1{
+  width: 15rem;
+  padding: 14px;
+  } */
+      /* .lectures-overview-header{
+  flex-direction: column;
+  height: 7rem;
+  } */
+      section.question-area {
+          /* display: block !important; */
+          flex-direction: column;
+      }
 
-    .readmore {
-        left: 50%;
+    
     }
 
     /* .template1{
@@ -283,7 +336,6 @@ height: 7rem;
         /* display: block !important; */
         flex-direction: column;
     }
-}
 
 .quizButton {
     padding: .3em .5em;
